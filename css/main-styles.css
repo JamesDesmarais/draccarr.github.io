@@ -6,6 +6,7 @@ html {
     margin: 0 auto;
     background-color: #252424;
     color: #fff;
+    min-height: 100%;
 } 
   
 *, *:before, *:after 
