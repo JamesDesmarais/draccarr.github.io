@@ -39,6 +39,13 @@ footer{
     background-color: #141414;
 }
 
+main h2 {
+    font-weight: bold;
+}
+main section {
+    margin-bottom: 20px;
+}
+
 
 /*--- Navigational behaviours --- */
 a {
