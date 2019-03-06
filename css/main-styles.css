@@ -4,6 +4,8 @@ html {
     font-size: 16px;	
     font-size: 62.5%;/* 62.5% of 16 = 10 */
     margin: 0 auto;
+    background-color: #252424;
+    color: fff;
 } 
   
 *, *:before, *:after 
@@ -17,6 +19,7 @@ body {
 }
 
 /*--- Authors Styles --- */
+
 
 
 /*--- Navigational behaviours --- */
