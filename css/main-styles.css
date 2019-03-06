@@ -17,6 +17,7 @@ html {
 body {
     max-width: 1920px;
     min-width: 1024px;
+    min-height: 900px;
 }
 
 /*--- Authors Styles --- */
