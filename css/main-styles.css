@@ -21,7 +21,22 @@ body {
 }
 
 /*--- Authors Styles --- */
-
+header {
+    width: 100%;
+    height: 50px;
+    background-color: #141414;
+}
+main {
+    min-height: 900px;
+    width: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+footer{
+    width: 100%;
+    height: 300px;
+    background-color: #141414;
+}
 
 
 /*--- Navigational behaviours --- */
@@ -31,9 +46,57 @@ a {
 }
 
 a:link, a:visited {
-    color: #000;      /* unvisited link and a visted link */
+    color: #fff;
 }
 
-a:hover, a:active {
-    color: #fff;      /* mouse over  and selected link */
+nav li a {
+    align-items: center;
+    justify-content: center;
 }
+
+nav {
+    width: 50%;
+    height: 70%;
+    margin: 0 auto;
+}
+
+nav ul {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+  
+nav li {
+    position: relative;
+    display: flex;
+    width: 16.66666666666667%;
+    height: 100%;
+    background-color: #0a5296;
+    font: 20px/1.5 arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+nav li:hover{
+    /* display: block; */
+    background-color: #1466b3;
+}
+
+nav li ul{
+    position: absolute;
+    display: none;
+}
+
+nav li:hover ul{
+    display: block;
+    background-color: #ffffff;
+}
+
+nav li ul li {
+    float: none;
+    margin-bottom: .4rem;
+}
+
+/* a:hover, a:active {
+    color: #1b84da;
+} */
