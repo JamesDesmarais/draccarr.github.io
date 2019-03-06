@@ -15,7 +15,6 @@ html {
 }
 
 body {
-    max-width: 1920px;
     min-width: 1024px;
     min-height: 900px;
     font: 16px/1.5 arial, sans-serif;
@@ -103,6 +102,10 @@ nav li:hover ul{
 nav li ul li {
     float: none;
     margin-bottom: .4rem;
+}
+
+footer nav li{
+    width: 33.333333334%;
 }
 
 /* a:hover, a:active {
