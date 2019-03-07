@@ -4,12 +4,13 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Draccarr | Contact Page</title>
+    <title>Draccarr | Blog Page</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main-styles.css">
     <!-- Javascript plugins (top priority) -->
     <script src="./scripts/modernizr-custom.js"></script>
 </head>
+
 <body>
     <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -30,27 +31,18 @@
             </ul>
         </nav>
     </header>
+
     <main>
-        <form>
-            <fieldset>
-                <ul>
-                    <li><label for="name" id="lbl-name">Name:</label></li>
-                    <li><input type="text" id="name" placeholder="name..." required></li>
-                    <li><label for="email" id="lbl-email">Email</label></li>
-                    <li><input type="email" id="email" placeholder="email..." required></li>
-                    <li><label for="message" id="lbl-message">Message:</label></li>
-                    <li><textarea id="message" placeholder="message..." required></textarea></li>
-                    <li><input type="submit" id="submit" name="submit" value="Submit"></li>
-                    <li><input type="reset" id="reset" name="reset" value="Clear"></li>
-                </ul>
-            </fieldset>
-        </form>
+        
     </main>
+
     <footer>
-    
+
     </footer>
-    
+
     <!-- Javascript plugins (bottom priority) -->
     <script src="./scripts/jquery-3.3.1.min.js"></script>
+    <script>$(function () { $("main").load("blog-content.html"); });</script>
     <script>$(function () { $("footer").load("footer.html"); });</script>
+
 </body>

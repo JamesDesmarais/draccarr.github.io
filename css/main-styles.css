@@ -46,11 +46,6 @@ main {
     background-color: #fff;
     padding: 20px;
 }
-footer{
-    width: 100%;
-    height: 300px;
-    background-color: #141414;
-}
 
 main h2 {
     font-weight: bold;
@@ -59,9 +54,22 @@ main section {
     margin-bottom: 20px;
 }
 
+footer{
+    width: 100%;
+    height: 300px;
+    background-color: #141414;
+}
+
 img {
     width: 100%;
     height: auto;
+}
+
+main img:nth-of-type(1){
+    margin-bottom: 2rem;
+}
+article h2 {
+    font-weight: bold;
 }
 
 /*--- Form Styles ---*/
@@ -84,7 +92,6 @@ input,textarea{
 textarea {
     resize: none;
 }
-
 header form {
     position: relative;
     width: 100%;
@@ -121,11 +128,11 @@ header div {
 
 header nav {
     position: fixed;
-    width: 100%;
+    width: 25%;
 }
 
 nav ul {
-    width: 25%;
+    width: 100%;
     background-color: #14141457;
 }
 nav ul li a{
