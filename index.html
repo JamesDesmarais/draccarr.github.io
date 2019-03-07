@@ -7,6 +7,7 @@
     <title>Draccarr | Landing Page</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main-styles.css">
+    <!-- Javascript plugins (top priority) -->
     <script src="./scripts/modernizr-custom.js"></script>
 </head>
 
@@ -120,16 +121,11 @@
     </main>
 
     <footer>
-        <nav>
-            <ul class="clearfix">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Jobs</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <!-- Images from: https://www.pexels.com/search/forest/ -->
+        
     </footer>
-
-    <!-- Javascript plugins -->
+    
+    <!-- Javascript plugins (bottom priority) -->
     <script src="./scripts/jquery-3.3.1.min.js"></script>
+    <script>$(function () { $("footer").load("footer.html"); });</script>
+    
 </body>
