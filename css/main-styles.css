@@ -26,6 +26,19 @@ header {
     height: 50px;
     background-color: #141414;
 }
+
+h1{
+    position: absolute;
+    height: 50px;
+    left: 25%;
+    top: 0;
+    z-index: 100;
+}
+h1 img {
+    height: 50px;
+    width: auto;
+}
+
 main {
     min-height: 900px;
     width: 50%;
@@ -72,6 +85,22 @@ textarea {
     resize: none;
 }
 
+header form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+header form input {
+    position: absolute;
+    width: 20rem;
+    border-radius: 2rem;
+    right: 25%;
+    padding-left: 10px;
+    z-index: 100;
+}
+
 
 /*--- Navigational behaviours --- */
 a {
@@ -83,54 +112,44 @@ a:link, a:visited {
     color: #fff;
 }
 
-nav li a {
-    align-items: center;
-    justify-content: center;
+header div {
+	margin-top: 10px;
+	height: 50px;
+	width: 100%;
+	background-color: #292f49;
 }
 
-nav {
-    width: 50%;
-    height: 70%;
-    margin: 0 auto;
+header nav {
+    position: fixed;
+    /* margin-top: 50px; */
+    width: 100%;
 }
 
 nav ul {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
+    width: 25%;
+    background-color: #14141457;
 }
-  
-nav li {
-    position: relative;
-    display: flex;
-    width: 16.66666666666667%;
-    height: 100%;
-    background-color: #0a5296;
-    font: 20px/1.5 arial, sans-serif;
-    align-items: center;
-    justify-content: center;
+nav ul li a{
+	color: #f2eddb;
+    padding: 15px 0%;
+    padding-left: 100px;
+    width: 100%;
 }
-
-nav li:hover{
-    /* display: block; */
-    background-color: #1466b3;
+nav li:nth-of-type(1):hover{
+	background-color: #b81b1b;
 }
-
-nav li ul{
-    position: absolute;
-    display: none;
+nav li:nth-of-type(2):hover{
+	background-color: #55b81b;
 }
-
-nav li:hover ul{
-    display: block;
-    background-color: #ffffff;
+nav li:nth-of-type(3):hover{
+	background-color: #1b93b8;
 }
-
-nav li ul li {
-    float: none;
-    margin-bottom: .4rem;
+nav li:nth-of-type(4):hover{
+	background-color: #5f1bb8;
 }
-
-footer nav li{
-    width: 33.333333334%;
+nav li:nth-of-type(5):hover{
+	background-color: #b85a1b;
+}
+nav li:nth-of-type(6):hover{
+	background-color: #1baeb8;
 }
