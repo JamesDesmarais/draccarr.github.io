@@ -22,6 +22,7 @@ body {
 
 /*--- Authors Styles --- */
 header {
+    position: relative;
     width: 100%;
     height: 5rem;
     background-color: #141414;
