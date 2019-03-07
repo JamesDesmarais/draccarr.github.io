@@ -25,6 +25,7 @@ header {
     width: 100%;
     height: 5rem;
     background-color: #141414;
+    /* box-shadow: 0 20px 100px 20px #0ca5c0; */
 }
 
 h1{
@@ -49,6 +50,7 @@ main {
 
 main h2 {
     font-weight: bold;
+    padding-bottom: 0.5rem;
 }
 main section {
     margin-bottom: 2rem;
@@ -68,8 +70,16 @@ img {
 main img:nth-of-type(1){
     margin-bottom: 2rem;
 }
+article {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #141414;
+}
 article h2 {
     font-weight: bold;
+}
+article p {
+    text-indent: 2rem;
+    padding-bottom: 1rem;
 }
 
 .gallery-container {
@@ -99,6 +109,10 @@ article h2 {
 .gallery-container ul li img {
     width: 100%;
     height: auto;
+}
+
+b{
+    font-weight: 900;
 }
 
 /*--- Form Styles ---*/
@@ -136,6 +150,15 @@ header form input {
     padding-left: 1rem;
     z-index: 100;
 }
+.left-background{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    width: 25%;
+    z-index:-1; 
+    /* background-color: #0f0; */
+}
 
 
 /*--- Navigational behaviours --- */
@@ -158,11 +181,16 @@ header div {
 header nav {
     position: fixed;
     width: 25%;
+    margin-top: 10rem;
+    z-index: 100;
 }
 
 nav ul {
     width: 100%;
     background-color: #14141457;
+}
+nav ul li {
+    box-shadow: 0 10px 6px -6px #141414;
 }
 nav ul li a{
 	color: #f2eddb;
