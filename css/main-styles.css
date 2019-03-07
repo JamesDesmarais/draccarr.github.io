@@ -15,48 +15,48 @@ html {
 }
 
 body {
-    min-width: 1024px;
-    min-height: 900px;
-    font: 16px/1.5 arial, sans-serif;
+    min-width: 102.4rem;
+    min-height: 90rem;
+    font: 1.6rem/1.5 arial, sans-serif;
 }
 
 /*--- Authors Styles --- */
 header {
     width: 100%;
-    height: 50px;
+    height: 5rem;
     background-color: #141414;
 }
 
 h1{
     position: absolute;
-    height: 50px;
+    height: 5rem;
     left: 25%;
     top: 0;
     z-index: 100;
 }
 h1 img {
-    height: 50px;
+    height: 5rem;
     width: auto;
 }
 
 main {
-    min-height: 900px;
+    min-height: 90rem;
     width: 50%;
     margin: 0 auto;
     background-color: #fff;
-    padding: 20px;
+    padding: 2rem;
 }
 
 main h2 {
     font-weight: bold;
 }
 main section {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 footer{
     width: 100%;
-    height: 300px;
+    height: 30rem;
     background-color: #141414;
 }
 
@@ -70,6 +70,35 @@ main img:nth-of-type(1){
 }
 article h2 {
     font-weight: bold;
+}
+
+.gallery-container {
+    position: relative;
+    width: 100%;
+    background-color: #141414;
+}
+.gallery-container h2 {
+    font-size: 4rem;
+    text-align: center;
+    color: #fff;
+}
+.gallery-container ul {
+    width: 100%;
+    min-height: 90rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+.gallery-container ul li{
+    display: flex;
+    height: auto;
+    width: 30%;
+    align-items: center;
+}
+.gallery-container ul li img {
+    width: 100%;
+    height: auto;
 }
 
 /*--- Form Styles ---*/
@@ -104,7 +133,7 @@ header form input {
     width: 20rem;
     border-radius: 2rem;
     right: 25%;
-    padding-left: 10px;
+    padding-left: 1rem;
     z-index: 100;
 }
 
@@ -120,8 +149,8 @@ a:link, a:visited {
 }
 
 header div {
-	margin-top: 10px;
-	height: 50px;
+	margin-top: 1rem;
+	height: 5rem;
 	width: 100%;
 	background-color: #292f49;
 }
@@ -137,8 +166,8 @@ nav ul {
 }
 nav ul li a{
 	color: #f2eddb;
-    padding: 15px 0%;
-    padding-left: 100px;
+    padding: 1.5rem 0%;
+    padding-left: 10rem;
     width: 100%;
 }
 nav li:nth-of-type(1):hover{
