@@ -51,6 +51,8 @@ h1 a {
 h1 a img {
     height: 5rem;
     width: auto;
+    /* Blends the alt text into the background of the header. */
+    color: #141414;
 }
 h1 span {
     padding-left: 1rem;
@@ -157,11 +159,19 @@ form ul {
 form ul li {
     width: 100%;
 }
-input,textarea{
+input, textarea{
+    padding-left: 1rem;
+    font-family: arial, sans-serif;
+    font-size: 16px;
+}
+main input, main textarea{
     width: 100%;
+    border-radius: .5rem;
+    min-height: 3rem;
 }
 textarea {
     resize: none;
+    height: 20rem;
 }
 header form {
     position: relative;
@@ -187,18 +197,34 @@ header form input {
     z-index:-1; 
     /* background-color: #0f0; */
 }
+input[type="submit"]{
+    background-color: #24962e;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+}
+input[type="submit"]:hover, input[type="submit"]:active{
+    background-color: #32b33d;
+    color: #fff;
+}
+input[type="reset"]{
+    background-color: #962424;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+}
+input[type="reset"]:hover, input[type="reset"]:active{
+    background-color: #b33232;
+    color: #fff;
+}
+.contact-form li:last-of-type, .contact-form li:nth-last-of-type(2){
+    width: 50%;
+    float: left;
+}
 
 
 /*--- Navigational behaviours --- */
 a {
     display: inline-block;
     text-decoration: none;
-}
-h1 a img, h1 a:focus img, h1 a:active img{
-    /* outline: none; */
-}
-img {
-    border : 0;
 }
 
 a:link, a:visited {
@@ -214,12 +240,14 @@ header div {
 
 header nav {
     position: fixed;
+    min-width: 25.6rem;
     width: 25%;
     margin-top: 10rem;
     z-index: 100;
 }
 
 nav ul {
+    position: relative;
     width: 100%;
     background-color: #14141457;
 }
