@@ -9,27 +9,14 @@
     <link rel="stylesheet" href="./css/main-styles.css">
     <!-- Javascript plugins (top priority) -->
     <script src="./scripts/modernizr-custom.js"></script>
+    <script src="./scripts/jquery-3.3.1.min.js"></script>
+    <script>$(function () { $("header").load("header.html"); });</script>
 </head>
 <body>
     <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
-    <header>
-        <h1><a href="./index.html"><img src="./images/draccarr-logo.png" alt="logo"></a></h1>
-        <form>
-            <input type="text" placeholder="Search...">
-        </form>
-        <nav>
-            <ul class="clearfix">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./gallery.html">Gallery</a></li>
-                <li><a href="#">Current Projects</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header></header>
     <main>
         <h2>* Still in development, not hooked up yet.</h2>
         <form>
@@ -47,11 +34,8 @@
             </fieldset>
         </form>
     </main>
-    <footer>
-    
-    </footer>
+    <footer></footer>
     
     <!-- Javascript plugins (bottom priority) -->
-    <script src="./scripts/jquery-3.3.1.min.js"></script>
     <script>$(function () { $("footer").load("footer.html"); });</script>
 </body>

@@ -24,21 +24,36 @@ body {
 header {
     position: relative;
     width: 100%;
-    height: 5rem;
+    height: 5.8rem;
     background-color: #141414;
     /* box-shadow: 0 20px 100px 20px #0ca5c0; */
 }
 
 h1{
     position: absolute;
-    height: 5rem;
+    display: inline-block;
+    height: 100%;
     left: 25%;
-    top: 0;
+    top: 0%;
     z-index: 100;
+    display: flex;
+    align-items: center;
+    font: 3rem/2.0 garamond, arial, sans-serif;
 }
-h1 img {
+h1 a {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+h1 a img {
     height: 5rem;
     width: auto;
+}
+h1 span {
+    padding-left: 1rem;
 }
 
 main {
@@ -77,10 +92,23 @@ article {
 }
 article h2 {
     font-weight: bold;
+    padding-left: 2rem;
 }
 article p {
     text-indent: 2rem;
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
+    font: 1.6rem/2.0 arial, sans-serif;
+}
+article img {
+    /* position: absolute; */
+    /* display: inline-block; */
+    width: 5rem;
+    height: auto;
+    margin-bottom: 0;
+}
+.box {
+   display: flex;
+   align-items:center;
 }
 
 .gallery-container {
@@ -111,7 +139,6 @@ article p {
     width: 100%;
     height: auto;
 }
-
 b{
     font-weight: 900;
 }
