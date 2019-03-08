@@ -167,6 +167,12 @@ a {
     display: inline-block;
     text-decoration: none;
 }
+h1 a img, h1 a:focus img, h1 a:active img{
+    /* outline: none; */
+}
+img {
+    border : 0;
+}
 
 a:link, a:visited {
     color: #fff;
