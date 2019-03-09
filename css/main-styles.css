@@ -199,7 +199,7 @@ header form input {
     border-radius: 2rem;
     right: 25%;
     padding-left: 1rem;
-    z-index: 100;
+    z-index: 99;
 }
 .left-background{
     position: fixed;
@@ -231,6 +231,20 @@ input[type="reset"]:hover, input[type="reset"]:active{
 .contact-form li:last-of-type, .contact-form li:nth-last-of-type(2){
     width: 50%;
     float: left;
+}
+header form button{
+    position: absolute;
+    right: 25%;    
+    font-size: 1.8rem;
+    color: #7a7a7e;
+    width: fit-content;
+    height: fit-content;
+    background-color: #ffffff00;
+    border-color: #ffffff00;
+    z-index: 100;
+}
+header form button:hover, header form button:active{
+    color: #292f49;
 }
 
 
