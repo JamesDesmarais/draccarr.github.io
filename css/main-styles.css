@@ -66,11 +66,14 @@ main {
     padding: 2rem;
 }
 
-main h2 {
+main h2, main h3 {
     font-weight: bold;
     padding-bottom: 0.5rem;
 }
 main section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
     margin-bottom: 2rem;
 }
 
@@ -143,6 +146,16 @@ article img {
 }
 b{
     font-weight: 900;
+}
+.large-text{
+    font-size: 4rem;
+}
+.half-horizontal-size{
+    width: 50%;
+    height: auto;
+}
+.horizontal-center{
+    margin-left: 25%;
 }
 
 /*--- Form Styles ---*/
