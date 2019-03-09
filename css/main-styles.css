@@ -212,19 +212,21 @@ header form input {
 }
 input[type="submit"]{
     background-color: #24962e;
+    border-width: 0;
     font-size: 2rem;
-    color: rgb(0, 0, 0);
+    color: #000;
 }
-input[type="submit"]:hover, input[type="submit"]:active{
+input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus{
     background-color: #32b33d;
     color: #fff;
 }
 input[type="reset"]{
     background-color: #962424;
+    border-width: 0;
     font-size: 2rem;
-    color: rgb(0, 0, 0);
+    color: #000;
 }
-input[type="reset"]:hover, input[type="reset"]:active{
+input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus{
     background-color: #b33232;
     color: #fff;
 }
