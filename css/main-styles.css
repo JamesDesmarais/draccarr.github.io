@@ -339,15 +339,6 @@ footer nav li:hover a {
    padding-bottom: 1.2rem;
 }
 
-.unstick-nav {
-    position: absolute !important;
-    width: 50% !important;
-    bottom: 0;
-    /* left: -50%; */
-    /* left: -50%; */
-    left: -50% !important;
-}
-
 #fancyNav {
     position: fixed;
     min-width: 25.6rem;
@@ -357,6 +348,9 @@ footer nav li:hover a {
     z-index: 100;
 }
 
-/* #fancyNav ul {
-
-} */
+#fancyNav.unstick-nav {
+    position: absolute;
+    width: 50%;
+    bottom: 0;
+    left: -50%;
+}
