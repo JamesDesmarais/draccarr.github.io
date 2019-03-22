@@ -160,7 +160,7 @@ article img {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .gallery-container ul li{
     display: flex;
