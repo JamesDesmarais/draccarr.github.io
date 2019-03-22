@@ -59,6 +59,7 @@ h1 span {
 }
 
 main {
+    position: relative;
     min-height: 90rem;
     width: 50%;
     margin: 0 auto;
@@ -76,11 +77,38 @@ main section {
     position: relative;
     margin-bottom: 2rem;
 }
+#mainNavigation{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 
 footer{
     width: 100%;
-    height: 30rem;
+    /* height: 30rem; */
+    height: 70rem;
     background-color: #141414;
+}
+footer nav {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+}
+footer nav ul {
+    width: 20%;
+    text-align: center;
+}
+
+footer nav ul li h2 {
+    margin-top: 2rem;
+    color: #fff;
+    font: 2.2rem/1 arial, sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+footer nav ul li a {
+    /* box-shadow: 0 10px 6px -6px #2e2c2c; */
 }
 
 img {
@@ -269,14 +297,6 @@ header div {
 	background-color: #292f49;
 }
 
-header nav {
-    position: fixed;
-    min-width: 25.6rem;
-    width: 25%;
-    margin-top: 10rem;
-    z-index: 100;
-}
-
 nav ul {
     position: relative;
     width: 100%;
@@ -288,24 +308,55 @@ nav ul li {
 nav ul li a{
 	color: #f2eddb;
     padding: 1.5rem 0%;
-    padding-left: 10rem;
     width: 100%;
 }
-nav li:nth-of-type(1):hover{
+nav.side-bar ul li a{
+    padding-left: 10rem;
+}
+nav.side-bar li:nth-of-type(1):hover a{
 	background-color: #b81b1b;
 }
-nav li:nth-of-type(2):hover{
+nav.side-bar li:nth-of-type(2):hover a{
 	background-color: #55b81b;
 }
-nav li:nth-of-type(3):hover{
+nav.side-bar li:nth-of-type(3):hover a{
 	background-color: #1b93b8;
 }
-nav li:nth-of-type(4):hover{
+nav.side-bar li:nth-of-type(4):hover a{
 	background-color: #5f1bb8;
 }
-nav li:nth-of-type(5):hover{
+nav.side-bar li:nth-of-type(5):hover a{
 	background-color: #b85a1b;
 }
-nav li:nth-of-type(6):hover{
+nav.side-bar li:nth-of-type(6):hover a{
 	background-color: #1baeb8;
 }
+footer nav li:hover a {
+    /* background-color: #2e2c2c; */
+    /* border-bottom: .2rem solid #2e2c2c; */
+   font-size: 18px;
+   color: #cacaca;
+   padding-bottom: 1.2rem;
+}
+
+.unstick-nav {
+    position: absolute !important;
+    width: 50% !important;
+    bottom: 0;
+    /* left: -50%; */
+    /* left: -50%; */
+    left: -50% !important;
+}
+
+#fancyNav {
+    position: fixed;
+    min-width: 25.6rem;
+    width: 25%;
+    margin-top: 10rem;
+    left: 0%;
+    z-index: 100;
+}
+
+/* #fancyNav ul {
+
+} */
