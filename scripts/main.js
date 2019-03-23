@@ -22,11 +22,6 @@ window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
     const navScrollHeight = document.getElementById('fancyNav').scrollHeight - window.innerHeight + 170;
     const footScrollHeight = document.getElementsByTagName('footer')[0].scrollHeight;
-    // console.log(scrollable);
-    console.log("Nav Scroll Height: " + navScrollHeight);
-    console.log("Footer Scroll height: " + footScrollHeight);
-    console.log("Current Scroll Pos: " + scrolled);
-    console.log("Current Scrolled: " + scrolled + " < " + (scrollable - footScrollHeight - navScrollHeight));
     if (Math.ceil(scrolled) >= scrollable - footScrollHeight - navScrollHeight){
         fancyNav.addClass("unstick-nav");
     } else {
