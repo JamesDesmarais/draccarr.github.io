@@ -1,4 +1,8 @@
 
+//This is for populating the 'header' with the content of the header html file.
+$(function () {
+    $("header").load("header.html"); 
+});
 
 //This is for populating the 'mainNavigation' with the content of the navigation html file.
 $(function () { 
