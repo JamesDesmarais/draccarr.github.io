@@ -1,13 +1,18 @@
 
+
+$(window).bind("load", function () {
+    $("#fancyNav").load("main-nav.html"); 
+});
+
 //This is for populating the 'header' with the content of the header html file.
 $(function () {
     $("header").load("header.html"); 
 });
 
 //This is for populating the 'mainNavigation' with the content of the navigation html file.
-$(function () { 
-    $("#fancyNav").load("main-nav.html"); 
-});
+// $(function () { 
+//     $("#fancyNav").load("main-nav.html"); 
+// });
 
 // This is for detaching the 'mainNavigation' when it reaches the footer.
 var fancyNav = $("#fancyNav");
