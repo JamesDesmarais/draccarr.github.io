@@ -128,9 +128,10 @@ article h2 {
     padding-left: 2rem;
 }
 article p {
-    text-indent: 2rem;
-    padding-bottom: 3rem;
-    font: 1.6rem/2.0 arial, sans-serif;
+    /* text-indent: 2rem; */
+    /* padding-bottom: 3rem; */
+    padding-bottom: 2rem;
+    font: 1.6rem/1.5 arial, sans-serif;
 }
 article img {
     /* position: absolute; */
@@ -174,6 +175,9 @@ article img {
 }
 b{
     font-weight: 900;
+}
+i {
+    font-style: italic;
 }
 .large-text{
     font-size: 4rem;
