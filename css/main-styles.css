@@ -15,8 +15,8 @@ html {
 }
 
 body {
-    min-width: 102.4rem;
-    min-height: 90rem;
+    min-width: 1024px;
+    min-height: 900px;
     font: 1.6rem/1.5 arial, sans-serif;
 }
 
@@ -345,7 +345,7 @@ footer nav li:hover a {
 
 #fancyNav {
     position: fixed;
-    min-width: 25.6rem;
+    min-width: 256px;
     width: 25%;
     margin-top: 10rem;
     left: 0%;
@@ -358,3 +358,40 @@ footer nav li:hover a {
     bottom: 0;
     left: -50%;
 }
+
+/* 
+@media only screen and (max-width: 1040px) {
+    body {
+        min-width: 0px;
+        width: 100%;
+    }
+    header, main, footer {
+        width: 100%;
+    }
+    header h1 {
+        left: 0;
+    }
+    header form input, header form button{
+        right: 0;
+    }
+    #fancyNav {
+        width: 100%;
+        top: 0;
+        margin-top: 5.8rem;;
+        flex-direction: row;
+    }
+    #fancyNav ul {
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #fancyNav ul li a{
+        padding: 0;
+        margin: 0;
+    } 
+    footer {
+        height: 30rem;
+    }
+}
+ */
