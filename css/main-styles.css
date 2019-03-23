@@ -107,10 +107,6 @@ footer nav ul li h2 {
     margin-bottom: 1.5rem;
 }
 
-footer nav ul li a {
-    /* box-shadow: 0 10px 6px -6px #2e2c2c; */
-}
-
 img {
     width: 100%;
     height: auto;
@@ -292,6 +288,19 @@ a {
 
 a:link, a:visited {
     color: #fff;
+}
+
+main section a:link, main section a:visited {
+    padding: 1rem;
+    background-color: #4f8295;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+}
+
+main section a:hover {
+    padding: 1rem;
+    background-color: #78c2dd;
+    border-radius: .5rem;
 }
 
 header div {
