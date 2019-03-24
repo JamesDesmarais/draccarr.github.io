@@ -294,6 +294,23 @@ header form button:hover, header form button:active{
 header form #searchBarResultList.search-bar-result-list{
     display: block;
 }
+footer nav + ul {
+    display: flex;
+    width: 10%;
+    margin: 0 auto;
+    font-size: 5rem;
+    color: #fff;
+    flex-direction: row;
+}
+footer nav + ul li a{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.fa-discord:hover {
+    position: relative;
+    color: #7289DA;
+}
+
 
 /*--- Navigational behaviours --- */
 a {
