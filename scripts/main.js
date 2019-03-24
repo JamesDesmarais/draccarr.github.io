@@ -1,8 +1,6 @@
 
-//This is for populating the 'header' with the content of the header html file.
-// $(function () {
-//     $("header").load("header.html"); 
-// });
+
+
 
 //This is for populating the 'mainNavigation' with the content of the navigation html file.
 $(function () { 
@@ -11,15 +9,24 @@ $(function () {
 });
 
 $(document).ready(function () {
-    // $("header").load("header.html"); 
-    // $("#fancyNav").load("main-nav.html");
-
     if (window.location.hash) {
         $('html, body').animate({
             scrollTop: $(window.location.hash).offset().top - 20
         }, 500);
     }
 });
+
+var toggle = false;
+searchBarFocus = function() {
+    var searchBarResultList = $("#searchBarResultList");
+    if (!toggle){
+        searchBarResultList.addClass("search-bar-result-list");
+        toggle = true;
+    } else {
+        searchBarResultList.removeClass("search-bar-result-list");
+        toggle = false;
+    }
+}
 
 
 // This is for detaching the 'mainNavigation' when it reaches the footer.

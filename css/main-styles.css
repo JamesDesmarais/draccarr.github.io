@@ -221,7 +221,7 @@ header form {
     display: flex;
     align-items: center;
 }
-header form input {
+header form input, header form ul {
     position: absolute;
     width: 20rem;
     border-radius: 2rem;
@@ -229,6 +229,19 @@ header form input {
     padding-left: 1rem;
     outline: none;
     z-index: 99;
+}
+header form ul {
+    display: none;
+    width: 18rem;
+    height: 300px;
+    top: 4rem;
+    margin-right: 1rem;
+    z-index: 98;
+    background-color: #fff;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    /* box-shadow: 0 10px 6px -6px #141414; */
+    box-shadow: 2px 5px 5px #141414;
 }
 .left-background{
     position: fixed;
@@ -278,7 +291,9 @@ header form button{
 header form button:hover, header form button:active{
     color: #292f49;
 }
-
+header form #searchBarResultList.search-bar-result-list{
+    display: block;
+}
 
 /*--- Navigational behaviours --- */
 a {

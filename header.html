@@ -1,6 +1,18 @@
 <!--[Note: This technique should only be used for parts of the page that do not appear on the opening screen.]-->
 <h1><a href="./index.html"><img src="./images/draccarr-logo.png" alt="logo"><span>Draccarr</span></a></h1>
 <form>
-    <input type="text" placeholder="Search..." onfocus="placeholder = ' '" onblur="placeholder = 'Search...'">
-    <button type="submit"><i class="fas fa-search"></i></button>
+    <input type="text" id="searchBar" placeholder="Search..." 
+                onfocus="placeholder = ' '; searchBarFocus();" 
+                onblur="placeholder = 'Search...'; searchBarFocus();">
+    <ul id="searchBarResultList">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <button type="submit">
+        <i class="fas fa-search"></i>
+    </button>
 </form>
