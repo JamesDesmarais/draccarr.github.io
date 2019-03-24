@@ -15,12 +15,17 @@ html {
 }
 
 body {
+    /* width: 102.4rem; */
     min-width: 1024px;
+     max-width: 1903px;
     min-height: 900px;
     font: 1.6rem/1.5 arial, sans-serif;
+    margin: 0 auto;
 }
 
-/*--- Authors Styles --- */
+/*************************************
+  --- Authors Styles 
+ *************************************/
 header {
     position: relative;
     width: 100%;
@@ -60,15 +65,17 @@ h1 span {
 
 main {
     position: relative;
-    min-height: 90rem;
+    /* max-width: 951.5px; */
     width: 50%;
+    min-height: 90rem;
+    /* width: 951.5px; */
     margin: 0 auto;
     background-color: #fff;
     padding: 2rem;
 }
 
 main h2, main h3 {
-    font-weight: bold;
+    /* font-weight: bold; */
     padding-bottom: 0.5rem;
 }
 main section {
@@ -116,7 +123,9 @@ main img:nth-of-type(1){
     margin-bottom: 2rem;
 }
 article {
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     border-bottom: 1px solid #141414;
 }
 article h2 {
@@ -124,14 +133,10 @@ article h2 {
     padding-left: 2rem;
 }
 article p {
-    /* text-indent: 2rem; */
-    /* padding-bottom: 3rem; */
     padding-bottom: 2rem;
-    font: 1.6rem/1.5 arial, sans-serif;
+    font: 1.6rem/1.5 'Raleway', arial, sans-serif;
 }
 article img {
-    /* position: absolute; */
-    /* display: inline-block; */
     width: 5rem;
     height: auto;
     margin-bottom: 0;
@@ -185,8 +190,39 @@ i {
 .horizontal-center{
     margin-left: 25%;
 }
+.special-message {
+    font: 2rem/1.5 'Raleway', arial, sans-serif;
+    text-align: center;
+    color: #000;
+    padding: 3rem;
+    border-top: 0.1rem solid #292f49;
+}
+main li {
+    font-family: 'Raleway', arial, sans-serif;
+}
 
-/*--- Form Styles ---*/
+#news-articles article:first-of-type{
+    border-top: 1px solid #ccc;
+}
+#news-articles article{
+    position: relative;
+    width: 40%;
+    height: 10rem;
+    /* background-color: #57575c; */
+    /* border-top: 1px solid #ccc; */
+    border-bottom: 1px solid #ccc;
+}
+#news-articles article h3 a{
+    font-size: 2rem;
+}
+#news-articles article ul li:last-child{
+    position: absolute;
+    right: 3%;
+}
+
+/*************************************
+  --- Form Styles 
+ *************************************/
 form {
     width: 100%;
 }
@@ -306,13 +342,14 @@ footer nav + ul li a{
     margin-left: 1rem;
     margin-right: 1rem;
 }
+
+/*************************************
+  --- Navigational behaviours
+ *************************************/
 .fa-discord:hover {
     position: relative;
     color: #7289DA;
 }
-
-
-/*--- Navigational behaviours --- */
 a {
     display: inline-block;
     text-decoration: none;
@@ -323,15 +360,15 @@ a:link, a:visited {
 }
 
 main section a:link, main section a:visited {
-    padding: 1rem;
-    background-color: #4f8295;
+    /* padding: 1rem; */
+    color: #4f8295;
     border-radius: .5rem;
     font-size: 1.2rem;
 }
 
 main section a:hover {
-    padding: 1rem;
-    background-color: #78c2dd;
+    /* padding: 1rem; */
+    color: #78c2dd;
     border-radius: .5rem;
 }
 
@@ -387,9 +424,10 @@ footer nav li:hover a {
 #fancyNav {
     position: fixed;
     min-width: 256px;
+    max-width: 475.75px;
     width: 25%;
     margin-top: 10rem;
-    left: 0%;
+    right: 75%;
     z-index: 100;
 }
 
