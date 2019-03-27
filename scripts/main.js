@@ -8,13 +8,10 @@ $(function () {
     $("#fancyNav").load("main-nav.html");
 });
 
-$(document).ready(function () {
-    if (window.location.hash) {
-        $('html, body').animate({
-            scrollTop: $(window.location.hash).offset().top - 20
-        }, 0);
-    }
-});
+// $(document).ready(function () {
+//     if (window.location.hash) {
+//     }
+// });
 
 var toggle = false;
 searchBarFocus = function() {
@@ -43,7 +40,6 @@ searchBarFocus = function() {
 
 // This is for detaching the 'mainNavigation' when it reaches the footer.
 var fancyNav = $("#fancyNav");
-
 window.addEventListener('scroll', () => {
     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
     const scrolled = window.scrollY;
