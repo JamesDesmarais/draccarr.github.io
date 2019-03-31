@@ -200,16 +200,14 @@ i {
 main li {
     font-family: 'Raleway', arial, sans-serif;
 }
-
 #news-articles article:first-of-type{
     border-top: 1px solid #ccc;
 }
 #news-articles article{
     position: relative;
     width: 40%;
+    min-width: 364px;
     height: 10rem;
-    /* background-color: #57575c; */
-    /* border-top: 1px solid #ccc; */
     border-bottom: 1px solid #ccc;
 }
 #news-articles article h3 a{
