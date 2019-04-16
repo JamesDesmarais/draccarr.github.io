@@ -208,7 +208,9 @@ main li {
     position: relative;
     width: 40%;
     min-width: 364px;
-    height: 10rem;
+    /* height: 10rem; */
+    padding-top: 1rem;
+    padding-bottom: 3rem;
     border-bottom: 1px solid #ccc;
 }
 #news-articles article h3 a{
