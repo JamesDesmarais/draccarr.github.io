@@ -477,6 +477,14 @@ footer nav li:hover a {
     min-width: 0px;
 }
 
+.blog-post-navigation a {
+    color: #4f8295;
+    font-size: 3rem;
+}
+.blog-post-navigation a:hover {
+    color: #78c2dd;
+}
+
 
 /*************************************
   --- Media Queries
