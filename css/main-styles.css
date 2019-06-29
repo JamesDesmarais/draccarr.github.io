@@ -97,7 +97,7 @@ footer{
     height: 70rem;
     background-color: #141414;
 }
-footer nav {
+/* footer nav {
     display: flex;
     justify-content: space-between;
     width: 50%;
@@ -113,7 +113,7 @@ footer nav ul li h2 {
     color: #fff;
     font: 2.2rem/1 arial, sans-serif;
     margin-bottom: 1.5rem;
-}
+} */
 
 img {
     width: 100%;
@@ -311,15 +311,16 @@ header form ul {
     width: 25%;
     z-index:-1; 
 }
-input[type="submit"] {
-    width: 15%;
+footer input[type="submit"] {
+    display: inline-block;
+    text-align: center;
     background-color: #284b2b;
     border-width: 0;
     font-size: 1.5rem;
     color: #fff;
     cursor: pointer;
 }
-input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
+footer input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
     background-color: #32b33d;
     color: #fff;
 }
@@ -356,23 +357,35 @@ header form button:hover, header form button:active{
 header form #searchBarResultList.search-bar-result-list{
     display: block;
 }
-footer nav + ul {
+footer {
     display: flex;
-    width: 10%;
-    margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 25% 0 25%;
+}
+footer .social-media-icons {
+    display: flex;
+    width: 100%;
     font-size: 5rem;
     color: #fff;
     flex-direction: row;
+    justify-content: center;
 }
-footer nav + ul li a {
-    margin-left: 1rem;
-    margin-right: 1rem;
+footer .social-media-icons li a {
+    margin: 1rem;
 }
 footer label {
     color: #fff;
 }
 #Btn_submit {
     cursor: pointer;
+}
+footer form {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 footer form ul {
     margin-top: 3rem;
@@ -389,6 +402,12 @@ footer form ul li {
 .fa-discord:hover {
     position: relative;
     color: #7289DA;
+}
+.fa-twitter:hover {
+    color: #1da1f2;
+}
+.fa-linkedin:hover {
+    color: #2867b2;
 }
 a {
     display: inline-block;
@@ -451,13 +470,13 @@ nav.side-bar li:nth-of-type(5):hover a{
 nav.side-bar li:nth-of-type(6):hover a{
 	background-color: #1baeb8;
 }
-footer nav li:hover a {
-    /* background-color: #2e2c2c; */
-    /* border-bottom: .2rem solid #2e2c2c; */
-   font-size: 18px;
+/* footer nav li:hover a { */
+    /* background-color: #2e2c2c; Leave out*/
+    /* border-bottom: .2rem solid #2e2c2c; Leave out*/
+   /* font-size: 18px;
    color: #cacaca;
    padding-bottom: 1.2rem;
-}
+} */
 
 #fancyNav {
     position: fixed;
