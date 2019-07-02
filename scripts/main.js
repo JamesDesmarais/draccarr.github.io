@@ -65,19 +65,65 @@ var allPosts;
 var currentPost;
 $.get("https://draccarr.github.io/blog-content.html", function (_content) {
     postsDoc = new DOMParser().parseFromString(_content, "text/html");
+
+    $("#BlogPost").load("blog-content.html " + window.location.hash);
+
+    // ReplacePrevious();
+    ReplaceAnchors();
+
+
 });
 
-// var a;
-// $(function () {
+var previousPostAnchor;
+var nextPostAnchor;
+var loadedHTML;
+ReplaceAnchors=function(){
+    if (document.location.hash.length > 0) {
+
+        // loadedHTML = $("#BlogPost").load("blog-content.html " + window.location.hash);
+        // console.log(loadedHTML);
+
+        console.log(location.hash);
+
+        console.log("Hello World!");
+        previousPostAnchor = document.getElementById("PreviousPost");
+        nextPostAnchor = document.getElementById("NextPost");
+        if (previousPostAnchor){
+            allPosts = postsDoc.getElementsByTagName("article");
+            for (var i=0; i< allPosts.length; i++){
+                // console.log("#" + allPosts[i].id + " --- " + location.hash);
+                if ("#" + allPosts[i].id == location.hash){
+                    if (allPosts.length > i + 1) {
+                        previousPostAnchor.outerHTML = "<a id=\"PreviousPost\" title=\"Previous\" href=\"" + "?" + i + "=./blog-post.html#" + allPosts[i + 1].id + "\"><i class=\"fas fa-arrow-left\"></i></a>";
+                    } else {
+                        previousPostAnchor.outerHTML = "<a id=\"PreviousPost\"></a>";
+                    }
+                    if (i-1 >= 0) {
+                        nextPostAnchor.outerHTML = "<a id=\"NextPost\" title=\"Next\" href=\"" + "?" + i + "=./blog-post.html#" + allPosts[i - 1].id + "\"><i class=\"fas fa-arrow-right\"></i></a>";
+                    } else {
+                        nextPostAnchor.outerHTML = "<a id=\"NextPost\"></a>";
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// ReloadPage = function() {
+//     location.reload(true)
+// }
+
+// var previousPost;
+// ReplacePrevious = function () {
 //     if (document.location.hash.length > 0) {
 
 //         $.get("https://draccarr.github.io/blog-content.html", function (_content) {
 //             postsDoc = new DOMParser().parseFromString(_content, "text/html");
 //         });
 
-//         a = document.getElementById("PreviousPost");
-//         if (a) {
-        
+//         previousPost = document.getElementById("PreviousPost");
+//         if (previousPost) {   
 //             allPosts = postsDoc.getElementsByTagName("article");
 //             for (var i = 0; i < allPosts.length; i++) {
 //                 if (allPosts[i].id == document.body.getElementsByTagName("article")[0].id && allPosts.length > i + 1) {
@@ -88,12 +134,12 @@ $.get("https://draccarr.github.io/blog-content.html", function (_content) {
 //             // window.location.replace("https://draccarr.github.io/blog-post.html#" + currentPost.id);
 //             // location.reload(true);
         
-//             a.replaceWith("<a id=\"PreviousPost\" title=\"Previous\" href=\"" + "./blog-post.html# " + currentPost.id + "\"><i class=\"fas fa - arrow - left\"></i></a>");
+//             previousPost.replaceWith("<a id=\"PreviousPost\" title=\"Previous\" href=\"" + "./blog-post.html# " + currentPost.id + "\"><i class=\"fas fa - arrow - left\"></i></a>");
         
 //         }
 //     }
 
-// });
+// }
 
 
 
