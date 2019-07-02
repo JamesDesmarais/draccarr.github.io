@@ -26,16 +26,16 @@
             <img src="./images/blog-by-pixabay.jpeg" alt="Blog Image By Pixabay">
             <script src="./scripts/main.js"></script>
             <div id="BlogPost"></div>
-            <div class="blog-post-navigation">
-                <a title="Previous" onclick="PreviousPost();"><i class="fas fa-arrow-left"></i></a>
-                <a title="Next" onclick="NextPost();"><i class="fas fa-arrow-right"></i></a>
+            <div id="BlogPostNav" class="blog-post-navigation">
+                <a id="PreviousPost" title="Previous" onclick="PreviousPost()"><i class="fas fa-arrow-left"></i></a>
+                <a id="NextPost" title="Next" onclick="NextPost();"><i class="fas fa-arrow-right"></i></a>
             </div>
     </main>
     <footer></footer>
 
     <!-- Javascript plugins (bottom priority) -->
-    <script>$(window.onload = function () { $("#BlogPost").load("blog-content.html " + window.location.hash); });</script>
-    <script>$(window.onload = function () { $("footer").load("footer.html"); });</script>
+    <script>$(function () { $("#BlogPost").load("blog-content.html " + window.location.hash); });</script>
+    <script>$(function () { $("footer").load("footer.html"); });</script>
 
 
 </body>

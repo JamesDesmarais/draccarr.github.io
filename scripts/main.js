@@ -57,22 +57,49 @@ window.addEventListener('scroll', () => {
 
 
 
-// $.get("https://draccarr.github.io/blog.html", function (_page) {
-//     // my_var contains whatever that request returned
-//     allPosts = _page.body.getElementsByTagName("article");
-// });
+
+
 
 var postsDoc;
-// ToDo: Get all the elements from the blog, find the current post i'm on, store the next and previous posts id's.
-var allPosts; //= load("blog-content.html").body.getElementsByTagName("article");
+var allPosts;
 var currentPost;
-
-
-
 $.get("https://draccarr.github.io/blog-content.html", function (_content) {
     postsDoc = new DOMParser().parseFromString(_content, "text/html");
 });
 
+// var a;
+// $(function () {
+//     if (document.location.hash.length > 0) {
+
+//         $.get("https://draccarr.github.io/blog-content.html", function (_content) {
+//             postsDoc = new DOMParser().parseFromString(_content, "text/html");
+//         });
+
+//         a = document.getElementById("PreviousPost");
+//         if (a) {
+        
+//             allPosts = postsDoc.getElementsByTagName("article");
+//             for (var i = 0; i < allPosts.length; i++) {
+//                 if (allPosts[i].id == document.body.getElementsByTagName("article")[0].id && allPosts.length > i + 1) {
+//                     currentPost = allPosts[i + 1];
+//                 }
+//             }
+//             // console.log(currentPost.id);
+//             // window.location.replace("https://draccarr.github.io/blog-post.html#" + currentPost.id);
+//             // location.reload(true);
+        
+//             a.replaceWith("<a id=\"PreviousPost\" title=\"Previous\" href=\"" + "./blog-post.html# " + currentPost.id + "\"><i class=\"fas fa - arrow - left\"></i></a>");
+        
+//         }
+//     }
+
+// });
+
+
+
+
+
+// Open the next blog post
 NextPost = function () {
     allPosts = postsDoc.getElementsByTagName("article");
     for (var i = 0; i < allPosts.length; i++) {
@@ -85,6 +112,7 @@ NextPost = function () {
     location.reload(true);
 }
 
+// Open the previous blog post
 PreviousPost = function() {
     allPosts = postsDoc.getElementsByTagName("article");
     for (var i = 0; i < allPosts.length; i++) {
@@ -96,5 +124,3 @@ PreviousPost = function() {
     window.location.replace("https://draccarr.github.io/blog-post.html#" + currentPost.id);
     location.reload(true);
 }
-
-//ToDo: When next and previous buttons are pressed, go to the next or previous blog post.
