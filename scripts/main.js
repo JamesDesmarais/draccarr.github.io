@@ -82,6 +82,7 @@ NextPost = function () {
     }
     console.log(currentPost.id);
     window.location.replace("https://draccarr.github.io/blog-post.html#" + currentPost.id);
+    location.reload(true);
 }
 
 PreviousPost = function() {
@@ -93,6 +94,7 @@ PreviousPost = function() {
     }
     console.log(currentPost.id);
     window.location.replace("https://draccarr.github.io/blog-post.html#" + currentPost.id);
+    location.reload(true);
 }
 
 //ToDo: When next and previous buttons are pressed, go to the next or previous blog post.
