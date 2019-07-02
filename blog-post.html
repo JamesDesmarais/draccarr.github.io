@@ -34,8 +34,8 @@
     <footer></footer>
 
     <!-- Javascript plugins (bottom priority) -->
-    <script>$(function () { $("#BlogPost").load("blog-content.html " + window.location.hash); });</script>
-    <script>$(function () { $("footer").load("footer.html"); });</script>
+    <script>$(window.onload = function () { $("#BlogPost").load("blog-content.html " + window.location.hash); });</script>
+    <script>$(window.onload = function () { $("footer").load("footer.html"); });</script>
 
 
 </body>
