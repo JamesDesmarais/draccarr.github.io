@@ -51,3 +51,48 @@ window.addEventListener('scroll', () => {
         fancyNav.removeClass("unstick-nav");
     }
 });
+
+
+
+
+
+
+// $.get("https://draccarr.github.io/blog.html", function (_page) {
+//     // my_var contains whatever that request returned
+//     allPosts = _page.body.getElementsByTagName("article");
+// });
+
+var postsDoc;
+// ToDo: Get all the elements from the blog, find the current post i'm on, store the next and previous posts id's.
+var allPosts; //= load("blog-content.html").body.getElementsByTagName("article");
+var currentPost;
+
+
+
+$.get("https://draccarr.github.io/blog-content.html", function (_content) {
+    postsDoc = new DOMParser().parseFromString(_content, "text/html");
+});
+
+NextPost = function () {
+    allPosts = postsDoc.getElementsByTagName("article");
+    for (var i = 0; i < allPosts.length; i++) {
+        if (allPosts[i].id == document.body.getElementsByTagName("article")[0].id && i -1 >= 0) {
+            currentPost = allPosts[i -1];
+        }
+    }
+    console.log(currentPost.id);
+    window.location.replace("https://draccarr.github.io/blog-post.html#" + currentPost.id);
+}
+
+PreviousPost = function() {
+    allPosts = postsDoc.getElementsByTagName("article");
+    for (var i = 0; i < allPosts.length; i++) {
+        if (allPosts[i].id == document.body.getElementsByTagName("article")[0].id && allPosts.length > i + 1) {
+            currentPost = allPosts[i + 1];
+        }
+    }
+    console.log(currentPost.id);
+    window.location.replace("https://draccarr.github.io/blog-post.html#" + currentPost.id);
+}
+
+//ToDo: When next and previous buttons are pressed, go to the next or previous blog post.
