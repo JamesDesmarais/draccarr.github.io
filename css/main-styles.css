@@ -506,6 +506,14 @@ nav.side-bar li:nth-of-type(6):hover a{
 
 
 /*************************************
+  --- Unity Game Styles
+ *************************************/
+ /*Gives the game an aspect ration of 16:9*/
+#gameContainer {
+    height: 56.25%;
+}
+
+/*************************************
   --- Media Queries
  *************************************/
 /*
