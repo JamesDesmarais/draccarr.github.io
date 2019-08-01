@@ -35,7 +35,7 @@ header {
     /* box-shadow: 0 20px 100px 20px #0ca5c0; */
 }
 
-h1{
+h1 {
     position: absolute;
     display: inline-block;
     height: 100%;
@@ -521,13 +521,7 @@ Is it bad practice to put input elements like buttons outside of forms? "Yes" - 
 What is the width of mobile devices for media queries? "768" - Markis Day
 */
 
-/*Switch back to 902px*/
-/* @media only screen and (max-width: 902px) { */
 @media only screen and (max-width: 1040px) {
-
-
-/*This is mobile view*/
-/* @media only screen and (max-width: 768px) { */
     body {
         width: 100%;
         margin: 0;
@@ -540,59 +534,32 @@ What is the width of mobile devices for media queries? "768" - Markis Day
     body main {
         padding: 0;
     }
-    /*Fix this*/
-    /* main img {
-        width: 100%;
-        height: auto;
-    } */
+    header {
+        height: 10.8rem;
+    }
+    h1 {
+        left: 0%;
+        font: 6rem/2.0 garamond, arial, sans-serif;
+    }
+    h1 a img {
+        height: 10rem;
+    }
     #fancyNav{
         display: none;
     }
     article {
         padding-left: 2rem;
         padding-right: 2rem;
-        /* margin: 0 2rem 0 2rem; */
         margin-left: auto;
         margin-right: auto;
     }
     .blog-container {
         margin: 0 2rem 0 2rem;
     }
-}
-
-/* 
-@media only screen and (max-width: 1040px) {
-    body {
-        min-width: 0px;
-        width: 100%;
+    #BlogPostNav a {
+        font-size: 10rem;
     }
-    header, main, footer {
-        width: 100%;
-    }
-    header h1 {
-        left: 0;
-    }
-    header form input, header form button{
-        right: 0;
-    }
-    #fancyNav {
-        width: 100%;
-        top: 0;
-        margin-top: 5.8rem;;
-        flex-direction: row;
-    }
-    #fancyNav ul {
-        top: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    #fancyNav ul li a{
-        padding: 0;
-        margin: 0;
-    } 
-    footer {
-        height: 30rem;
+    #searchBar, #SearchBarBtn {
+        display: none;
     }
 }
- */
