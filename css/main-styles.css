@@ -520,7 +520,10 @@ nav.side-bar li:nth-of-type(6):hover a{
 Is it bad practice to put input elements like buttons outside of forms? "Yes" - Markis Day
 What is the width of mobile devices for media queries? "768" - Markis Day
 */
-@media only screen and (max-width: 902px) {
+
+/*Switch back to 902px*/
+/* @media only screen and (max-width: 902px) { */
+@media only screen and (max-width: 1040px) {
 
 
 /*This is mobile view*/
@@ -546,8 +549,14 @@ What is the width of mobile devices for media queries? "768" - Markis Day
         display: none;
     }
     article {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        /* margin: 0 2rem 0 2rem; */
         margin-left: auto;
         margin-right: auto;
+    }
+    .blog-container {
+        margin: 0 2rem 0 2rem;
     }
 }
 
