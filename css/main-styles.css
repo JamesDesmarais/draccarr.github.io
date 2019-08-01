@@ -233,6 +233,14 @@ main li {
     transform: scale(1.1);
 }
 
+.show-in-mobile {
+    display: none;
+}
+.hide-in-mobile {
+    display: block;
+}
+
+
 /*************************************
   --- Form Styles 
  *************************************/
@@ -527,7 +535,7 @@ What is the width of mobile devices for media queries? "768" - Markis Day
         margin: 0;
         min-width: 364px;
     }
-    body header, body main, body footer {
+    body header, body footer {
         width: 100%;
         margin: 0;
     }
@@ -535,7 +543,15 @@ What is the width of mobile devices for media queries? "768" - Markis Day
         padding: 0;
     }
     header {
+        position: fixed;
         height: 10.8rem;
+        z-index: 100;
+        top: 0%;
+    }
+    main {
+        margin-top: 10.8rem;
+        width: 100%;
+        margin: 10.8rem, 0, 0, 0;
     }
     h1 {
         left: 0%;
@@ -559,7 +575,27 @@ What is the width of mobile devices for media queries? "768" - Markis Day
     #BlogPostNav a {
         font-size: 10rem;
     }
-    #searchBar, #SearchBarBtn {
-        display: none;
+    #news-articles article {
+        width: 100%;
+        font-size: 3rem;
+        padding-bottom: 10rem;
+    }
+    #news-articles a, #news-articles article h3 a {
+        font-size: 3rem;
+    }
+    #news-articles article ul li:last-child{
+        position: absolute;
+        right: 3%;
+        bottom: 0%;
+    }
+    .large-text {
+        font-size: 8rem;
+        padding-left: 2rem;
+    }
+    .show-in-mobile {
+        display: block;
+    }
+    .hide-in-mobile {
+        display: none;  
     }
 }

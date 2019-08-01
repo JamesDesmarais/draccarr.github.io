@@ -3,7 +3,8 @@
 <form>
     <input type="text" id="searchBar" placeholder="Search..." 
                 onfocus="placeholder = ' '; searchBarFocus();" 
-                onblur="placeholder = 'Search...'; searchBarFocus();">
+                onblur="placeholder = 'Search...'; searchBarFocus();"
+                class="hide-in-mobile">
     <ul id="searchBarResultList">
         <li></li>
         <li></li>
@@ -12,7 +13,7 @@
         <li></li>
     </ul>
 
-    <button id="SearchBarBtn" type="submit">
+    <button id="SearchBarBtn" type="submit" class="hide-in-mobile">
         <i class="fas fa-search"></i>
     </button>
 </form>
