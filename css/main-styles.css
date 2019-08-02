@@ -239,6 +239,12 @@ main li {
 .hide-in-mobile {
     display: block;
 }
+body .hide {
+    display: none;
+}
+body .show {
+    display: block;
+}
 
 
 /*************************************
@@ -466,12 +472,12 @@ nav.side-bar li:nth-of-type(2):hover a{
 nav.side-bar li:nth-of-type(3):hover a{
 	background-color: #1b93b8;
 }
-nav.side-bar li:nth-of-type(4) a{
+/* nav.side-bar li:nth-of-type(4) a{
     color: #777879;
-}
-/* nav.side-bar li:nth-of-type(4):hover a{
-    background-color: #5f1bb8;
 } */
+nav.side-bar li:nth-of-type(4):hover a{
+    background-color: #5f1bb8;
+}
 nav.side-bar li:nth-of-type(5):hover a{
 	background-color: #b85a1b;
 }
@@ -554,7 +560,7 @@ What is the width of mobile devices for media queries? "768" - Markis Day
         margin: 10.8rem, 0, 0, 0;
     }
     h1 {
-        left: 0%;
+        left: 2%;
         font: 6rem/2.0 garamond, arial, sans-serif;
     }
     h1 a img {
@@ -587,6 +593,25 @@ What is the width of mobile devices for media queries? "768" - Markis Day
         position: absolute;
         right: 3%;
         bottom: 0%;
+    }
+    #OpenMenuBtn {
+        font-size: 8rem;
+        position: absolute;
+        right: 2%;
+        color: #906206;
+    }
+    header nav {
+        width: 100%;
+        position: fixed;
+        top: 10.8rem;
+    }
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header nav li {
+        width: 100%;
     }
     .large-text {
         font-size: 8rem;

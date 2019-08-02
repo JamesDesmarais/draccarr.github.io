@@ -6,17 +6,32 @@ $(function () {
 });
 
 
-var toggle = false;
+//This toggles the search bar results.
+var toggleSearch = false;
 searchBarFocus = function() {
     var searchBarResultList = $("#searchBarResultList");
-    if (!toggle){
+    if (!toggleSearch){
         searchBarResultList.addClass("search-bar-result-list");
-        toggle = true;
+        toggleSearch = true;
     } else {
         searchBarResultList.removeClass("search-bar-result-list");
-        toggle = false;
+        toggleSearch = false;
     }
 }
+
+
+// Open mobile navigation
+var toggleMobileNav = false;
+ToggleMobileNav = function () {
+    var mobileNav = $("#MobileNav");
+    if (!toggleMobileNav) {
+        mobileNav.removeClass("hide");
+    } else {
+        mobileNav.addClass("hide");
+    }
+    toggleMobileNav = !toggleMobileNav;
+
+}//end ToggleMobileNav
 
 
 // This is for detaching the 'mainNavigation' when it reaches the footer.
