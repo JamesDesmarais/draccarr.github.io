@@ -581,11 +581,11 @@ What is the width of mobile devices for media queries? "768" - Markis Day
         margin-bottom: 0;
     }
     article h2 {
-        font-size: 2.5rem;
-        /* font-size: 4rem; */
+        /* font-size: 2.5rem; */
+        font-size: 4rem;
     }
     article p {
-        padding-bottom: 20rem;
+        padding-bottom: 4rem;
     }
     .blog-container {
         margin: 0 2rem 0 2rem;
