@@ -575,6 +575,11 @@ What is the width of mobile devices for media queries? "768" - Markis Day
         margin-left: auto;
         margin-right: auto;
     }
+    article img {
+        width: 10rem;
+        height: auto;
+        margin-bottom: 0;
+    }
     .blog-container {
         margin: 0 2rem 0 2rem;
     }
