@@ -585,7 +585,7 @@ What is the width of mobile devices for media queries? "768" - Markis Day
         /* font-size: 4rem; */
     }
     article p {
-        padding-bottom: 8rem;
+        padding-bottom: 20rem;
     }
     .blog-container {
         margin: 0 2rem 0 2rem;
