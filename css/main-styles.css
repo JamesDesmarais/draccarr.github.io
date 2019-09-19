@@ -73,8 +73,6 @@ main {
     margin: 0 auto;
     background-color: #fff;
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
 }
 
 main h2, main h3 {
@@ -203,10 +201,6 @@ i {
 main li {
     font-family: 'Raleway', arial, sans-serif;
 }
-#news-articles {
-    /* Only apply this to desktop mode */
-    /* width: 50%; */
-}
 #news-articles article:first-of-type{
     border-top: 1px solid #ccc;
 }
@@ -250,17 +244,6 @@ body .hide {
 }
 body .show {
     display: block;
-}
-#snapshots {
-    width: 20%;
-    align-self: flex-end;
-    top: 0;
-    justify-self: flex-start;
-}
-.small-img {
-    width: 100%;
-    height: auto;
-    
 }
 
 
