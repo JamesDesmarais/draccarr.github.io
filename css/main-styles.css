@@ -661,8 +661,15 @@ What is the width of mobile devices for media queries? "768" - Markis Day
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        background-color: #1414149a;
     }
     header nav li {
+        width: 100%;
+    }
+    nav ul li a {
+        color: #f2eddb;
+        padding: 2rem 0%;
+        font-size: 3rem;
         width: 100%;
     }
     .large-text {
