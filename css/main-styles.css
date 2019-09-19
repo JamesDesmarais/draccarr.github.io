@@ -203,10 +203,10 @@ i {
 main li {
     font-family: 'Raleway', arial, sans-serif;
 }
-#news-articles article:first-of-type{
+#news-articles article:first-of-type {
     border-top: 1px solid #ccc;
 }
-#news-articles article{
+#news-articles article {
     position: relative;
     width: 100%;
     min-width: 364px;
@@ -250,6 +250,10 @@ body .show {
     width: 100%;
     display: flex;
     flex-direction: row;
+}
+#index-container h2 {
+    position: absolute;
+    display: none;
 }
 #Snapshots {
     width: 50%;
@@ -588,7 +592,6 @@ What is the width of mobile devices for media queries? "768" - Markis Day
     main {
         margin-top: 10.8rem;
         width: 100%;
-        margin: 10.8rem, 0, 0, 0;
     }
     h1 {
         left: 2%;
