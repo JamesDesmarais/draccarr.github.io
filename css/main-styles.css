@@ -590,11 +590,9 @@ nav.side-bar li:nth-of-type(6):hover a{
     position: fixed;
     top: 17.8rem;
     left: 25%;
-    width: 100%;
+    width: 30%;
     height: auto;
-    max-width: 30%;
     background-color: #fff;
-    /* background-color: #bb1d1d; */
     border-radius: 0 0 2rem 0;
     box-shadow: 0 0.2rem 1rem #000000;
 }
@@ -630,7 +628,6 @@ nav.side-bar li:nth-of-type(6):hover a{
 }
 .close-image:hover {
     color: #db2626;
-
 }
 
 
