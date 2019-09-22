@@ -271,16 +271,16 @@ body .show {
 #Snapshots div {
     width: 90%;
     height: auto;
-    margin-bottom: 1rem;
+    margin: 0.1rem 0.1rem 1.1rem 0.1rem;
+    /* margin-bottom: 1rem; */
     overflow: hidden;
-    padding: 0.1rem;
+    /* padding: 0.1rem; */
 }
 #Snapshots div:hover{
     box-shadow: 0 0 5px #00000083;
-    /* padding: 3px 0px 3px 3px;
-    margin: 5px 1px 3px 0px; */
     border: 0.1rem solid #00000083;
-    padding: 0;
+    /* padding: 0; */
+    margin: 0 0 1.1rem 0;
 }
 #Snapshots img {
     transition: 0.4s;
@@ -596,7 +596,7 @@ nav.side-bar li:nth-of-type(6):hover a{
     background-color: #fff;
     /* background-color: #bb1d1d; */
     border-radius: 0 0 2rem 0;
-    padding-bottom: 1rem;
+    box-shadow: 0 0.2rem 1rem #000000;
 }
 #ExpandImageView img {
     width: 100%;
