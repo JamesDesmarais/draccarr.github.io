@@ -263,6 +263,7 @@ body .show {
     justify-content: flex-start;
 }
 #Snapshots div {
+    display: flex;
     width: 90%;
     height: auto;
     margin-bottom: 1rem;
@@ -270,6 +271,17 @@ body .show {
 #Snapshots img {
     transition: 0.4s;
     transition-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+#Snapshots a {
+    position: absolute;
+    align-self: flex-end;
+    right: 0;
+    padding: 3rem;
+    color: #fff;
+}
+#Snapshots a:hover {
+    color: #78c2dd;
+    cursor: pointer;
 }
 #Snapshots img:hover {
     transform: scale(1.1);
@@ -552,7 +564,6 @@ nav.side-bar li:nth-of-type(6):hover a{
 .blog-post-navigation a {
     color: #4f8295;
     font-size: 3rem;
-    /* padding: 0 2rem; */
 }
 .blog-post-navigation a:nth-of-type(odd) {
     padding-right: 2rem;
@@ -560,10 +571,38 @@ nav.side-bar li:nth-of-type(6):hover a{
 .blog-post-navigation a:hover {
     color: #78c2dd;
 }
-/* #BlogPostNavTop {
-    position: relative;
-    justify-content: flex-start;
-} */
+.expand-image, .close-image {
+    font-size: 3rem;
+}
+#ExpandImageView {
+    position: fixed;
+    top: 10%;
+    right: 25%;
+    left: 25%;
+    height: auto;
+    background-color: #fff;
+}
+#ExpandImageView img {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}
+.close-image {
+    position: absolute;
+    top: -1.5rem;
+    right: -1.5rem;
+    color: #000;
+    background-color: #fff;
+    border-radius: 50% 50% 50% 50%;
+    border: solid;
+    border-color: #fff;
+    border-width: 1rem;
+    padding: 0;
+}
+.close-image:hover {
+    color: #db2626;
+
+}
 
 
 /*************************************

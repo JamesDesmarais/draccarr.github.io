@@ -19,6 +19,52 @@ searchBarFocus = function() {
     }
 }
 
+//This hides the expanded image.
+var imageToggled = false;
+var imageToShow;
+var selectedImageID;
+//[Note: _val must have an image element immediately before it in the html.]
+toggleImage = function (_val) {
+    var expandedImage = $("#ExpandImageView");
+    if (!imageToggled) {
+        if (_val != null) {
+            selectedImageID = _val.id;
+            imageToShow = document.getElementById("ExpandedImage");
+            imageToShow.setAttribute("src", _val.src);
+            imageToShow.setAttribute("alt", _val.alt);
+            imageToShow.setAttribute("title", _val.title);
+        }
+        imageToggled = true;
+        expandedImage.removeClass("hide");
+    } else {
+        expandedImage.addClass("hide");
+        imageToggled = false;
+        imageToShow.setAttribute("src", "./images/transparent-pixel.png");
+    }
+}//end close toggleimage
+
+nextImage = function () {
+    imageToShow = document.getElementById("ExpandedImage");
+    try {
+        imageToShow.setAttribute("src", document.getElementById(selectedImageID).parentElement.nextElementSibling.firstElementChild.src);
+        imageToShow.setAttribute("alt", document.getElementById(selectedImageID).parentElement.nextElementSibling.firstElementChild.alt);
+        imageToShow.setAttribute("title", document.getElementById(selectedImageID).parentElement.nextElementSibling.firstElementChild.title);
+        selectedImageID = document.getElementById(selectedImageID).parentElement.nextElementSibling.firstElementChild.id;
+    } catch(_ex) {
+        console.log("No more next Images!\n" + _ex);
+    }
+}
+previousImage = function () {
+    imageToShow = document.getElementById("ExpandedImage");
+    try {
+        imageToShow.setAttribute("src", document.getElementById(selectedImageID).parentElement.previousElementSibling.firstElementChild.src);
+        imageToShow.setAttribute("alt", document.getElementById(selectedImageID).parentElement.previousElementSibling.firstElementChild.alt);
+        imageToShow.setAttribute("title", document.getElementById(selectedImageID).parentElement.previousElementSibling.firstElementChild.title);
+        selectedImageID = document.getElementById(selectedImageID).parentElement.previousElementSibling.firstElementChild.id;
+    } catch(_ex) {
+        console.log("No more previous Images!\n" + _ex);
+    }
+}
 
 // Open mobile navigation
 var toggleMobileNav = false;
