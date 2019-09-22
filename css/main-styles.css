@@ -544,14 +544,26 @@ nav.side-bar li:nth-of-type(6):hover a{
     left: -50%;
     min-width: 0px;
 }
-
+.blog-post-navigation {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
 .blog-post-navigation a {
     color: #4f8295;
     font-size: 3rem;
+    /* padding: 0 2rem; */
+}
+.blog-post-navigation a:nth-of-type(odd) {
+    padding-right: 2rem;
 }
 .blog-post-navigation a:hover {
     color: #78c2dd;
 }
+/* #BlogPostNavTop {
+    position: relative;
+    justify-content: flex-start;
+} */
 
 
 /*************************************
@@ -624,7 +636,7 @@ What is the width of mobile devices for media queries? "768" - Markis Day
     .blog-container {
         margin: 0 2rem 0 2rem;
     }
-    #BlogPostNav a {
+    .blog-post-navigation a {
         font-size: 10rem;
     }
     #news-articles {

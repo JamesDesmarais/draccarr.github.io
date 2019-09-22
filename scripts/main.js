@@ -58,26 +58,34 @@ $.get("https://draccarr.github.io/blog-content.html", function (_content) {
     ReplaceAnchors();
 });
 
-var previousPostAnchor;
-var nextPostAnchor;
+var previousPostAnchorTop;
+var previousPostAnchorBottom;
+var nextPostAnchorTop;
+var nextPostAnchorBottom;
 var loadedHTML;
 ReplaceAnchors=function(){
     if (document.location.hash.length > 0) {
-        previousPostAnchor = document.getElementById("PreviousPost");
-        nextPostAnchor = document.getElementById("NextPost");
-        if (previousPostAnchor){
+        previousPostAnchorTop = document.getElementById("PreviousPostTop");
+        previousPostAnchorBottom = document.getElementById("PreviousPostBottom");
+        nextPostAnchorTop = document.getElementById("NextPostTop");
+        nextPostAnchorBottom = document.getElementById("NextPostBottom");
+        if (previousPostAnchorTop && previousPostAnchorBottom){
             allPosts = postsDoc.getElementsByTagName("article");
             for (var i=0; i< allPosts.length; i++){
                 if ("#" + allPosts[i].id == location.hash){
                     if (allPosts.length > i + 1) {
-                        previousPostAnchor.outerHTML = "<a id=\"PreviousPost\" title=\"Previous\" href=\"" + "?" + i + "=./blog-post.html#" + allPosts[i + 1].id + "\"><i class=\"fas fa-arrow-left\"></i></a>";
+                        previousPostAnchorTop.outerHTML = "<a id=\"PreviousPost\" title=\"Previous\" href=\"" + "?" + i + "=./blog-post.html#" + allPosts[i + 1].id + "\"><i class=\"fas fa-arrow-left\"></i></a>";
+                        previousPostAnchorBottom.outerHTML = "<a id=\"PreviousPost\" title=\"Previous\" href=\"" + "?" + i + "=./blog-post.html#" + allPosts[i + 1].id + "\"><i class=\"fas fa-arrow-left\"></i></a>";
                     } else {
-                        previousPostAnchor.outerHTML = "<a id=\"PreviousPost\"></a>";
+                        previousPostAnchorTop.outerHTML = "<a id=\"PreviousPost\"></a>";
+                        previousPostAnchorBottom.outerHTML = "<a id=\"PreviousPost\"></a>";
                     }
                     if (i-1 >= 0) {
-                        nextPostAnchor.outerHTML = "<a id=\"NextPost\" title=\"Next\" href=\"" + "?" + i + "=./blog-post.html#" + allPosts[i - 1].id + "\"><i class=\"fas fa-arrow-right\"></i></a>";
+                        nextPostAnchorTop.outerHTML = "<a id=\"NextPost\" title=\"Next\" href=\"" + "?" + i + "=./blog-post.html#" + allPosts[i - 1].id + "\"><i class=\"fas fa-arrow-right\"></i></a>";
+                        nextPostAnchorBottom.outerHTML = "<a id=\"NextPost\" title=\"Next\" href=\"" + "?" + i + "=./blog-post.html#" + allPosts[i - 1].id + "\"><i class=\"fas fa-arrow-right\"></i></a>";
                     } else {
-                        nextPostAnchor.outerHTML = "<a id=\"NextPost\"></a>";
+                        nextPostAnchorTop.outerHTML = "<a id=\"NextPost\"></a>";
+                        nextPostAnchorBottom.outerHTML = "<a id=\"NextPost\"></a>";
                     }
                 }
             }
