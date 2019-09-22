@@ -240,7 +240,7 @@ main li {
 .hide-in-mobile {
     display: block;
 }
-body .hide {
+body .hide, #ExpandImageView.hide {
     display: none;
 }
 body .show {
@@ -262,32 +262,41 @@ body .show {
     align-items: flex-end;
     justify-content: flex-start;
 }
-#Snapshots div {
+#Snapshots div, .gallery-container ul li {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+#Snapshots div {
     width: 90%;
     height: auto;
     margin-bottom: 1rem;
+    overflow: hidden;
+    padding: 0.1rem;
+}
+#Snapshots div:hover{
+    box-shadow: 0 0 5px #00000083;
+    /* padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px; */
+    border: 0.1rem solid #00000083;
+    padding: 0;
 }
 #Snapshots img {
     transition: 0.4s;
     transition-timing-function: cubic-bezier(0, 0, 1, 1);
 }
-#Snapshots a {
+#Snapshots a, .gallery-container ul li a {
     position: absolute;
-    align-self: flex-end;
-    right: 0;
     padding: 3rem;
     color: #fff;
 }
-#Snapshots a:hover {
+#Snapshots a:hover, .gallery-container ul li a:hover {
     color: #78c2dd;
     cursor: pointer;
 }
 #Snapshots img:hover {
     transform: scale(1.1);
-}
-#Snapshots div {
-    overflow: hidden;
 }
 .box {
     margin-bottom: 2rem;
@@ -575,17 +584,37 @@ nav.side-bar li:nth-of-type(6):hover a{
     font-size: 3rem;
 }
 #ExpandImageView {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     position: fixed;
-    top: 10%;
-    right: 25%;
+    top: 17.8rem;
     left: 25%;
+    width: 100%;
     height: auto;
+    max-width: 30%;
     background-color: #fff;
+    /* background-color: #bb1d1d; */
+    border-radius: 0 0 2rem 0;
+    padding-bottom: 1rem;
 }
 #ExpandImageView img {
     width: 100%;
     height: auto;
     padding: 1rem;
+    margin: 0 auto;
+}
+#ExpandImageView a {
+    cursor: pointer;
+    font-size: 3rem;
+    color: #4f8295;
+}
+#ExpandImageView a:first-of-type {
+    margin-top: 2.5rem;
+    
+}
+#ExpandImageView a:hover {
+    color: #78c2dd;
 }
 .close-image {
     position: absolute;
@@ -730,7 +759,7 @@ What is the width of mobile devices for media queries? "768" - Markis Day
     .show-in-mobile {
         display: block;
     }
-    .hide-in-mobile {
+    html .hide-in-mobile {
         display: none;  
     }
 }
