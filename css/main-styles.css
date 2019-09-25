@@ -271,17 +271,18 @@ body .show {
 #Snapshots div {
     width: 90%;
     height: auto;
-    margin: 0.1rem 0.1rem 1.1rem 0.1rem;
-    /* margin-bottom: 1rem; */
+    /* margin: 0.1rem 0.1rem 1.1rem 0.1rem; */
+    margin-bottom: 1rem;
     overflow: hidden;
-    /* padding: 0.1rem; */
+    /* padding: 0.2rem; */
 }
-#Snapshots div:hover{
-    box-shadow: 0 0 5px #00000083;
-    border: 0.1rem solid #00000083;
-    /* padding: 0; */
+/* #Snapshots div:hover{ */
+    /* box-shadow: 0 0 5px #00000083;
+    border: 0.1rem solid #00000083; */
+    /* box-shadow: 0 0 5px #125c8d83;
+    border: 0.1rem solid #125c8d83;
     margin: 0 0 1.1rem 0;
-}
+} */
 #Snapshots img {
     transition: 0.4s;
     transition-timing-function: cubic-bezier(0, 0, 1, 1);
