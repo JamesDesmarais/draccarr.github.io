@@ -297,7 +297,8 @@ body .show {
     cursor: pointer;
 }
 #Snapshots img:hover {
-    transform: scale(1.1);
+    transform: scale(1.5);
+    /*Changed from 1.1*/
 }
 .box {
     margin-bottom: 2rem;
