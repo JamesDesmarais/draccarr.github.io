@@ -303,6 +303,13 @@ body .show {
 .box {
     margin-bottom: 2rem;
 }
+#CopyrightNotice {
+    color: #fff;
+    position: absolute;
+    margin: 0 auto;
+    padding: 2rem;
+    bottom: 0;
+}
 
 
 /*************************************
@@ -435,6 +442,7 @@ footer {
     justify-content: center;
     align-items: flex-start;
     padding: 0 25% 0 25%;
+    position: relative;
 }
 footer .social-media-icons {
     display: flex;
