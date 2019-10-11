@@ -310,6 +310,13 @@ body .show {
     padding: 2rem;
     bottom: 0;
 }
+.picture-icon {
+    width: 100%;
+    height: auto;
+    font-size: 40rem;
+    text-align: center;
+    padding-bottom: 2rem;
+}
 
 
 /*************************************
