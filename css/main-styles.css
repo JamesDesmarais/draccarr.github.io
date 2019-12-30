@@ -321,6 +321,14 @@ body .show {
     text-align: center;
     padding-bottom: 2rem;
 }
+/* .container {
+    display: flex;
+} */
+.poetry {
+    text-align: center;
+    width: 40rem;
+    padding-left: 2rem;
+}
 
 
 /*************************************
@@ -700,6 +708,10 @@ What is the width of mobile devices for media queries? "768" - Markis Day
     }
     #fancyNav{
         display: none;
+    }
+    .poetry {
+        width: 100%;
+        font-size: 3rem;
     }
     article {
         padding-left: 2rem;
