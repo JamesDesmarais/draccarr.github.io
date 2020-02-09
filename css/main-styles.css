@@ -329,7 +329,38 @@ body .show {
     width: 40rem;
     padding-left: 2rem;
 }
+.footer-container {
+    display: flex;
+    width: 100%;
+    /* height: 200px; */
+    /* background-color: lawngreen; */
+    padding: 2rem;
+    flex-direction: row;
+    justify-content: center;
+}
+.footer-container-I {
 
+}
+.footer-container-II {
+    display: flex;
+    /* background: green; */
+    height: 10rem;
+    /* width: 100%; */
+    margin-left: 2rem;
+    padding: 2rem;
+    flex-direction: row;
+    align-items: center;
+}
+.footer-social-icons-container {
+
+}
+.super-text {
+    font-size: 3rem;
+    color: #fff;
+}
+#PrivacyLink:hover {
+    text-decoration: underline;
+}
 
 /*************************************
   --- Form Styles 
@@ -470,6 +501,7 @@ footer .social-media-icons {
     color: #fff;
     flex-direction: row;
     justify-content: center;
+    border-right: solid 1px #ebebeb9b;
 }
 footer .social-media-icons li a {
     margin: 1rem;
@@ -498,16 +530,21 @@ footer form ul li {
 /*************************************
   --- Navigational behaviours
  *************************************/
-.fa-discord:hover {
-    position: relative;
+/* .fa-discord:hover {
     color: #7289DA;
-}
-.fa-twitter:hover {
+} */
+/* .fa-twitter:hover {
     color: #1da1f2;
-}
-.fa-linkedin:hover {
+} */
+/* .fa-linkedin:hover {
     color: #2867b2;
-}
+} */
+/* .fa-github:hover {
+    color: #9228b2;
+} */
+/* .social-hover:hover {
+    color: #292f49;
+} */
 a {
     display: inline-block;
     text-decoration: none;
@@ -685,6 +722,9 @@ What is the width of mobile devices for media queries? "768" - Markis Day
     body header, body footer {
         width: 100%;
         margin: 0;
+    }
+    footer {
+        padding: 0;
     }
     body main {
         padding: 0;
