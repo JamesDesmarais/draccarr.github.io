@@ -358,8 +358,23 @@ body .show {
     font-size: 3rem;
     color: #fff;
 }
-#PrivacyLink:hover {
+#PrivacyLink:hover, #TermsOfUseLink:hover {
     text-decoration: underline;
+}
+#TermsOfUse h2 {
+    font-size: 3.5rem;
+}
+#TermsOfUse h3 {
+    font-size: 2.5rem;
+}
+#TermsOfUse p {
+    padding-bottom: 2rem;
+}
+strong {
+    font-weight: bold;
+}
+#TermsOfUse section li {
+    padding-bottom: 2rem;
 }
 
 /*************************************
