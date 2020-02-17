@@ -1,0 +1,28 @@
+<nav id="fancyNav" class="side-bar fancyNav"></nav>
+<img src="./images/robot-game.png" width="1920" height="1200" alt="Robot Game Image By James Desmarais" title="Robot Game Image By James Desmarais">
+<section class="games-container">
+    <h2>Game Catalog</h2>
+        <ul>
+            <li>
+                <!-- <a href="./merchant.html"> -->
+                    <img id="0" src="./images/jay-symbol-300x300.png" width="300" height="300" alt="Jay symbol By James Desmarais" title="Jay symbol By James Desmarais">
+                    <div class="game-details-container">
+                        <div>    
+                            <a href="./merchant.html"><h3>Merchant</h3></a>
+                        </div>
+                    </div>
+                <!-- </a> -->
+                <!-- <a class="fas fa-expand expand-image hide-in-mobile" title="Expand" onclick="toggleImage(this.previousElementSibling);"></a> -->
+            </li>
+        </ul>
+</section>
+<div id="ExpandImageView" class="hide hide-in-mobile">
+    <img id="ExpandedImage" src="./images/tree-by-veeterzy.jpg" alt="Tree Image By Veeterzy" class="hide-in-mobile">
+    <button class="fas fa-times-circle close-image" title="close" onclick="toggleImage();"></button>
+    <div class="expanded-image-controls">
+        <a id="PreviousImage" title="Previous"><i class="fas fa-arrow-left" onclick="previousImage();"></i></a>
+        <a id="NextImage" title="Next"><i class="fas fa-arrow-right" onclick="nextImage();"></i></a>
+    </div>
+</div>
+<!-- Javascript (Mid priority)-->
+<script src="./scripts/main.js"></script>
