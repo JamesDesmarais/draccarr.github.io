@@ -438,6 +438,14 @@ strong {
 #Privacy section li {
 	padding-bottom: 2rem;
 }
+.new-symbol {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: indigo;
+	padding: 0.5rem;
+	transform: rotate(25deg);
+}
 
 /*************************************
   --- Form Styles 
@@ -920,5 +928,16 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 	}
 	html .hide-in-mobile {
 		display: none;
+	}
+	.new-symbol {
+		font-size: 3rem;
+		padding: 1rem;
+	}
+	footer .social-media-icons {
+		font-size: 10rem;
+	}
+	footer div.footer-container-II {
+		font-size: 3rem;
+		align-self: center;
 	}
 }
