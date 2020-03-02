@@ -940,4 +940,7 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 		font-size: 3rem;
 		align-self: center;
 	}
+	#CopyrightNotice {
+		font-size: 3rem;
+	}
 }
