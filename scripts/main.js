@@ -42,7 +42,7 @@ toggleImage = function (_val) {
         imageToggled = false;
         imageToShow.setAttribute("src", "./images/transparent-pixel.png");
     }
-}//end close toggleimage
+}//end toggleImage
 
 nextImage = function () {
     imageToShow = document.getElementById("ExpandedImage");
@@ -54,7 +54,7 @@ nextImage = function () {
     } catch(_ex) {
         console.log("No more next Images!\n" + _ex);
     }
-}
+}//end nextImage
 previousImage = function () {
     imageToShow = document.getElementById("ExpandedImage");
     try {
@@ -65,7 +65,7 @@ previousImage = function () {
     } catch(_ex) {
         console.log("No more previous Images!\n" + _ex);
     }
-}
+}//end previousImage
 
 // Open mobile navigation
 var toggleMobileNav = false;
@@ -104,6 +104,7 @@ $.get("https://draccarr.github.io/blog-content.html", function (_content) {
     $("#BlogPost").load("blog-content.html " + window.location.hash);
     ReplaceAnchors();
 });
+
 
 var previousPostAnchorTop;
 var previousPostAnchorBottom;
@@ -175,7 +176,6 @@ CheckDate=function() {
                                 + dateArray[1]
                                 + "/"
                                 + dateArray[2];
-
 
         //month, day, year
         date1 = new Date(postToCheck);
