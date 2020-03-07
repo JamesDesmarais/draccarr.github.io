@@ -446,15 +446,15 @@ strong {
 	padding: 0.5rem;
 	transform: rotate(25deg);
 }
-main .item {
-	/* width: 250px; */
-	opacity: 0;
+/* main ul li.item {
+	opacity: 0.2;
+	transition: opacity ease 3s;
+	transition-delay: 3s;
 }
-main .item.animate {
-	transition: opacity ease 1s;
-	transition-delay: 0.5s;
+html main .item.animate {
+
 	opacity: 1;
-}
+} */
 
 /*************************************
   --- Form Styles 
