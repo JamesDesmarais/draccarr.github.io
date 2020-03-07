@@ -8,12 +8,16 @@
     <link rel="icon" href="./images/draccarr-logo.png">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main-styles.css">
+    <link rel="stylesheet" href="./css/gallery-styles.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Javascript plugins (top priority) -->
     <script src="./scripts/modernizr-custom.js"></script>
     <script src="./scripts/jquery-3.3.1.min.js"></script>
+    <script src="//naver.github.io/egjs-infinitegrid/release/latest/dist/infinitegrid.pkgd.min.js"></script>
+    <!-- <script src="//naver.github.io/egjs-infinitegrid/release/latest/dist/infinitegrid.gridlayout.min.js"></script> -->
+    <script type="module" src="./scripts/gallery.js"></script>
 </head>
 
 <body>
@@ -21,7 +25,15 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
     <header></header>
-    <main></main>
+    <main>
+        <nav id="fancyNav" class="side-bar fancyNav"></nav>
+        <img src="./images/robot-game.png" width="1920" height="1200" alt="Robot Game Image By James Desmarais" title="Robot Game Image By James Desmarais">
+        <section class="art-container">
+            <h2>Gallery</h2>
+            <ul id="Grid">
+            </ul>
+        </section>
+    </main>
 
     <!-- Javascript (Mid priority)-->
     <script src="./scripts/main.js"></script>
@@ -30,7 +42,7 @@
 
     <!-- Javascript plugins (bottom priority) -->
     <script src="./scripts/jquery-3.3.1.min.js"></script>
-    <script>$(function () { $("main").load("gallery-content.html"); });</script>
+    <!-- <script>$(function () { $("main").load("gallery-content.html"); });</script> -->
     <script>$(function () { $("footer").load("footer.html"); });</script>
 
 </body>

@@ -1,0 +1,55 @@
+/*************************************
+  --- Authors Styles
+ *************************************/
+
+.art-container {
+	position: relative;
+	width: 100%;
+	background-color: #141414;
+	padding-bottom: 2rem;
+}
+
+.art-container h2 {
+    font-size: 4rem;
+	text-align: center;
+	color: #fff;
+}
+
+.art-container ul {
+    width: 100%;
+}
+
+.art-container ul li {
+    display: flex;
+	width: 30rem;
+	height: auto;
+    align-items: center;
+    overflow: hidden;
+}
+
+.art-container ul li img {
+    width: 100%;
+	height: auto;
+}
+
+.art-container img {
+	transition: 0.2s;
+	transition-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+.art-container img:hover {
+	transform: scale(1.1);
+}
+
+/*************************************
+  --- Media Queries
+ *************************************/
+
+/* @media only screen and (max-width: 1200px) {
+    .art-container ul li {
+        display: flex;
+        width: 30rem;
+        height: auto;
+        align-items: center;
+        overflow: hidden;
+    }
+} */
