@@ -45,7 +45,7 @@ ig.setLayout(GridLayout, {
 var galleryDoc;
 var allGalleryPosts;
 var currentGalleryPost;
-$.get("https://draccarr.github.io/gallery-content.html", function (_content) {
+$.get("./gallery-content.html", function (_content) {
     galleryDoc = new DOMParser().parseFromString(_content, "text/html");
     allGalleryPosts = galleryDoc.getElementsByTagName("li");
 
