@@ -71,7 +71,8 @@ main {
 	min-height: 90rem;
 	/* width: 951.5px; */
 	margin: 0 auto;
-	background-color: #fff;
+	/* background-color: #fff; */
+	background-color: #eee;
 	padding: 2rem;
 }
 
