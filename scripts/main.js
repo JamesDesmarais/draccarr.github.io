@@ -26,7 +26,7 @@ var imageToShow;
 var selectedImageID;
 //[Note: _val must have an image element immediately before it in the html.]
 toggleImage = function (_val) {
-    var expandedImage = $("#ExpandImageView");
+    var imageViewer = $("#ImageViewer");
     if (!imageToggled) {
         if (_val != null) {
             selectedImageID = _val.id;
@@ -36,9 +36,9 @@ toggleImage = function (_val) {
             imageToShow.setAttribute("title", _val.title);
         }
         imageToggled = true;
-        expandedImage.removeClass("hide");
+        imageViewer.removeClass("hide");
     } else {
-        expandedImage.addClass("hide");
+        imageViewer.addClass("hide");
         imageToggled = false;
         imageToShow.setAttribute("src", "./images/transparent-pixel.png");
     }
@@ -66,6 +66,7 @@ previousImage = function () {
         console.log("No more previous Images!\n" + _ex);
     }
 }//end previousImage
+
 
 // Open mobile navigation
 var toggleMobileNav = false;

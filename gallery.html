@@ -22,6 +22,17 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
     <header></header>
+    <div id="ImageViewer" class="hide hide-in-mobile">
+        <div id="ExpandImageView" class="hide-in-mobile">
+            <img id="ExpandedImage" src="./images/tree-by-veeterzy.jpg" alt="Tree Image By Veeterzy" class="hide-in-mobile">
+            <button class="fas fa-times-circle close-image" title="close" onclick="toggleImage();"></button>
+            <div class="expanded-image-controls">
+                <a id="PreviousImage" title="Previous"><i class="fas fa-arrow-left show-cursor-pointer" onclick="previousImage();"></i></a>
+                <a id="NextImage" title="Next"><i class="fas fa-arrow-right show-cursor-pointer" onclick="nextImage();"></i></a>
+            </div>
+        </div>
+        <button class="full-button" onclick="toggleImage();"></button>
+    </div>
     <main>
         <nav id="fancyNav" class="side-bar fancyNav"></nav>
         <img src="./images/robot-game.png" id="PageImage" class="side-padding top-padding" width="1920" height="1200" alt="Robot Game Image By James Desmarais" title="Robot Game Image By James Desmarais">
@@ -30,14 +41,6 @@
             <ul id="Grid">
             </ul>
         </section>
-        <div id="ExpandImageView" class="hide hide-in-mobile">
-            <img id="ExpandedImage" src="./images/tree-by-veeterzy.jpg" alt="Tree Image By Veeterzy" class="hide-in-mobile">
-            <button class="fas fa-times-circle close-image" title="close" onclick="toggleImage();"></button>
-            <div class="expanded-image-controls">
-                <a id="PreviousImage" title="Previous"><i class="fas fa-arrow-left show-cursor-pointer" onclick="previousImage();"></i></a>
-                <a id="NextImage" title="Next"><i class="fas fa-arrow-right show-cursor-pointer" onclick="nextImage();"></i></a>
-            </div>
-        </div>
     </main>
     <!-- Javascript (Mid priority)-->
     <script src="./scripts/main.js"></script>
