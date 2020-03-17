@@ -22,8 +22,8 @@ var ig = new InfiniteGrid(document.getElementById("Grid"), {
 
 ig.setLayout(GridLayout, {
     horizontal: false,
-    itemSize: 300,
-    // margin: 0,
+    itemSize: 285,
+    margin: 24,
     align: "center"
 });
 // if (window.innerWidth <= 1200) {
