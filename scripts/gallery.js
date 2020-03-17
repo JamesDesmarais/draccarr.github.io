@@ -1,6 +1,6 @@
 /**********************************************
 Author: James Desmarais
-Date modified: Mar 07, 2020
+Date modified: Mar 16, 2020
 
 InfiniteGrids documentation:
     https://naver.github.io/egjs-infinitegrid/#layouts
@@ -45,16 +45,17 @@ ig.setLayout(GridLayout, {
 var galleryDoc;
 var allGalleryPosts;
 var currentGalleryPost;
+let allCurrentPosts = [];//Can be removed later.
 $.get("./gallery-content.html", function (_content) {
     galleryDoc = new DOMParser().parseFromString(_content, "text/html");
     allGalleryPosts = galleryDoc.getElementsByTagName("li");
 
 
-    var template = '<li>${content}<li>';
+    var template = '<li class="card" onmouseover="this.classList.add(\'show-buttons\')" onmouseout="this.classList.remove(\'show-buttons\')">${content}<li>';
     var link = "./gallery-images/";
     var num = 9;
+    var id = 0;
     function getItem(_template, _options) {
-        // return template.replace(/\$\{([^\}]*)\}/g, function () { //original
         return _template.replace(/\$\{([^\}]*)\}/g, function () {
             var replaceTarget = arguments[1];
 
@@ -71,9 +72,26 @@ $.get("./gallery-content.html", function (_content) {
                 no: i % 60 + 1,
                 text: "egjs post " + (i + 1),
                 link: link,
-                content: allGalleryPosts[i].innerHTML
+                content: allGalleryPosts[i].innerHTML, 
+
             }));
         }
+        arr.forEach(_x => allCurrentPosts.push(_x));
+        // arr.forEach(_x => console.log(typeof _x));
+        // arr.forEach(_x => _x.addEventListener('mouseenter', e => {
+        //     DisplayButtons();
+        // }));
+
+        // AddMyListeners(arr);
+
+        // mouseTarget.addEventListener('mouseenter', e => {
+        //     mouseTarget.style.border = '5px dotted orange';
+        //     enterEventCount++;
+        //     addListItem('This is mouseenter event ' + enterEventCount + '.');
+        // });
+
+
+        // console.log(allCurrentPosts);
         return arr;
     }
 
@@ -126,7 +144,6 @@ $.get("./gallery-content.html", function (_content) {
     // }//end ChangeLayoutOnWinResize
     // window.addEventListener('resize', ChangeLayoutOnWinResize);
 });
-
 // function ChangeLayoutOnWinResize() {
 //     if (window.innerWidth <= 1200) {
 //         ig.setLayout(GridLayout, {
@@ -148,3 +165,37 @@ $.get("./gallery-content.html", function (_content) {
 //     parallax.resize(items);
 // }//end ChangeLayoutOnWinResize
 // window.addEventListener('resize', ChangeLayoutOnWinResize);
+
+
+// function AddMyListeners(_htmlStringArray) {
+//     let myElements = [];
+//     let myElementsOnPage = [];
+//     //Make new objects of each string as dom elements
+//     _htmlStringArray.forEach(_x => myElements.push(new DOMParser().parseFromString(_x, "text/html")));
+//     //find the images in each of the elements and grab their ids
+//     console.log(myElements);
+//     for (var i=0; i< myElements.length; i++) {
+//         // myElementsOnPage.push(document.getElementById(myElements[i].images[0].id));
+//         console.log(myElements[i].images[0].id);
+//     }
+//     // console.log(myElementsOnPage);
+
+//     // _htmlStringArray.forEach(_x => new DOMParser().parseFromString(_x, "text/html")
+//     //                                                                                         .addEventListener('mouseenter', e => {
+//     //     console.log(this);
+//     //     DisplayButtons(this);
+
+//     // }));
+// }
+
+// function DisplayButtons(_domElement) {
+//     console.log(_domElement);
+// }//end DisplayButtons
+
+// document.addEventListener('click', function (_e) {
+//     if (_e.target && _e.target.tagName == "IMG" && _e.target.id != "PageImage") {
+//         // _e.target.parent;
+//         console.log(_e.target.parentNode);
+
+//     }
+// });

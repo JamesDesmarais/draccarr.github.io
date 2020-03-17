@@ -1,7 +1,5 @@
 <!doctype html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8" />
     <title>Draccarr | Gallery Page</title>
@@ -19,7 +17,6 @@
     <!-- <script src="//naver.github.io/egjs-infinitegrid/release/latest/dist/infinitegrid.gridlayout.min.js"></script> -->
     <script type="module" src="./scripts/gallery.js"></script>
 </head>
-
 <body>
     <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -27,7 +24,7 @@
     <header></header>
     <main>
         <nav id="fancyNav" class="side-bar fancyNav"></nav>
-        <img src="./images/robot-game.png" width="1920" height="1200" alt="Robot Game Image By James Desmarais" title="Robot Game Image By James Desmarais">
+        <img src="./images/robot-game.png" id="PageImage" width="1920" height="1200" alt="Robot Game Image By James Desmarais" title="Robot Game Image By James Desmarais">
         <section class="art-container">
             <h2>Gallery</h2>
             <ul id="Grid">
@@ -37,20 +34,16 @@
             <img id="ExpandedImage" src="./images/tree-by-veeterzy.jpg" alt="Tree Image By Veeterzy" class="hide-in-mobile">
             <button class="fas fa-times-circle close-image" title="close" onclick="toggleImage();"></button>
             <div class="expanded-image-controls">
-                <a id="PreviousImage" title="Previous"><i class="fas fa-arrow-left" onclick="previousImage();"></i></a>
-                <a id="NextImage" title="Next"><i class="fas fa-arrow-right" onclick="nextImage();"></i></a>
+                <a id="PreviousImage" title="Previous"><i class="fas fa-arrow-left show-cursor-pointer" onclick="previousImage();"></i></a>
+                <a id="NextImage" title="Next"><i class="fas fa-arrow-right show-cursor-pointer" onclick="nextImage();"></i></a>
             </div>
         </div>
     </main>
-
     <!-- Javascript (Mid priority)-->
     <script src="./scripts/main.js"></script>
-
     <footer></footer>
-
     <!-- Javascript plugins (bottom priority) -->
     <script src="./scripts/jquery-3.3.1.min.js"></script>
     <!-- <script>$(function () { $("main").load("gallery-content.html"); });</script> -->
     <script>$(function () { $("footer").load("footer.html"); });</script>
-
 </body>

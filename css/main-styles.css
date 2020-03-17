@@ -254,7 +254,12 @@ main li {
 	transition-timing-function: cubic-bezier(0, 0, 1, 1);
 }
 .gallery-container img:hover {
-	transform: scale(1.1);
+	/* transform: scale(1.1); */
+}
+#Snapshots div:hover, .art-container ul li:hover {
+	box-shadow: 0px 0px 7px 7px #78c2dd;
+	/* cursor: pointer; */
+	z-index: 100;
 }
 
 .show-in-mobile {
@@ -457,6 +462,19 @@ html main .item.animate {
 
 	opacity: 1;
 } */
+#Grid li a {
+	display: none;
+	position: absolute;
+	bottom: .5rem;
+	right: .5rem;
+	color: #fff;
+}
+#Grid li.show-buttons img {
+	transform: scale(1.1);
+}
+#Grid li.show-buttons a {
+	display: block;
+}
 
 /*************************************
   --- Form Styles 
@@ -748,14 +766,18 @@ nav.side-bar li:hover a {
 	font-size: 3rem;
 }
 .blog-post-navigation a:nth-of-type(odd) {
-	padding-right: 2rem;
+	margin-right: 2rem;
 }
 .blog-post-navigation a:hover {
 	color: #78c2dd;
 }
 .expand-image,
 .close-image {
+	cursor: pointer;
 	font-size: 3rem;
+}
+.show-cursor-pointer {
+	cursor: pointer;
 }
 #ExpandImageView {
 	display: flex;
@@ -769,6 +791,7 @@ nav.side-bar li:hover a {
 	background-color: #fff;
 	border-radius: 0 0 2rem 0;
 	box-shadow: 0 0.2rem 1rem #000000;
+	z-index: 101;
 }
 #ExpandImageView img {
 	width: 100%;
@@ -777,7 +800,7 @@ nav.side-bar li:hover a {
 	margin: 0 auto;
 }
 #ExpandImageView a {
-	cursor: pointer;
+	/* cursor: pointer; */
 	font-size: 3rem;
 	color: #4f8295;
 }
