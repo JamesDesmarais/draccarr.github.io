@@ -960,7 +960,13 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 	.show-in-mobile {
 		display: block;
 	}
-	html .hide-in-mobile {
+	html body .hide-in-mobile {
+		display: none;
+	}
+	#Grid li.show-buttons a {
+		display: none;
+	}
+	#ExpandImageView {
 		display: none;
 	}
 	.new-symbol {
