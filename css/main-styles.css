@@ -909,7 +909,8 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 		padding: 0;
 	}
 	body main {
-		padding: 2rem 0  0 0;
+		/* padding: 2rem 0  0 0; */
+		padding: 0;
 		width: 100%;
 		margin-top: 12rem;
 	}
