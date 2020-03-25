@@ -68,17 +68,9 @@ previousImage = function () {
 }//end previousImage
 
 
-// Open mobile navigation
-var toggleMobileNav = false;
+// Toggles the mobile navigation
 ToggleMobileNav = function () {
-    var mobileNav = $("#MobileNav");
-    if (!toggleMobileNav) {
-        mobileNav.removeClass("hide");
-    } else {
-        mobileNav.addClass("hide");
-    }
-    toggleMobileNav = !toggleMobileNav;
-
+    document.getElementById("MobileNav").classList.toggle("hide");
 }//end ToggleMobileNav
 
 

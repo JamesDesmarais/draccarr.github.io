@@ -1,6 +1,15 @@
 <!--[Note: This technique should only be used for parts of the page that do not appear on the opening screen.]-->
-<h1><a href="./index.html"><img src="./images/draccarr-logo-300x300.png" alt="logo"><span>ElderReign Studios</span></a></h1>
-<form>
+<!-- <h1> -->
+    <!-- </h1> -->
+<div class="container">
+    <span class="logo" style="display: inline-block;">
+            <a href="./index.html"><img src="./images/draccarr-logo-300x300.png" alt="logo"><span>ElderReign Studios</span></a>
+    </span>
+    <button id="OpenMenuBtn" type="button" onclick="ToggleMobileNav();" class="show-in-mobile">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
+<!-- <form> -->
     <!-- <input type="text" id="searchBar" placeholder="Search..." 
                 onfocus="placeholder = ' '; searchBarFocus();" 
                 onblur="placeholder = 'Search...'; searchBarFocus();"
@@ -16,17 +25,15 @@
     <button id="SearchBarBtn" type="submit" class="hide-in-mobile">
         <i class="fas fa-search"></i>
     </button> -->
-    <button id="OpenMenuBtn" type="button" onclick="ToggleMobileNav();" class="show-in-mobile">
-        <i class="fas fa-bars"></i>
-    </button>
-</form>
+
+<!-- </form> -->
 <nav id="MobileNav" class="show-in-mobile hide side-bar">
     <ul class="clearfix">
         <li><a href="./index.html"><i class="fas fa-home"></i> Home</a></li>
         <li><a href="./blog.html"><i class="fas fa-book"></i> Blog</a></li>
         <li><a href="./gallery.html">Gallery</a></li>
-        <li><a href="./game-catalog.html">Current Projects</a></li>
+        <li><a href="./game-catalog.html">Game Catalog</a></li>
         <li><a href="./about.html">About</a></li>
-        <li><a href="#Contact">Contact</a></li>
+        <li><a href="#Contact" onclick="ToggleMobileNav();">Contact</a></li>
     </ul>
 </nav>
