@@ -31,9 +31,11 @@ body main {
 
 .art-container ul li {
     display: flex;
+    flex-direction: row;
 	width: 28.5rem;
 	height: auto;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
@@ -48,6 +50,9 @@ body main {
 }
 .art-container img:hover {
 	transform: scale(1.1);
+}
+.art-container ul li img.half-width {
+    width: 50%;
 }
 
 /*************************************

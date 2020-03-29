@@ -874,7 +874,8 @@ body .full-button {
 	width: 100%;
 	height: 100%;
 	border: none;
-	background-color: #141414d8;
+	/* background-color: #141414d8; */
+	background-color: rgba(20, 20, 20, 0.847);
 	z-index: 100;
 }
 
