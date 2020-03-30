@@ -2,16 +2,9 @@
   --- Authors Styles
  *************************************/
 body main {
-    /* padding: 0; */
     background-color: #141414;
 }
-/* .side-padding {
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-.top-padding {
-    padding-top: 2rem;
-} */
+
 .art-container {
 	position: relative;
 	width: 100%;

@@ -823,37 +823,50 @@ nav.side-bar li:hover a {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	/* background-color: #141414d8; */
 	z-index: 101;
+}
+#ImageViewerControlsAndImage {
+	position: absolute;
+	top: 20%;
+	right: 10%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	width: 60%;
+	height: 60%;
+	z-index: 102;
 }
 #ExpandImageView {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	position: fixed;
-	top: 17.8rem;
-	left: 25%;
-	width: 30%;
-	height: auto;
-	background-color: #ccc;
-	border-radius: 0 0 2rem 0;
-	box-shadow: 0 0.2rem 1rem #000000;
-	z-index: 101;
+	align-items: center;
+	position: relative;
+	background-color: #000;
+	overflow: hidden;
+	min-width: 100%;
 }
 #ExpandImageView img {
-	width: 100%;
+	width: auto;
+	max-width: 100%;
 	height: auto;
-	padding: 1rem;
-	margin: 0 auto;
+	max-height: 100%;
 }
-#ExpandImageView a {
+#ExpandedImageControls {
+	position: relative;
+	min-width: 30rem;
+	height: 100%;
+	padding: 1rem;
+	background-color: #ccc;
+}
+#ExpandedImageControls a {
 	font-size: 3rem;
 	color: #4f8295;
 }
-#ExpandImageView a:first-of-type {
-	margin-top: 2.5rem;
+#ExpandedImageControls a:first-of-type {
+	margin-right: 1rem;
 }
-#ExpandImageView a:hover {
+#ExpandedImageControls a:hover {
 	color: #78c2dd;
 }
 .close-image {
@@ -871,13 +884,16 @@ nav.side-bar li:hover a {
 .close-image:hover {
 	color: #db2626;
 }
-body .full-button {
+body #FullButton {
+	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	border: none;
 	/* background-color: #141414d8; */
 	background-color: rgba(20, 20, 20, 0.847);
-	z-index: 100;
+	/* z-index: 100; */
 }
 
 /*************************************
@@ -1064,7 +1080,8 @@ main {
 	#fancyNav {
 		display: none;
 	}
-	header nav.show-in-mobile, header nav.hide {
+	header nav.show-in-mobile,
+	header nav.hide {
 		display: block;
 	}
 	body header #MobileNav {
