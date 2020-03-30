@@ -1059,6 +1059,7 @@ main {
 	header .container {
 		display: flex;
 		flex-direction: row;
+		align-items: center;
 	}
 	#fancyNav {
 		display: none;
