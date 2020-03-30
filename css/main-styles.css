@@ -42,9 +42,8 @@ body {
 	background-color: #252424;
 }
 
-
 /*************************************
-  --- Authors Styles 
+  --- Authors Styles
  *************************************/
 header {
 	display: flex;
@@ -281,7 +280,8 @@ main li {
 .gallery-container img:hover {
 	/* transform: scale(1.1); */
 }
-#Snapshots div:hover, .art-container ul li:hover {
+#Snapshots div:hover,
+.art-container ul li:hover {
 	/* box-shadow: inset 0px 0px 7px 7px #78c2dd; */
 	z-index: 100;
 }
@@ -328,8 +328,8 @@ body .show {
 	align-items: center;
 }
 .games-container ul li div.game-details-container h3 {
-    display: inline-block;
-    padding: 0;
+	display: inline-block;
+	padding: 0;
 }
 .games-container ul li div.game-details-container {
 	position: absolute;
@@ -496,7 +496,8 @@ html main .item.animate {
 #Grid li.show-buttons img {
 	transform: scale(1.1);
 }
-#Grid li.show-buttons a, #Grid li.show-buttons div.inner-shadow  {
+#Grid li.show-buttons a,
+#Grid li.show-buttons div.inner-shadow {
 	display: block;
 }
 .inner-shadow {
@@ -511,7 +512,7 @@ html main .item.animate {
 }
 
 /*************************************
-  --- Form Styles 
+  --- Form Styles
  *************************************/
 form {
 	width: 100%;
@@ -1041,5 +1042,53 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 	}
 	#CopyrightNotice {
 		font-size: 3rem;
+	}
+}
+main {
+	position: relative;
+}
+@media only screen and (max-width: 1732px) and (min-width: 1201px) {
+	header {
+		position: fixed;
+		top: 0;
+		z-index: 105;
+	}
+	main {
+		margin-top: 6.2rem;
+	}
+	header .container {
+		display: flex;
+		flex-direction: row;
+	}
+	#fancyNav {
+		display: none;
+	}
+	header nav.show-in-mobile, header nav.hide {
+		display: block;
+	}
+	body header #MobileNav {
+		position: relative;
+		margin: auto;
+		padding: 0;
+		width: auto;
+		z-index: 106;
+		margin: 0 0 0 2rem;
+	}
+	body header nav ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		background-color: #141414;
+	}
+	body header nav ul li {
+		padding-left: 0;
+		box-shadow: none;
+	}
+	body header nav.side-bar ul li a {
+		padding: 1.5rem;
+	}
+	.hide-home-link {
+		display: none;
 	}
 }
