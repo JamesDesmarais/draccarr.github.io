@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main-styles.css">
     <link rel="stylesheet" href="./css/gallery-styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Javascript plugins (top priority) -->
@@ -29,8 +28,18 @@
             </div>
             <div id="ExpandedImageControls" class="expanded-image-controls">
                 <button class="fas fa-times-circle close-image" title="close" onclick="toggleImage();"></button>
-                <a id="PreviousImage" title="Previous"><i class="fas fa-arrow-left show-cursor-pointer" onclick="previousImage();"></i></a>
-                <a id="NextImage" title="Next"><i class="fas fa-arrow-right show-cursor-pointer" onclick="nextImage();"></i></a>
+                <div id="ImageControls">
+                    <button id="PreviousImage" class="control-button show-cursor-pointer fas fa-arrow-left" title="Previous" onclick="previousImage();"></button>
+                    <button id="NextImage" class="control-button show-cursor-pointer fas fa-arrow-right" title="Next" onclick="nextImage();"></button>
+                </div>
+                <!-- <div id="ImageDetails">
+                    <h2 >Insert Image name here</h2>
+                    <span id="ImageAuthor">By James Desmarias</span>
+                </div> -->
+                <!-- <div id="ImageDescription">
+                    <p>
+                    </p>
+                </div> -->
             </div>
         </div>
         <button id="FullButton" class="full-button" onclick="toggleImage();"></button>
