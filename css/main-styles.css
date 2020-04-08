@@ -811,8 +811,8 @@ body #FullButton {
 Is it bad practice to put input elements like buttons outside of forms? "Yes" - Markis Day
 What is the width of mobile devices for media queries? "768" - Markis Day
 */
-
-@media only screen and (max-width: 1200px) {
+/*Changed from 1200px*/
+@media only screen and (max-width: 980px) {
 	body {
 		width: 100%;
 		margin: 0;
@@ -845,7 +845,7 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 	}
 	.logo {
 		left: 2%;
-		font: 6rem/2.0 garamond, arial, sans-serif;
+		font: 6rem/2.0 'Poppins', arial, sans-serif;
 	}
 	.logo a img {
 		height: 10rem;
@@ -858,8 +858,8 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 		font-size: 3rem;
 	}
 	article {
-		padding-left: 2rem;
-		padding-right: 2rem;
+		padding-left: 4rem;
+		padding-right: 4rem;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -961,7 +961,8 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 main {
 	position: relative;
 }
-@media only screen and (max-width: 1732px) and (min-width: 1201px) {
+/*changed min-width from 1201px*/
+@media only screen and (max-width: 1732px) and (min-width: 981px) {
 	header {
 		position: fixed;
 		top: 0;
