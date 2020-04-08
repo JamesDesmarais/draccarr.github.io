@@ -835,7 +835,7 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 		position: fixed;
 		z-index: 100;
 		top: 0%;
-		padding: 0 2rem 0 2rem;
+		padding: 0 4rem 0 4rem;
 	}
 	header div.container {
 		display: flex;
