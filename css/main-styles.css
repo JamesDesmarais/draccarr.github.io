@@ -217,21 +217,22 @@ i {
 main li {
 	font-family: 'Raleway', arial, sans-serif;
 }
-#news-articles article:first-of-type {
+#NewsArticles article:first-of-type, #BlogsArticles article:first-of-type {
 	border-top: 1px solid #ccc;
 }
-#news-articles article {
+#NewsArticles article, #BlogsArticles article {
 	position: relative;
 	width: 100%;
-	min-width: 364px;
+	/* min-width: 364px; */
+	min-width: 515.4px;
 	padding-top: 1rem;
 	padding-bottom: 3rem;
 	border-bottom: 1px solid #ccc;
 }
-#news-articles article h3 a {
+#NewsArticles article h3 a, #BlogsArticles article h3 a {
 	font-size: 2rem;
 }
-#news-articles article ul li:last-child {
+#NewsArticles article ul li:last-child, #BlogsArticles ul li:last-child {
 	position: absolute;
 	right: 3%;
 }
@@ -880,19 +881,20 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 	.blog-post-navigation a {
 		font-size: 10rem;
 	}
-	#news-articles {
+	#NewsArticles, #BlogsArticles {
 		width: 100%;
 	}
-	#news-articles article {
+	#NewsArticles article, #BlogsArticles article {
 		width: 100%;
 		font-size: 3rem;
 		padding-bottom: 10rem;
 	}
-	#news-articles a,
-	#news-articles article h3 a {
+	#NewsArticles a, #BlogsArticles a,
+	#NewsArticles article h3 a, #BlogsArticles article h3 a {
 		font-size: 3rem;
 	}
-	#news-articles article ul li:last-child {
+	#NewsArticles article ul li:last-child, 
+	#BlogsArticles article ul li:last-child {
 		position: absolute;
 		right: 3%;
 		bottom: 0%;

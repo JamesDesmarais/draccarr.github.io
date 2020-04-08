@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8" />
+
+    <meta property="og:site_name" content="ElderReign Studios">
+    <meta property="og:title" content="Blog Catalog">
+    <meta property="og:description" content="To get the officail ElderReign Studios blog posts.">
+    <meta property="og:image" content="https://draccarr.github.io/images/draccarr-logo-300x300.png">
+    <meta property="og:url" content="https://draccarr.github.io/blogs.html">
+
+    <title>ElderReign Studios | Blogs</title>
+    <link rel="icon" href="./images/draccarr-logo-300x300.png">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main-styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Javascript plugins (top priority) -->
+    <script src="./scripts/modernizr-custom.js"></script>
+    <script src="./scripts/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+    <header></header>
+    <div id="ImageViewer" class="hide hide-in-mobile">
+        <div id="ImageViewerControlsAndImage">
+            <div id="ExpandImageView" class="hide-in-mobile">
+                <img id="ExpandedImage" src="./images/tree-by-veeterzy.jpg" alt="Tree Image By Veeterzy" class="hide-in-mobile">
+            </div>
+            <div id="ExpandedImageControls" class="expanded-image-controls">
+                <button class="fas fa-times-circle close-image" title="close" onclick="toggleImage();"></button>
+                <a id="PreviousImage" title="Previous"><i class="fas fa-arrow-left show-cursor-pointer" onclick="previousImage();"></i></a>
+                <a id="NextImage" title="Next"><i class="fas fa-arrow-right show-cursor-pointer" onclick="nextImage();"></i></a>
+            </div>
+        </div>
+        <button id="FullButton" class="full-button" onclick="toggleImage();"></button>
+    </div>
+    <main>
+        <h1 class="hide">Blogs</h1>
+        <nav id="fancyNav" class="side-bar fancyNav"></nav>
+        <img src="./images/blog-by-pixabay.jpeg" alt="Blog Image By Pixabay">
+        <div id="index-container">
+            <section id="BlogsArticles">
+                <h2 class="large-text">Blogs</h2>
+                <article class="card">
+                    <h3><a href="./blog.html">All Blogs</a></h3>
+                    <ul>
+                        <li>All blogs ordered chronologically.</li>
+                        <li class="date">Apr 08, 2020</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3><a href="./blog.html">Hunted</a></h3>
+                    <ul>
+                        <li>The offical Hunted blog.</li>
+                        <li class="date">Apr 08, 2020</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3><a href="./blog.html">Player Notes (Hunted)</a></h3>
+                    <ul>
+                        <li>Notes from the players.</li>
+                        <li class="date">Apr 08, 2020</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3><a href="./blog.html">A Programmer's Thoughts</a></h3>
+                    <ul>
+                        <li>My thoughts.</li>
+                        <li class="date">Apr 08, 2020</li>
+                    </ul>
+                </article>
+            </section>
+            <section id="Snapshots" class="hide-in-mobile">
+                <h2 class="large-text hide-in-mobile">Snapshots</h2>
+                <div>
+                    <img id="1" src="./images/vatherdone-with-tree-ghosts.png" alt="Vatherdone With Ghosts By James Desmarais" title="Vatherdone With Ghosts By James Desmarais" class="hide-in-mobile">
+                </div>
+                <div>
+                    <img id="2" src="./images/draccarr-logo.png" alt="Draccarr Logo by James Desmarais" title="Draccarr Logo by James Desmarais" class="hide-in-mobile">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Javascript (Mid priority)-->
+    <script src="./scripts/main.js"></script>
+
+    <footer></footer>
+    
+    <!-- Javascript plugins (bottom priority) -->
+    <script>$(function () { $("footer").load("footer.html"); });</script>
+
+</body>
