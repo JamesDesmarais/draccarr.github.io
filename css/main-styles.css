@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&family=Open+Sans:wght@400;700&family=Raleway:wght@300;400;500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 html {
 	box-sizing: border-box;
 	font-size: 16px;
@@ -67,7 +67,7 @@ header div.container {
 	z-index: 100;
 	display: flex;
 	align-items: center;
-	font: 3rem/2.0 garamond, arial, sans-serif;
+	font: 3rem/2.0 'Poppins', arial, sans-serif;
 }
 .logo a {
 	position: relative;
