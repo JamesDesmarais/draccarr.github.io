@@ -646,7 +646,6 @@ main section a:link,
 main section a:visited {
 	color: #4f8295;
 	border-radius: .5rem;
-	font-size: 1.2rem;
 }
 main section a:hover {
 	color: #78c2dd;
