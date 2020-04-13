@@ -218,3 +218,15 @@ CheckDate = function() {
 		} //end if
 	} //end for i loop
 }; //end CheckDate
+
+
+// var newPostsDoc;
+// var newAllPosts;
+// var newCurrentPost;
+// function SearchBlogs(_blogType) {
+// 	//ToDo:
+// 	//Get all of the articles by class from the list and load them to the page.
+// 	postsDoc = new DOMParser().parseFromString(_content, 'text/html');
+// 	newAllPosts = postsDoc.getElementsByClassName(_blogType);
+// 	document.getElementById("");
+// }//end SearchBlogs
