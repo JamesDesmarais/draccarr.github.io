@@ -111,7 +111,28 @@ $.get('https://draccarr.github.io/blog-content.html', function(_content) {
 	postsDoc = new DOMParser().parseFromString(_content, 'text/html');
 	$('#BlogPost').load('blog-content.html ' + window.location.hash);
 	ReplaceAnchors();
+	// ReplaceImage();
 });
+
+
+function ReplaceImage() {
+	articleImg = null;
+	try {
+		articleImg = postsDoc.getElementById(window.location.hash.substr(1, window.location.hash.length - 1))
+																			.getElementsByClassName("blog-post-image")[0]
+																			.getElementsByTagName("img")[0];
+	} catch (_ex) {
+		
+	}
+	if (articleImg != null) {
+		var placeholderImg = document.getElementById("BlogPostImagePlaceholder");
+		placeholderImg.src = articleImg.src;
+		placeholderImg.alt = articleImg.alt;
+		placeholderImg.title = articleImg.alt;		
+		// articleImg.classList.add("hide");
+	}
+}//end ReplaceAnchor
+
 
 var previousPostAnchorTop;
 var previousPostAnchorBottom;
