@@ -133,7 +133,7 @@ article p {
 	padding-bottom: 2rem;
 	font: 1.6rem/1.5 'Raleway', arial, sans-serif;
 }
-article img {
+article .box img {
 	width: 5rem;
 	height: auto;
 	margin-bottom: 0;
@@ -453,6 +453,9 @@ strong {
 }
 #ImageControls {
 	padding-bottom: 1rem;
+}
+.blog-post-image img {
+	/* border: 1rem solid #000; */
 }
 
 /*************************************
@@ -864,7 +867,7 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 		margin-left: auto;
 		margin-right: auto;
 	}
-	article img {
+	article .box img {
 		width: 10rem;
 		height: auto;
 		margin-bottom: 0;
