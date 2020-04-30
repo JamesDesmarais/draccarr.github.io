@@ -1059,6 +1059,7 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 		font-size: 9rem;
 	}
 	#BlogPostNavTop, #BlogPostNavBottom {
+		width: 92%;
 		margin: 0 4rem 0 4rem;
 	}
 }
