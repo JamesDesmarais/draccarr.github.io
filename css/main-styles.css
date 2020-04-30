@@ -1051,6 +1051,13 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 	#CopyrightNotice {
 		font-size: 3rem;
 	}
+	#SharePost i {
+		font-size: 9.5rem;
+		padding-right: 1rem;
+	}
+	#SharePost span {
+		font-size: 9rem;
+	}
 }
 main {
 	position: relative;
