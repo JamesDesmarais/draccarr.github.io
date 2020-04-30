@@ -27,6 +27,18 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
     <header></header>
+    <div id="ShareViewer" class="hide hide-in-mobile">
+        <div id="ShareViewerSelectSharing">
+            <div id="PageURL" class="hide-in-mobile">
+                <div>
+                    <input id="URL" type="url" readonly="readonly">
+                    <button id="BtnClipboard" onclick="copyURLToClipboard();"><span class="far fa-clipboard"></span><span>Copy</span></button>
+                </div>
+                <span id="ClipboardPrompt" class="prompt hide">Copied to clipboard</span>
+            </div>
+        </div>
+        <button id="FullButton" class="full-button" onclick="toggleShareViewer();"></button>
+    </div>
     <main>
         <h1 class="hide">Blog post</h1>
         <nav id="fancyNav" class="side-bar fancyNav"></nav>
@@ -40,6 +52,7 @@
         <div id="BlogPostNavBottom" class="blog-post-navigation">
             <a id="PreviousPostBottom" title="Previous"><i class="fas fa-arrow-left"></i></a>
             <a id="NextPostBottom" title="Next"><i class="fas fa-arrow-right"></i></a>
+            <button id="SharePost" title="Share" onclick="toggleShareViewer()"><i class="fas fa-share-alt"></i><span>Share</span></button>
         </div>
     </main>
     <footer></footer>

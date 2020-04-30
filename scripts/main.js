@@ -18,6 +18,33 @@ searchBarFocus = function() {
 	}
 };
 
+
+toggleShareViewer = function () {
+	console.log("Poke");
+	var URL =  document.getElementById("URL").value = document.location;
+	if (ShareViewer != null) {
+		ShareViewer.classList.toggle("hide");
+	}
+}//end toggleShareViewer
+
+copyURLToClipboard = function() {
+	try {
+		copyToClipboard(document.getElementById("URL").value);
+		document.getElementById("ClipboardPrompt").classList.toggle("hide");
+	} catch(_ex) {
+		console.log(_ex);
+	}
+}//end copyURLToClipboard
+copyToClipboard = function(_text) {
+	try {
+		navigator.clipboard.writeText(_text);
+		console.log("Text has been added to clipboard.");
+	} catch (_ex) {
+		console.log("Text could not be added to clipboard.");
+	}
+}//end copyToClipboard
+
+
 //This hides the expanded image.
 var imageToggled = false;
 var imageToShow;

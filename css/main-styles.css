@@ -454,8 +454,32 @@ strong {
 #ImageControls {
 	padding-bottom: 1rem;
 }
-.blog-post-image img {
-	/* border: 1rem solid #000; */
+
+#SharePost {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	position: absolute;
+	right: 0;
+	color: #fff;
+	background-color: #252424;
+	padding: 1rem;
+	border-radius: 1rem;
+	border: none;
+	margin-top: 1rem;
+	margin-right: 2rem;
+}
+#SharePost:hover {
+	/* color: #4f8295; */
+	background-color: #78c2dd;
+	cursor: pointer;
+}
+#SharePost i {
+	font-size: 2.5rem;
+	padding-right: .5rem;
+}
+#SharePost span {
+	font-size: 2rem;
 }
 
 /*************************************
@@ -717,13 +741,75 @@ nav.side-bar li:hover a {
 .show-cursor-pointer {
 	cursor: pointer;
 }
-#ImageViewer {
+#ImageViewer, #ShareViewer {
 	position: fixed;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
 	z-index: 101;
+}
+#ShareViewerSelectSharing {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+#PageURL {
+	z-index: 102;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+#PageURL div {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	width: 50%;
+	padding: 2rem;
+	background-color: #fff;
+}
+#PageURL .prompt {
+	align-self: flex-start;
+	margin-top: -2.5rem;
+	margin-left: calc(25% + 2rem);
+	color: #1e9c48;
+	font-weight: bold;
+}
+#URL {
+	background-color: #ccc;
+	width: 100%;
+	height: 2rem;
+	border: none;
+	padding: 2rem 1rem;
+}
+#BtnClipboard {
+	height: 100%;
+	font-size: 3rem;
+	border: none;
+	background-color: transparent;
+}
+#BtnClipboard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: .5rem 0 0 .5rem;
+	font-size: 3rem;
+}
+#BtnClipboard:hover {
+	color: #78c2dd;
+}
+#BtnClipboard span:nth-of-type(1) {
+	font-size: 3.5rem;
+	padding-bottom: .5rem;
+}
+#BtnClipboard span:nth-of-type(2) {
+	font-family: 'Raleway', arial, sans-serif;
+	font-size: 1rem;
 }
 #ImageViewerControlsAndImage {
 	position: absolute;
@@ -896,7 +982,7 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 	#NewsArticles article h3 a, #BlogsArticles article h3 a {
 		font-size: 3rem;
 	}
-	#NewsArticles article ul li:last-child, 
+	#NewsArticles article ul li:last-child,
 	#BlogsArticles article ul li:last-child {
 		position: absolute;
 		right: 3%;
