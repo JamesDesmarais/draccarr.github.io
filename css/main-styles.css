@@ -1062,6 +1062,9 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 		width: 92%;
 		margin: 0 4rem 0 4rem;
 	}
+	.blog-post-navigation a:nth-of-type(odd) {
+		margin-right: 7rem;
+	}
 }
 main {
 	position: relative;
