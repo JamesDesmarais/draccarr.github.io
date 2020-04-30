@@ -757,6 +757,7 @@ nav.side-bar li:hover a {
 	height: 100%;
 }
 #PageURL {
+	position: relative;
 	z-index: 102;
 	width: 50%;
 	display: flex;
@@ -774,8 +775,9 @@ nav.side-bar li:hover a {
 	background-color: #fff;
 }
 #PageURL .prompt {
-	align-self: flex-start;
-	margin-top: -2.5rem;
+	position: absolute;
+	bottom: .3rem;
+	left: 0;
 	margin-left: calc(25% + 2rem);
 	color: #1e9c48;
 	font-weight: bold;
@@ -792,6 +794,7 @@ nav.side-bar li:hover a {
 	font-size: 3rem;
 	border: none;
 	background-color: transparent;
+	cursor: pointer;
 }
 #BtnClipboard {
 	display: flex;

@@ -30,7 +30,7 @@ toggleShareViewer = function () {
 copyURLToClipboard = function() {
 	try {
 		copyToClipboard(document.getElementById("URL").value);
-		document.getElementById("ClipboardPrompt").classList.toggle("hide");
+		document.getElementById("ClipboardPrompt").classList.remove("hide");
 	} catch(_ex) {
 		console.log(_ex);
 	}
