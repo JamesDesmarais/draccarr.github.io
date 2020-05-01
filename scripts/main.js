@@ -3,6 +3,29 @@ $(function() {
 	$('header').load('header.html');
 	$('#fancyNav').load('main-nav.html');
 	CheckDate();
+	var shareButton;
+	try {
+		shareButton = document.getElementById("SharePost");
+		if (shareButton != null) {
+			shareButton.addEventListener('click', event => {
+			if (navigator.share) {
+				navigator.share({
+				title: 'Hunted Blog',
+				url: 'https://draccarr.github.io/index'
+				}).then(() => {
+				console.log('Thanks for sharing!');
+				})
+				.catch(console.error);
+			} else {
+				// fallback
+			}
+		});
+	} else {
+		console.log("There is no share button");
+	}
+	} catch(_ex) {
+
+	}
 });
 
 //This toggles the search bar results.
