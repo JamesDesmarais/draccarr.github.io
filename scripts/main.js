@@ -13,9 +13,8 @@ $(function() {
 				title: 'Hunted Blog',
 				url: document.location
 				}).then(() => {
-				console.log('Thanks for sharing!');
-				})
-				.catch(console.error);
+					console.log('Thanks for sharing!');
+				}).catch(console.error);
 			} else {
 				// fallback
 			}
