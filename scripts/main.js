@@ -11,7 +11,7 @@ $(function() {
 			if (navigator.share) {
 				navigator.share({
 				title: 'Hunted Blog',
-				url: 'https://draccarr.github.io/index'
+				url: document.location
 				}).then(() => {
 				console.log('Thanks for sharing!');
 				})
