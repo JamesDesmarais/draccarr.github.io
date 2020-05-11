@@ -1013,8 +1013,23 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 		width: 100%;
 		font-size: 3rem;
 	}
+	#BlogsArticles p {
+		font-size: 3rem;
+	}
 	#NewsArticles article {
 		padding-bottom: 10rem;
+	}
+	#BlogsArticles article {
+		flex-direction: column;
+	}
+	#BlogsArticles div.article-right-side {
+		position: relative;
+		padding-left: 0;
+	}
+	#BlogsArticles div.article-right-side img {
+		max-height: none;
+		width: 100%;
+		height: auto;
 	}
 	#NewsArticles a,
 	#BlogsArticles a,
@@ -1075,11 +1090,9 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 		display: none;
 	}
 	.new-symbol {
-		font-size: 3rem;
 		padding: 1rem;
-		top: 1.2rem;
-		right: 3.8rem;
-		font-size: 1.6rem;
+		top: .9rem;
+		right: 0rem;
 	}
 	footer .social-media-icons {
 		font-size: 10rem;
