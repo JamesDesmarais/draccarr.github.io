@@ -252,8 +252,12 @@ main li {
 	text-align: right;
 	padding-left: 1rem;
 }
+#BlogsArticles div.article-right-side {
+	display: flex;
+	flex-direction: column;
+}
 #BlogsArticles div.article-right-side img {
-	display: block;
+	display: inline-block;
 	max-height: 25rem;
 	width: auto;
 }
@@ -505,6 +509,7 @@ strong {
 	font-size: 2rem;
 }
 .last-updated {
+	padding-top: 2rem;
 	font-family: 'Raleway', arial, sans-serif;
 }
 
