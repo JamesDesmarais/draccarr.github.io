@@ -1096,6 +1096,7 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 		padding: 1rem;
 		top: .9rem;
 		right: 0rem;
+		font-size: 3rem;
 	}
 	footer .social-media-icons {
 		font-size: 10rem;
