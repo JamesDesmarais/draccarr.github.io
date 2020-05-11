@@ -1013,6 +1013,9 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 		width: 100%;
 		font-size: 3rem;
 	}
+	body main #BlogsArticles h3 a {
+		font-size: 4rem;
+	}
 	#BlogsArticles p {
 		font-size: 3rem;
 	}
