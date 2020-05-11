@@ -217,10 +217,15 @@ i {
 main li {
 	font-family: 'Raleway', arial, sans-serif;
 }
-#NewsArticles article:first-of-type, #BlogsArticles article:first-of-type {
+#BlogsArticles {
+	width: 100%;
+}
+#NewsArticles article:first-of-type,
+#BlogsArticles article:first-of-type {
 	border-top: 1px solid #ccc;
 }
-#NewsArticles article, #BlogsArticles article {
+#NewsArticles article,
+#BlogsArticles article {
 	position: relative;
 	width: 100%;
 	/* min-width: 364px; */
@@ -229,12 +234,28 @@ main li {
 	padding-bottom: 3rem;
 	border-bottom: 1px solid #ccc;
 }
-#NewsArticles article h3 a, #BlogsArticles article h3 a {
+#NewsArticles article h3 a,
+#BlogsArticles article h3 a {
 	font-size: 2rem;
 }
-#NewsArticles article ul li:last-child, #BlogsArticles ul li:last-child {
+#NewsArticles article ul li:last-child {
 	position: absolute;
 	right: 3%;
+}
+#BlogsArticles article {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-bottom: 1rem;
+}
+#BlogsArticles div.article-right-side {
+	text-align: right;
+	padding-left: 1rem;
+}
+#BlogsArticles div.article-right-side img {
+	display: block;
+	max-height: 25rem;
+	width: auto;
 }
 .gallery-container img {
 	transition: 0.2s;
@@ -409,10 +430,12 @@ strong {
 }
 .new-symbol {
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 1.5rem;
+	right: -.2rem;
 	color: indigo;
-	padding: 0.5rem;
+	background-color: #eee;
+	border-radius: 2rem;
+	padding: 0.5rem 1rem;
 	transform: rotate(25deg);
 }
 #Grid li a {
@@ -445,7 +468,7 @@ strong {
 }
 #ImageDescription {
 	width: 100%;
-	height:100%;
+	height: 100%;
 	overflow: hidden;
 	overflow-y: scroll;
 	scrollbar-color: #464646 #141414;
@@ -480,6 +503,9 @@ strong {
 }
 #SharePost span {
 	font-size: 2rem;
+}
+.last-updated {
+	font-family: 'Raleway', arial, sans-serif;
 }
 
 /*************************************
@@ -643,7 +669,6 @@ footer form ul li {
 	justify-content: right;
 }
 
-
 /*************************************
   --- Navigational behaviours
  *************************************/
@@ -741,7 +766,8 @@ nav.side-bar li:hover a {
 .show-cursor-pointer {
 	cursor: pointer;
 }
-#ImageViewer, #ShareViewer {
+#ImageViewer,
+#ShareViewer {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -973,16 +999,22 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 	.blog-post-navigation a {
 		font-size: 10rem;
 	}
-	#NewsArticles, #BlogsArticles {
+	#NewsArticles,
+	#BlogsArticles {
 		width: 100%;
 	}
-	#NewsArticles article, #BlogsArticles article {
+	#NewsArticles article,
+	#BlogsArticles article {
 		width: 100%;
 		font-size: 3rem;
+	}
+	#NewsArticles article {
 		padding-bottom: 10rem;
 	}
-	#NewsArticles a, #BlogsArticles a,
-	#NewsArticles article h3 a, #BlogsArticles article h3 a {
+	#NewsArticles a,
+	#BlogsArticles a,
+	#NewsArticles article h3 a,
+	#BlogsArticles article h3 a {
 		font-size: 3rem;
 	}
 	#NewsArticles article ul li:last-child,
@@ -1040,6 +1072,9 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 	.new-symbol {
 		font-size: 3rem;
 		padding: 1rem;
+		top: 1.2rem;
+		right: 3.8rem;
+		font-size: 1.6rem;
 	}
 	footer .social-media-icons {
 		font-size: 10rem;
@@ -1058,7 +1093,8 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 	#SharePost span {
 		font-size: 9rem;
 	}
-	#BlogPostNavTop, #BlogPostNavBottom {
+	#BlogPostNavTop,
+	#BlogPostNavBottom {
 		width: 92%;
 		margin: 0 4rem 0 4rem;
 	}

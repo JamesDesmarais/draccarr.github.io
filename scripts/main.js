@@ -164,6 +164,15 @@ $.get('https://draccarr.github.io/blog-content.html', function(_content) {
 });
 
 
+// function LoadByBlogType(_blogType) {
+// 	//Get the type of blog post to load from the location hash in the url.
+// 	if (_blogType != null) {
+// 		allPosts = postsDoc.getElementsByTagName('article').classList.contains(_blogType);
+// 		document.getElementsByName('main')[0].innerHTML = allPosts;
+// 	}
+// }//end LoadByBlogType
+
+
 function ReplaceImage() {
 	articleImg = null;
 	try {
