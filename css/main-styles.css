@@ -288,8 +288,14 @@ body .show {
 	flex-direction: row;
 }
 #index-container h2 {
-	position: absolute;
-	display: none;
+	width: 100%;
+	font-size: 14pt;
+	color: #aaa;
+	/* position: absolute;
+	display: none; */
+}
+#Snapshots h2 {
+	padding-left: 3.8rem;
 }
 #Snapshots {
 	width: 50%;
@@ -436,8 +442,8 @@ strong {
 	position: absolute;
 	top: 1.5rem;
 	right: -.2rem;
-	color: indigo;
-	background-color: #eee;
+	color: #fff;
+	background-color: #78c2dd;
 	border-radius: 2rem;
 	padding: 0.5rem 1rem;
 	transform: rotate(25deg);
@@ -931,11 +937,6 @@ body #FullButton {
 /*************************************
   --- Media Queries
  *************************************/
-/*
-Is it bad practice to put input elements like buttons outside of forms? "Yes" - Markis Day
-What is the width of mobile devices for media queries? "768" - Markis Day
-*/
-/*Changed from 1200px*/
 @media only screen and (max-width: 980px) {
 	body {
 		width: 100%;
@@ -1123,9 +1124,9 @@ What is the width of mobile devices for media queries? "768" - Markis Day
 	.blog-post-navigation a:nth-of-type(odd) {
 		margin-right: 7rem;
 	}
-}
-main {
-	position: relative;
+	#index-container h2 {
+		padding-left: 4rem
+	}
 }
 /*changed min-width from 1201px*/
 @media only screen and (max-width: 1732px) and (min-width: 981px) {
