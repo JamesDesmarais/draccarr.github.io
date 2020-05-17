@@ -1098,6 +1098,8 @@ body #FullButton {
 		top: .9rem;
 		right: 0rem;
 		font-size: 3rem;
+		transform: rotate(0deg);
+		margin-right: 1rem;
 	}
 	footer .social-media-icons {
 		font-size: 10rem;
