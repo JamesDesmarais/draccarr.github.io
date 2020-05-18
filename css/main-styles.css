@@ -210,8 +210,6 @@ body .half-horizontal-size {
 }
 .special-message {
 	font: 1.6rem/1.5 'Raleway', arial, sans-serif;
-	color: #000;
-	padding: 1rem 4rem 1rem 4rem;
 	border-top: 0.1rem solid #ccc;
 }
 main li {
@@ -1130,8 +1128,12 @@ body #FullButton {
 	}
 	#BlogsArticles div.article-right-side img.scale-for-mobile {
 		width: 50%;
-		height: auto;/*Can remove this*/
 		margin-left: 25%;
+	}
+	.special-message {
+		font: 1.6rem/1.5 'Raleway', arial, sans-serif;
+		padding: 1rem 4rem 1rem 4rem;
+		border-top: 0.1rem solid #ccc;
 	}
 }
 /*changed min-width from 1201px*/
