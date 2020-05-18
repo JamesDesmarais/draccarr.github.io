@@ -201,7 +201,7 @@ i {
 .large-text {
 	font-size: 4rem;
 }
-.half-horizontal-size {
+body .half-horizontal-size {
 	width: 50%;
 	height: auto;
 }
@@ -1127,6 +1127,11 @@ body #FullButton {
 	main h2 {
 		padding-left: 4rem;
 		font-size: 5rem;
+	}
+	#BlogsArticles div.article-right-side img.scale-for-mobile {
+		width: 50%;
+		height: auto;/*Can remove this*/
+		margin-left: 25%;
 	}
 }
 /*changed min-width from 1201px*/
