@@ -289,7 +289,8 @@ body .show {
 }
 #index-container h2 {
 	width: 100%;
-	font-size: 14pt;
+	/* font-size: 14pt; */
+	font-size: 1.6rem;
 	color: #aaa;
 	/* position: absolute;
 	display: none; */
