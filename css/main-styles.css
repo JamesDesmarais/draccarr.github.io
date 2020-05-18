@@ -1128,7 +1128,8 @@ body #FullButton {
 		margin-right: 7rem;
 	}
 	#index-container h2 {
-		padding-left: 4rem
+		padding-left: 4rem;
+		font-size: 5rem;
 	}
 }
 /*changed min-width from 1201px*/
