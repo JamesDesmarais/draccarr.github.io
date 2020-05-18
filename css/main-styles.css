@@ -127,7 +127,7 @@ nav + img {
 article {
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
-	border-bottom: 1px solid #141414;
+	border-bottom: 1px solid #ccc;
 }
 article p {
 	padding-bottom: 2rem;
@@ -209,10 +209,10 @@ i {
 	margin-left: 25%;
 }
 .special-message {
-	font: 2rem/1.5 'Raleway', arial, sans-serif;
+	font: 1.6rem/1.5 'Raleway', arial, sans-serif;
 	color: #000;
-	padding: 3rem;
-	border-top: 0.1rem solid #292f49;
+	padding-top: 1rem;
+	border-top: 0.1rem solid #ccc;
 }
 main li {
 	font-family: 'Raleway', arial, sans-serif;
@@ -287,13 +287,10 @@ body .show {
 	display: flex;
 	flex-direction: row;
 }
-#index-container h2 {
+main h2 {
 	width: 100%;
-	/* font-size: 14pt; */
 	font-size: 1.6rem;
 	color: #aaa;
-	/* position: absolute;
-	display: none; */
 }
 #Snapshots h2 {
 	padding-left: 3.8rem;
@@ -369,9 +366,9 @@ body .show {
 .box {
 	margin-bottom: 2rem;
 }
-.box h2 {
+.box h3 {
 	font-weight: bold;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #ccc;
 	margin-left: 1rem;
 	margin-top: auto;
 }
@@ -1127,7 +1124,7 @@ body #FullButton {
 	.blog-post-navigation a:nth-of-type(odd) {
 		margin-right: 7rem;
 	}
-	#index-container h2 {
+	main h2 {
 		padding-left: 4rem;
 		font-size: 5rem;
 	}
