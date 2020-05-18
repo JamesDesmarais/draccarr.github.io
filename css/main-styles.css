@@ -150,12 +150,12 @@ article .box img {
 	background-color: #141414;
 	padding-bottom: 2rem;
 }
-.gallery-container h2,
+/* .gallery-container h2,
 .games-container h2 {
 	font-size: 4rem;
 	text-align: center;
 	color: #fff;
-}
+} */
 .gallery-container ul li div h3,
 .games-container ul li div h3 {
 	font-size: 2rem;
