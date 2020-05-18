@@ -211,7 +211,7 @@ i {
 .special-message {
 	font: 1.6rem/1.5 'Raleway', arial, sans-serif;
 	color: #000;
-	padding-top: 1rem;
+	padding: 1rem 4rem 1rem 4rem;
 	border-top: 0.1rem solid #ccc;
 }
 main li {
