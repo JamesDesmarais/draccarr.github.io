@@ -864,7 +864,7 @@ nav.side-bar li:hover a {
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	/* background-color: #000; */
+	background-color: #000;
 	overflow: hidden;
 	min-width: 100%;
 	width: 100%;
