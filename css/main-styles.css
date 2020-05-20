@@ -1155,6 +1155,7 @@ body #FullButton {
 /*changed min-width from 1201px*/
 @media only screen /*and (max-width: 1732px)*/ and (min-width: 981px) {
 	header {
+		/*ToDo: Make this only sticky in mobile view*/
 		position: fixed;
 		top: 0;
 		z-index: 105;
