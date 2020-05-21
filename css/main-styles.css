@@ -514,7 +514,7 @@ strong {
 	padding-top: 2rem;
 	font-family: 'Raleway', arial, sans-serif;
 }
-.fill-bar {
+.fill-bar, .nested-fill-bar {
 	width: 0%;
 	height: 2px;
 	background-color: #fff;
@@ -522,19 +522,47 @@ strong {
 	transition-timing-function: cubic-bezier(0, 0, 1, 1);
 	margin: -1rem auto 0 auto;
 }
-#MobileNav li:hover .fill-bar {
+#MobileNav li:hover .fill-bar,
+#MobileNav li li:hover .nested-fill-bar{
 	width: 100%;
 }
+#MobileNav li:hover .fa-chevron-down {
+	display: none;
+}
+#MobileNav li:hover .fa-chevron-up {
+	display: inline-block;
+}
+#MobileNav li .fa-chevron-down {
+	display: inline-block;
+}
+#MobileNav li .fa-chevron-up {
+	display: none;
+}
 #MobileNav li {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 }
-.hero-image {
+.full-width-image, .hero-image {
 	width: calc(100% + 4rem);
 	height: auto;
 	margin-left: -2rem;
+}
+.hero-image {
 	margin-top: -2rem;
 	margin-bottom: 1rem;
+}
+li:hover .nested-nav-list {
+	display: flex;
+}
+.nested-nav-list {
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	top: 5rem;
+	left: 0;
+	width: 205%;
+	color: #fff;
 }
 
 /*************************************
@@ -1158,12 +1186,22 @@ body #FullButton {
 		padding: 1rem 4rem 1rem 4rem;
 		border-top: 0.1rem solid #ccc;
 	}
-	.hero-image {
+	.full-width-image, .hero-image {
 		width: 100%;
 		height: auto;
 		margin-left: 0;
+	}
+	.hero-image {
 		margin-top: 0;
 	}
+	body #MobileNav li .fa-chevron-down,
+	body #MobileNav li .fa-chevron-up,
+	body #MobileNav li:hover .fa-chevron-down,
+	body #MobileNav li:hover .fa-chevron-up,
+	li:hover .nested-nav-list {
+		display: none;
+	}
+	
 }
 /*changed min-width from 1201px*/
 @media only screen /*and (max-width: 1732px)*/ and (min-width: 981px) {
