@@ -121,9 +121,9 @@ img {
 	width: 100%;
 	height: auto;
 }
-nav + img {
+/* nav + img {
 	margin-bottom: 2rem;
-}
+} */
 article {
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
@@ -528,6 +528,13 @@ strong {
 #MobileNav li {
 	display: flex;
 	flex-direction: column;
+}
+.hero-image {
+	width: calc(100% + 4rem);
+	height: auto;
+	margin-left: -2rem;
+	margin-top: -2rem;
+	margin-bottom: 1rem;
 }
 
 /*************************************
@@ -1151,18 +1158,23 @@ body #FullButton {
 		padding: 1rem 4rem 1rem 4rem;
 		border-top: 0.1rem solid #ccc;
 	}
+	.hero-image {
+		width: 100%;
+		height: auto;
+		margin-left: 0;
+		margin-top: 0;
+	}
 }
 /*changed min-width from 1201px*/
 @media only screen /*and (max-width: 1732px)*/ and (min-width: 981px) {
-	header {
-		/*ToDo: Make this only sticky in mobile view*/
+	/* header {
 		position: fixed;
 		top: 0;
 		z-index: 105;
 	}
 	main {
 		margin-top: 6.2rem;
-	}
+	} */
 	header .container {
 		display: flex;
 		flex-direction: row;
