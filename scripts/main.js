@@ -20,7 +20,7 @@ $(function() {
 			}
 		});
 	} else {
-		console.log("There is no share button");
+		// console.log("There is no share button");
 	}
 	} catch(_ex) {
 
