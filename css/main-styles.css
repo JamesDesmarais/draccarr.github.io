@@ -564,6 +564,17 @@ li:hover .nested-nav-list {
 	width: 205%;
 	color: #fff;
 }
+#GreetingContainer {
+	width: 100%;
+	height: 100%; 
+	background-color: #000; 
+}
+#GreetingContainer img {
+	display: block;
+	width: 95rem; 
+	height: auto; 
+	margin: 0 auto; 
+}
 
 /*************************************
   --- Form Styles
@@ -976,9 +987,19 @@ body #FullButton {
 /*************************************
   --- Unity Game Styles
  *************************************/
-/*Gives the game an aspect ration of 16:9*/
-#gameContainer {
-	height: 56.25%;
+ body #gameContainer {
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 width: 100%;
+	 height: 80%;
+	 background-color: #000;
+	 /*Gives the game an aspect ration of 16:9*/
+	/* height: 56.25%; */
+}
+#gameContainer canvas {
+	width: 100%;
+	height: 100%;
 }
 
 /*************************************
@@ -1001,7 +1022,25 @@ body #FullButton {
 	body main {
 		padding: 0;
 		width: 100%;
+		
+	}
+	/*
+	GreetingContainer should be styled with a style attribute on the container 
+	for proformance because it's one of the first pieces of content to load on the page.
+	But because it currently relies on this media query, I'll keep it here for now.
+	*/
+	#GreetingContainer,
+	#GamesContainer {
 		margin-top: 12rem;
+	}
+	#GamesContainer {
+		height: 67%;
+	}
+	body #gameContainer {
+		height: 100%;
+	}
+	#GreetingContainer img {
+		width: 100%;
 	}
 	header {
 		position: fixed;
