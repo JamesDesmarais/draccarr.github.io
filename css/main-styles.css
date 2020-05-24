@@ -583,6 +583,9 @@ li:hover .nested-nav-list {
 	height: auto; 
 	margin: 0 auto; 
 }
+/* header {
+	padding: 1rem 0;
+} */
 
 /*************************************
   --- Form Styles
@@ -775,6 +778,8 @@ main section a:link,
 main section a:visited {
 	color: #4f8295;
 	border-radius: .5rem;
+	transition: color 0.1s;
+	transition-timing-function: cubic-bezier(0, 0, 1, 1);
 }
 main section a:hover {
 	color: #78c2dd;
@@ -963,12 +968,17 @@ nav.side-bar ul li a {
 	color: #4f8295;
 	border: none;
 	background-color: transparent;
+	transition: 0.2s;
+	transition-timing-function: cubic-bezier(0, 0, 1, 1);
 }
 #ExpandedImageControls .control-button:first-of-type {
 	margin-right: 1rem;
 }
 #ExpandedImageControls .control-button:hover {
 	color: #78c2dd;
+}
+#ExpandedImageControls .control-button:active {
+	color: #549ab4;
 }
 .close-image {
 	position: absolute;
@@ -981,6 +991,8 @@ nav.side-bar ul li a {
 	border-color: #ccc;
 	border-width: 1rem;
 	padding: 0;
+	transition: color 0.2s;
+	transition-timing-function: cubic-bezier(0, 0, 1, 1);
 }
 .close-image:hover {
 	color: #db2626;
