@@ -95,7 +95,7 @@ main {
 	min-height: 90rem;
 	margin: 0 auto;
 	background-color: #eee;
-	padding: 2rem;
+	padding: 1rem 2rem 2rem 2rem;
 }
 main h2,
 main h3 {
@@ -801,7 +801,8 @@ nav.side-bar ul li a {
 #fancyNav {
 	position: fixed;
 	width: 47.6rem;
-	margin-top: 10rem;
+	/* margin-top: 10rem; */
+	top: 10rem;
 	margin-left: -49.6rem;
 }
 
@@ -1290,3 +1291,20 @@ body #FullButton {
 		display: none;
 	}
 }
+/*
+ToDo: 
+- Add an aside to the right and or left of the website. 
+- Upgrade the FancyNav to only be shown if you've 
+scrolled down for a bit. Also, it needs restyling.
+- I like the idea of the animaiton of it showing is it expanding
+from it's left side. 
+*/
+/* @media only screen and (min-width: 1740px) {
+	#fancyNav {
+		display: block;
+	}
+	#GreetingContainer, #GreetingContainer img {
+		position: relative;
+		z-index: 1;
+	}
+} */
