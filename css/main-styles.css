@@ -597,7 +597,7 @@ li:hover .nested-nav-list {
 	left: 0rem;
 	background-color: #ffffff44;
 	padding: 1rem;
-	transition: 0.9s;
+	transition: color 0.9s, background-color 0.9s;
 	transition-timing-function: cubic-bezier(0, 0, 1, 1);
 }
 .blog-post-image:hover .article-heading-container {
@@ -609,7 +609,7 @@ li:hover .nested-nav-list {
 }
 .blog-post-image .article-heading-container img {
 	opacity: 1;
-	transition: 0.9s;
+	transition: opacity 0.9s;
 	transition-timing-function: cubic-bezier(0, 0, 1, 1);
 }
 .blog-post-image:hover .article-heading-container img {
