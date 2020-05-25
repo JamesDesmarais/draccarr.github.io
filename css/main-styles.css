@@ -583,9 +583,59 @@ li:hover .nested-nav-list {
 	height: auto; 
 	margin: 0 auto; 
 }
-/* header {
-	padding: 1rem 0;
-} */
+.article-heading-container {
+	display: flex;
+	flex-direction: row;
+}
+.blog-post-image {
+	position: relative;
+}
+.blog-post-image .article-heading-container {
+	display: flex;
+	position: absolute;
+	top: 2rem;
+	left: 0rem;
+	background-color: #ffffff44;
+	padding: 1rem;
+	transition: 0.9s;
+	transition-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+.blog-post-image:hover .article-heading-container {
+	color: #00000000;
+	background-color: #ffffff00;
+}
+.blog-post-image:hover .article-heading-container div {
+	border-color: #cccccc00;
+}
+.blog-post-image .article-heading-container img {
+	opacity: 1;
+	transition: 0.9s;
+	transition-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+.blog-post-image:hover .article-heading-container img {
+	opacity: 0;
+}
+.article-heading-container div {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	border-bottom: 1px solid #ccc;
+	transition: 0.9s;
+	transition-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+.article-heading-container div:nth-of-type(1) {
+	padding: 0 1rem;
+	border-right: 1px solid #ccc;
+}
+.article-heading-container div:nth-of-type(2) {
+	padding: 0 1rem;
+	font-size: 1.6rem;
+}
+.article-heading-container h3 {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
 
 /*************************************
   --- Form Styles
