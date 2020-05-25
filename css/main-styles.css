@@ -751,6 +751,9 @@ input[type="reset"]:focus {
 	width: 50%;
 	float: left;
 }
+header button {
+	outline: none;
+}
 header button:hover,
 header button:active {
 	color: #292f49;
@@ -1158,8 +1161,6 @@ body #FullButton {
 	.article-heading-container span {
 		font-size: 3rem;
 	}
-	/* .article-heading-container div {
-	} */
 	article p {
 		padding-bottom: 4rem;
 	}
