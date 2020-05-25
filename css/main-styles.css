@@ -1155,6 +1155,11 @@ body #FullButton {
 	article h3 {
 		font-size: 4rem;
 	}
+	.article-heading-container span {
+		font-size: 3rem;
+	}
+	/* .article-heading-container div {
+	} */
 	article p {
 		padding-bottom: 4rem;
 	}
@@ -1299,9 +1304,8 @@ body #FullButton {
 		border-top: 0.1rem solid #ccc;
 	}
 	.full-width-image, .hero-image {
-		width: 100%;
-		height: auto;
-		margin-left: 0;
+		width: calc(100% + 8rem);
+		margin-left: -4rem;
 	}
 	.hero-image {
 		margin-top: 0;
@@ -1312,6 +1316,9 @@ body #FullButton {
 	body #MobileNav li:hover .fa-chevron-up,
 	li:hover .nested-nav-list {
 		display: none;
+	}
+	.blog-post-image .article-heading-container { 
+		left: -4rem;
 	}
 	
 }
