@@ -1190,7 +1190,7 @@ body #FullButton {
 	body main #BlogsArticles h3 a {
 		font-size: 6rem;
 	}
-	#BlogsArticles p, article li {
+	#BlogsArticles p {
 		font-size: 3rem;
 	}
 	#NewsArticles article {
@@ -1328,6 +1328,9 @@ body #FullButton {
 	}
 	.blog-post-image .article-heading-container { 
 		left: -4rem;
+	}
+	article li {
+		font-size: 4rem;
 	}
 	
 }
