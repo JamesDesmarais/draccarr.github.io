@@ -1332,6 +1332,9 @@ body #FullButton {
 	article li {
 		font-size: 4rem;
 	}
+	#NewsArticles article h3 a {
+		font-size: 5rem;
+	}
 	
 }
 /*changed min-width from 1201px*/
