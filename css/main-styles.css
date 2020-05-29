@@ -774,7 +774,7 @@ footer {
 	flex-direction: row;
 	justify-content: center;
 	align-items: flex-start;
-	padding: 0 25% 0 25%;
+	padding: 0 20% 0 20%;
 	position: relative;
 }
 footer .social-media-icons {
@@ -1334,6 +1334,10 @@ body #FullButton {
 	}
 	#NewsArticles article h3 a {
 		font-size: 5rem;
+	}
+	.super-text {
+		font-size: 5rem;
+		color: #fff;
 	}
 	
 }
