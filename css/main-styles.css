@@ -125,7 +125,6 @@ img {
 	margin-bottom: 2rem;
 } */
 article {
-	/* padding-top: 1.5rem; */
 	padding-bottom: 1.5rem;
 	border-bottom: 1px solid #ccc;
 	margin-bottom: 3rem;
@@ -526,7 +525,8 @@ strong {
 	padding-top: 2rem;
 	font-family: 'Raleway', arial, sans-serif;
 }
-.fill-bar, .nested-fill-bar {
+.fill-bar,
+.nested-fill-bar {
 	width: 0%;
 	height: 2px;
 	background-color: #fff;
@@ -535,7 +535,7 @@ strong {
 	margin: -1rem auto 0 auto;
 }
 #MobileNav li:hover .fill-bar,
-#MobileNav li li:hover .nested-fill-bar{
+#MobileNav li li:hover .nested-fill-bar {
 	width: 100%;
 }
 #MobileNav li:hover .fa-chevron-down {
@@ -555,7 +555,8 @@ strong {
 	display: flex;
 	flex-direction: column;
 }
-.full-width-image, .hero-image {
+.full-width-image,
+.hero-image {
 	width: calc(100% + 4rem);
 	height: auto;
 	margin-left: -2rem;
@@ -578,14 +579,14 @@ li:hover .nested-nav-list {
 }
 #GreetingContainer {
 	width: 100%;
-	height: 100%; 
+	height: 100%;
 	/* background-color: #000;  */
 }
 #GreetingContainer img {
 	display: block;
-	width: 95rem; 
-	height: auto; 
-	margin: 0 auto; 
+	width: 95rem;
+	height: auto;
+	margin: 0 auto;
 }
 .article-heading-container {
 	display: flex;
@@ -643,6 +644,51 @@ li:hover .nested-nav-list {
 }
 .no-padding-top {
 	padding-top: 0;
+}
+#SortingOptionsContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+.sorting-option {
+	/* height: 2rem;
+	width: 2rem; */
+	padding: 1rem;
+	margin: 0 1rem 2rem 0;
+	background-color: #252424;
+}
+.more-info {
+position: relative;
+}
+.more-info div {
+	position: absolute;
+	display: none;
+	top: .3rem;
+	left: 0;
+	padding-left: 2.5rem;
+	min-height: 4rem;
+}
+.more-info div div {
+	position: relative;
+	padding: 2rem;
+	width: 36rem;
+	z-index: 98;
+	background-color: #252424;
+	font: normal 1.6rem 'Raleway', arial, sans-serif;
+	color: #fff;
+}
+.more-info div div a {
+	padding-top: 1rem;
+}
+.more-info div div .bubble-tip {
+	position: absolute;
+	top: -.6rem;
+	left: -1rem;
+	color: #252424;
+	user-select: none;
+}
+.more-info:hover div {
+	display: block;
 }
 
 /*************************************
@@ -1071,14 +1117,14 @@ body #FullButton {
 /*************************************
   --- Unity Game Styles
  *************************************/
- body #gameContainer {
-	 display: flex;
-	 flex-direction: column;
-	 align-items: center;
-	 width: 100%;
-	 height: 80%;
-	 background-color: #000;
-	 /*Gives the game an aspect ration of 16:9*/
+body #gameContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 80%;
+	background-color: #000;
+	/*Gives the game an aspect ration of 16:9*/
 	/* height: 56.25%; */
 }
 #gameContainer canvas {
@@ -1106,7 +1152,6 @@ body #FullButton {
 	body main {
 		padding: 0;
 		width: 100%;
-		
 	}
 	/*
 	GreetingContainer should be styled with a style attribute on the container 
@@ -1214,8 +1259,7 @@ body #FullButton {
 	#BlogsArticles article h3 a {
 		font-size: 3rem;
 	}
-	#NewsArticles article ul li:last-child,
-	#BlogsArticles article ul li:last-child {
+	#NewsArticles article ul li:last-child {
 		position: absolute;
 		right: 3%;
 		bottom: 0%;
@@ -1312,7 +1356,8 @@ body #FullButton {
 		padding: 1rem 4rem 1rem 4rem;
 		border-top: 0.1rem solid #ccc;
 	}
-	.full-width-image, .hero-image {
+	.full-width-image,
+	.hero-image {
 		width: calc(100% + 8rem);
 		margin-left: -4rem;
 	}
@@ -1326,7 +1371,7 @@ body #FullButton {
 	li:hover .nested-nav-list {
 		display: none;
 	}
-	.blog-post-image .article-heading-container { 
+	.blog-post-image .article-heading-container {
 		left: -4rem;
 	}
 	article li {
@@ -1339,10 +1384,9 @@ body #FullButton {
 		font-size: 5rem;
 		color: #fff;
 	}
-	
 }
 /*changed min-width from 1201px*/
-@media only screen /*and (max-width: 1732px)*/ and (min-width: 981px) {
+@media only screen and (min-width: 981px) {
 	/* header {
 		position: fixed;
 		top: 0;

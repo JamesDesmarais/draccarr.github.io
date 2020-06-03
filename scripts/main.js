@@ -27,22 +27,7 @@ $(function() {
 	}
 });
 
-//This toggles the search bar results.
-var toggleSearch = false;
-searchBarFocus = function() {
-	var searchBarResultList = $('#searchBarResultList');
-	if (!toggleSearch) {
-		searchBarResultList.addClass('search-bar-result-list');
-		toggleSearch = true;
-	} else {
-		searchBarResultList.removeClass('search-bar-result-list');
-		toggleSearch = false;
-	}
-};
-
-
 toggleShareViewer = function () {
-	console.log("Poke");
 	var URL =  document.getElementById("URL").value = document.location;
 	if (ShareViewer != null) {
 		ShareViewer.classList.toggle("hide");
@@ -57,12 +42,13 @@ copyURLToClipboard = function() {
 		console.log(_ex);
 	}
 }//end copyURLToClipboard
+
 copyToClipboard = function(_text) {
 	try {
 		navigator.clipboard.writeText(_text);
-		console.log("Text has been added to clipboard.");
 	} catch (_ex) {
 		console.log("Text could not be added to clipboard.");
+		console.log(_ex);
 	}
 }//end copyToClipboard
 
@@ -140,28 +126,18 @@ ToggleMobileNav = function() {
 }; //end ToggleMobileNav
 
 // This is for detaching the 'mainNavigation' when it reaches the footer.
-var fancyNav = $('#fancyNav');
-window.addEventListener('scroll', () => {
-	const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-	const scrolled = window.scrollY;
-	const navScrollHeight = document.getElementById('fancyNav').scrollHeight - window.innerHeight + 170;
-	const footScrollHeight = document.getElementsByTagName('footer')[0].scrollHeight;
-	if (Math.ceil(scrolled) >= scrollable - footScrollHeight - navScrollHeight) {
-		fancyNav.addClass('unstick-nav');
-	} else {
-		fancyNav.removeClass('unstick-nav');
-	}
-});
-
-var postsDoc;
-var allPosts;
-var currentPost;
-$.get('https://draccarr.github.io/blog-content.html', function(_content) {
-	postsDoc = new DOMParser().parseFromString(_content, 'text/html');
-	$('#BlogPost').load('blog-content.html ' + window.location.hash);
-	ReplaceAnchors();
-	// ReplaceImage();
-});
+// var fancyNav = $('#fancyNav');
+// window.addEventListener('scroll', () => {
+// 	const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+// 	const scrolled = window.scrollY;
+// 	const navScrollHeight = document.getElementById('fancyNav').scrollHeight - window.innerHeight + 170;
+// 	const footScrollHeight = document.getElementsByTagName('footer')[0].scrollHeight;
+// 	if (Math.ceil(scrolled) >= scrollable - footScrollHeight - navScrollHeight) {
+// 		fancyNav.addClass('unstick-nav');
+// 	} else {
+// 		fancyNav.removeClass('unstick-nav');
+// 	}
+// });
 
 
 // function LoadByBlogType(_blogType) {
@@ -171,85 +147,6 @@ $.get('https://draccarr.github.io/blog-content.html', function(_content) {
 // 		document.getElementsByName('main')[0].innerHTML = allPosts;
 // 	}
 // }//end LoadByBlogType
-
-
-function ReplaceImage() {
-	articleImg = null;
-	try {
-		articleImg = postsDoc.getElementById(window.location.hash.substr(1, window.location.hash.length - 1))
-																			.getElementsByClassName("blog-post-image")[0]
-																			.getElementsByTagName("img")[0];
-	} catch (_ex) {
-		
-	}
-	if (articleImg != null) {
-		var placeholderImg = document.getElementById("BlogPostImagePlaceholder");
-		placeholderImg.src = articleImg.src;
-		placeholderImg.alt = articleImg.alt;
-		placeholderImg.title = articleImg.alt;		
-		// articleImg.classList.add("hide");
-	}
-}//end ReplaceAnchor
-
-
-var previousPostAnchorTop;
-var previousPostAnchorBottom;
-var nextPostAnchorTop;
-var nextPostAnchorBottom;
-var loadedHTML;
-ReplaceAnchors = function() {
-	if (document.location.hash.length > 0) {
-		previousPostAnchorTop = document.getElementById('PreviousPostTop');
-		previousPostAnchorBottom = document.getElementById('PreviousPostBottom');
-		nextPostAnchorTop = document.getElementById('NextPostTop');
-		nextPostAnchorBottom = document.getElementById('NextPostBottom');
-		if (previousPostAnchorTop && previousPostAnchorBottom) {
-			allPosts = postsDoc.getElementsByTagName('article');
-			for (var i = 0; i < allPosts.length; i++) {
-				if ('#' + allPosts[i].id == location.hash) {
-					if (allPosts.length > i + 1) {
-						previousPostAnchorTop.outerHTML =
-							'<a id="PreviousPost" title="Previous" href="' +
-							'?' +
-							i +
-							'=./blog-post.html#' +
-							allPosts[i + 1].id +
-							'"><i class="fas fa-arrow-left"></i></a>';
-						previousPostAnchorBottom.outerHTML =
-							'<a id="PreviousPost" title="Previous" href="' +
-							'?' +
-							i +
-							'=./blog-post.html#' +
-							allPosts[i + 1].id +
-							'"><i class="fas fa-arrow-left"></i></a>';
-					} else {
-						previousPostAnchorTop.outerHTML = '<a id="PreviousPost"></a>';
-						previousPostAnchorBottom.outerHTML = '<a id="PreviousPost"></a>';
-					}
-					if (i - 1 >= 0) {
-						nextPostAnchorTop.outerHTML =
-							'<a id="NextPost" title="Next" href="' +
-							'?' +
-							i +
-							'=./blog-post.html#' +
-							allPosts[i - 1].id +
-							'"><i class="fas fa-arrow-right"></i></a>';
-						nextPostAnchorBottom.outerHTML =
-							'<a id="NextPost" title="Next" href="' +
-							'?' +
-							i +
-							'=./blog-post.html#' +
-							allPosts[i - 1].id +
-							'"><i class="fas fa-arrow-right"></i></a>';
-					} else {
-						nextPostAnchorTop.outerHTML = '<a id="NextPost"></a>';
-						nextPostAnchorBottom.outerHTML = '<a id="NextPost"></a>';
-					}
-				}
-			}
-		}
-	}
-};
 
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
@@ -297,15 +194,3 @@ CheckDate = function() {
 		} //end if
 	} //end for i loop
 }; //end CheckDate
-
-
-// var newPostsDoc;
-// var newAllPosts;
-// var newCurrentPost;
-// function SearchBlogs(_blogType) {
-// 	//ToDo:
-// 	//Get all of the articles by class from the list and load them to the page.
-// 	postsDoc = new DOMParser().parseFromString(_content, 'text/html');
-// 	newAllPosts = postsDoc.getElementsByClassName(_blogType);
-// 	document.getElementById("");
-// }//end SearchBlogs

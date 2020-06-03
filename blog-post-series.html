@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://draccarr.github.io/index">
     <meta name="theme-color" content="#141414">
 
-    <title>ElderReign Studios | Blog Post Page</title>
+    <title>ElderReign Studios | Blog Post Series Page</title>
     <link rel="icon" href="./images/draccarr-logo.png">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main-styles.css">
@@ -22,7 +22,8 @@
     <!-- Javascript plugins (top priority) -->
     <script src="./scripts/modernizr-custom.js"></script>
     <script src="./scripts/jquery-3.3.1.min.js"></script>
-    <script src="./scripts/blog-post.js"></script>
+    <!-- <script src="./scripts/cookie-manager.js"></script> -->
+    <script src="./scripts/blog-post-series.js"></script>
 </head>
 
 <body>
@@ -56,8 +57,8 @@
         </div>
         <div id="BlogPost"></div>
         <div id="BlogPostNavBottom" class="blog-post-navigation">
-            <a id="PreviousPostBottom" title="Previous"><i class="fas fa-arrow-left"></i></a>
-            <a id="NextPostBottom" title="Next"><i class="fas fa-arrow-right"></i></a>
+            <a id="PreviousPostBottom" title="Previous" onclick="changeSeriesPosition(-1)"><i class="fas fa-arrow-left"></i></a>
+            <a id="NextPostBottom" title="Next" onclick="changeSeriesPosition(1)"><i class="fas fa-arrow-right"></i></a>
             <button id="SharePost" title="Share" onclick="toggleShareViewer()"><i class="fas fa-share-alt"></i><span>Share</span></button>
         </div>
     </main>

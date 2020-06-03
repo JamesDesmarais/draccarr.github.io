@@ -21,6 +21,7 @@
     <!-- Javascript plugins (top priority) -->
     <script src="./scripts/modernizr-custom.js"></script>
     <script src="./scripts/jquery-3.3.1.min.js"></script>
+    <script src="./scripts/cookie-manager.js"></script>
 </head>
 
 <body>
@@ -53,11 +54,16 @@
                 <h2>Blogs <i class="fas fa-book"></i></h2>
                 <article class="card">
                     <div class="article-left-side">
-                        <h3><a href="./blog-series.html#hunted">Hunted</a></h3>
+                        <h3><a href="./blog-series.html?=descending0./blog-post.html#hunted">Hunted</a></h3>
                         <p>
                             In this action packed fantasy series, we follow our heros: Bullivar and Viper,
                             on their journey to become true hunters.
                         </p>
+                        <ul id="SortingOptionsContainer">
+                            <li><a title="Oldest posts first" href="./blog-series.html?=ascending0./blog-post.html#hunted" class="sorting-option">Ascending</a></li>
+                            <li><a title="Newest posts first" href="./blog-series.html?=descending0./blog-post.html#hunted" class="sorting-option">Descending</a></li>
+                            <li><a title="Start Series" onclick="startSeries('hunted')" href="./blog-post-series.html?=hunted#Hunted-Chapter-1-part-1" class="sorting-option"><i class="fas fa-play"></i> Start Series</a></li>
+                        </ul>
                     </div>
                     <div class="article-right-side">
                         <img src="./images/vatherdone-with-tree-ghosts-optimized.jpg" alt="Vatherdone With Ghosts By James Desmarais" title="Vatherdone With Ghosts By James Desmarais">
@@ -69,10 +75,15 @@
                 </article>
                 <article class="card">
                     <div class="article-left-side">
-                        <h3><a href="./blog-series.html#player-notes-hunted">Player Notes (Hunted)</a></h3>
+                        <h3><a href="./blog-series.html?=descending#player-notes-hunted">Player Notes (Hunted)</a></h3>
                         <p>
                             These are the thoughts of the players throughout the Hunted series.
                         </p>
+                        <ul id="SortingOptionsContainer">
+                            <li><a title="Oldest posts first" href="./blog-series.html?=ascending0./blog-post.html#player-notes-hunted" class="sorting-option">Ascending</a></li>
+                            <li><a title="Newest posts first" href="./blog-series.html?=descending0./blog-post.html#player-notes-hunted" class="sorting-option">Descending</a></li>
+                            <li><a title="Start Series" onclick="startSeries('player-notes-hunted')" href="./blog-post-series.html?=player-notes-hunted" class="sorting-option"><i class="fas fa-play"></i> Start Series</a></li>
+                        </ul>
                     </div>
                     <div class="article-right-side">
                         <img src="./images/vatherdone-with-tree-ghosts-optimized.jpg" alt="Vatherdone With Ghosts By James Desmarais" title="Vatherdone With Ghosts By James Desmarais">
@@ -84,11 +95,16 @@
                 </article>
                 <article class="card">
                     <div class="article-left-side">
-                        <h3><a href="./blog-series.html#a-programmers-thoughts">A Programmer's Thoughts</a></h3>
+                        <h3><a href="./blog-series.html?=descending#a-programmers-thoughts">A Programmer's Thoughts</a></h3>
                         <p>
                             My thoughts on various topics ranging from programming notes
                             to everyday life occurrences (a diary of sorts).
                         </p>
+                        <ul id="SortingOptionsContainer">
+                            <li><a title="Oldest posts first" href="./blog-series.html?=ascending0./blog-post.html#a-programmers-thoughts" class="sorting-option">Ascending</a></li>
+                            <li><a title="Newest posts first" href="./blog-series.html?=descending0./blog-post.html#a-programmers-thoughts" class="sorting-option">Descending</a></li>
+                            <li><a title="Start Series" onclick="startSeries('a-programmers-thoughts')" href="./blog-post-series.html?=a-programmers-thoughts" class="sorting-option"><i class="fas fa-play"></i> Start Series</a></li>
+                        </ul>
                     </div>
                     <div class="article-right-side">
                         <img class="scale-for-mobile" src="./images/draccarr-logo-300x300.png" alt="Draccarr Symbol By James Desmarais" title="Draccarr Symbol By James Desmarais">
@@ -117,6 +133,7 @@
 
     <!-- Javascript (Mid priority)-->
     <script src="./scripts/main.js"></script>
+    
 
     <footer></footer>
     
