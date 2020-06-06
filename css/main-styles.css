@@ -587,6 +587,7 @@ li:hover .nested-nav-list {
 	width: 95rem;
 	height: auto;
 	margin: 0 auto;
+	background-color: #000;
 }
 .article-heading-container {
 	display: flex;
