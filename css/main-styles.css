@@ -659,7 +659,7 @@ li:hover .nested-nav-list {
 	background-color: #252424;
 }
 .more-info {
-position: relative;
+	position: relative;
 }
 .more-info div {
 	position: absolute;
