@@ -687,6 +687,7 @@ li:hover .nested-nav-list {
 	left: -1rem;
 	color: #252424;
 	user-select: none;
+	line-height: 2.3rem;
 }
 .more-info:hover div {
 	display: block;
