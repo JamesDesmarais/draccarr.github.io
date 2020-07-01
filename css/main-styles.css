@@ -132,7 +132,7 @@ article {
 article.card {
 	margin-bottom: 0;
 }
-article.card ul li:not(:last-child)::before {
+#NewsArticles article.card ul li:not(:last-child)::before {
 	content: "- ";
 }
 article p {
