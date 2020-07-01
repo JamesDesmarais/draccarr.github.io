@@ -132,6 +132,9 @@ article {
 article.card {
 	margin-bottom: 0;
 }
+article.card ul li:not(:last-child)::before {
+	content: "- ";
+}
 article p {
 	padding-bottom: 2rem;
 	font: 1.6rem/1.5 'Raleway', arial, sans-serif;
@@ -1114,6 +1117,14 @@ body #FullButton {
 	height: 100%;
 	border: none;
 	background-color: rgba(20, 20, 20, 0.847);
+}
+nav ul li i {
+	transition: 0.2s;
+}
+nav ul li:hover i:first-of-type {
+	transform: rotate(25deg);
+	/* This may not be helping... */
+	-webkit-font-smoothing: antialiased;
 }
 
 /*************************************
