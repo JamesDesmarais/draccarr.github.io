@@ -39,7 +39,7 @@ body main {
 
 .art-container img {
 	transition: 0.2s;
-	transition-timing-function: cubic-bezier(0, 0, 1, 1);
+    transition-timing-function: cubic-bezier(0, 0, 1, 1);
 }
 .art-container img:hover {
 	transform: scale(1.1);

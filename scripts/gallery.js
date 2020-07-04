@@ -30,7 +30,6 @@ $.get('./gallery-content.html', function(_content) {
 		'<li class="card" onmouseover="this.classList.add(\'show-buttons\')" onmouseout="this.classList.remove(\'show-buttons\')">${content}<li>';
 	var link = './gallery-images/';
 	var num = allGalleryPosts.length;
-	var id = 0;
 	function getItem(_template, _options) {
 		return _template.replace(/\$\{([^\}]*)\}/g, function() {
 			var replaceTarget = arguments[1];
