@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#141414"/>
+
+    <meta property="og:site_name" content="ElderReign Studios">
+    <meta property="og:title" content="Gallery">
+    <meta property="og:description" content="The official ElderReign Studios gallery.">
+    <meta property="og:image" content="https://draccarr.github.io/images/draccarr-logo-300x300.png">
+    <meta property="og:url" content="https://draccarr.github.io/gallery.html">
+
+    <title>ElderReign Studios | Gallery Page</title>
+    <link rel="icon" href="./images/draccarr-logo.png">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main-styles.css">
+    <link rel="stylesheet" href="./css/gallery-styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Javascript plugins (top priority) -->
+    <script src="./scripts/modernizr-custom.js"></script>
+    <script src="./scripts/jquery-3.3.1.min.js"></script>
+    <script src="//naver.github.io/egjs-infinitegrid/release/latest/dist/infinitegrid.pkgd.min.js"></script>
+    <!-- <script src="//naver.github.io/egjs-infinitegrid/release/latest/dist/infinitegrid.gridlayout.min.js"></script> -->
+    <!-- <script type="module" src="./scripts/gallery.js"></script> -->
+    <script type="module" src="./scripts/gallery-v2.js"></script>
+</head>
+<body>
+    <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+    <header></header>
+    <div id="ImageViewer" class="hide hide-in-mobile">
+        <div id="ImageViewerControlsAndImage">
+            <div id="ExpandImageView" class="hide-in-mobile">
+                <img id="ExpandedImage" src="./images/tree-by-veeterzy.jpg" alt="Tree Image By Veeterzy" class="hide-in-mobile">
+            </div>
+            <div id="ExpandedImageControls" class="expanded-image-controls">
+                <button class="fas fa-times-circle close-image" title="close" onclick="toggleImage();"></button>
+                <div id="ImageControls">
+                    <button id="PreviousImage" class="control-button show-cursor-pointer fas fa-arrow-left" title="Previous" onclick="previousImage();"></button>
+                    <button id="NextImage" class="control-button show-cursor-pointer fas fa-arrow-right" title="Next" onclick="nextImage();"></button>
+                </div>
+                <!-- <div id="ImageDetails">
+                    <h2 >Insert Image name here</h2>
+                    <span id="ImageAuthor">By James Desmarias</span>
+                </div> -->
+                <!-- <div id="ImageDescription">
+                    <p>
+                    </p>
+                </div> -->
+            </div>
+        </div>
+        <button id="FullButton" class="full-button" onclick="toggleImage();"></button>
+    </div>
+    <div id="GreetingContainer">
+        <img class="hero-image" src="./images/robot-game.png" id="PageImage" class="side-padding top-padding" width="950" height="593.75" alt="Robot Game Image By James Desmarais" title="Robot Game Image By James Desmarais">
+    </div>
+    <main>
+        <h1 class="hide">Gallery</h1>
+        <nav id="fancyNav" class="side-bar fancyNav"></nav>
+        <!-- <img class="hero-image" src="./images/robot-game.png" id="PageImage" class="side-padding top-padding" width="1920" height="1200" alt="Robot Game Image By James Desmarais" title="Robot Game Image By James Desmarais"> -->
+        <section class="art-container">
+            <h2>Gallery <i class="fas fa-images"></i></h2>
+            <ul id="Grid">
+            </ul>
+        </section>
+    </main>
+    <!-- Javascript (Mid priority)-->
+    <script src="./scripts/main.js"></script>
+    <footer></footer>
+    <!-- Javascript plugins (bottom priority) -->
+    <script src="./scripts/jquery-3.3.1.min.js"></script>
+    <!-- <script>$(function () { $("main").load("gallery-content.html"); });</script> -->
+    <script>$(function () { $("footer").load("footer.html"); });</script>
+</body>

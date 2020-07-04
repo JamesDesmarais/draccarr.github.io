@@ -10,15 +10,6 @@ var GridLayout = InfiniteGrid.GridLayout;
 var ig = new InfiniteGrid(document.getElementById('Grid'), {
 	horizontal: false
 });
-// var parallax = new eg.Parallax(window, {
-//     container: ".art-container",
-//     selector: "img.parallax",
-//     strength: 0.8,
-//     center: 0,
-//     range: [-1, 1],
-//     align: "center",
-//     horizontal: true,
-// });
 
 ig.setLayout(GridLayout, {
 	horizontal: false,
@@ -26,21 +17,6 @@ ig.setLayout(GridLayout, {
 	margin: 24,
 	align: 'center'
 });
-// if (window.innerWidth <= 1200) {
-//     ig.setLayout(GridLayout, {
-//         horizontal: false,
-//         itemSize: 300,
-//         margin: 20,
-//         align: "center"
-//     });
-// } else {
-//     ig.setLayout(GridLayout, {
-//         horizontal: false,
-//         itemSize: 250,
-//         margin: 20,
-//         align: "center"
-//     });
-// }
 
 var galleryDoc;
 var allGalleryPosts;
@@ -80,31 +56,6 @@ $.get('./gallery-content.html', function(_content) {
 
 		return arr;
 	} //end getItems
-
-	// ig.on(
-	//     {
-	//         "append": function (_e) {
-
-	//         }
-	//     }
-	// );
-	// ig.on({
-	//     "append": function (_e) {
-	//         ig.append(getItems(num), _e.groupKey + 1);
-	//     },
-	//     "layoutComplete": function (_e) {
-	//         _e.target.forEach(function (item) {
-	//             if (!item.el) {
-	//                 return;
-	//             }
-	//             // add animation
-	//             item.el.setAttribute("class", "item animate");
-	//         });
-	//         if (!_e.isAppend && _e.fromCache && _e.target[0].groupKey === 0) {
-	//             ig.layout(true);
-	//         }
-	//     }
-	// });
 
 	ig.append(getItems(num), 0);
 });
