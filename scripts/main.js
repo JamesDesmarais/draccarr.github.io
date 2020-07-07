@@ -75,6 +75,7 @@ toggleImage = function(_val) {
 		imageToggled = false;
 		imageToShow.setAttribute('src', './images/transparent-pixel.png');
 	}
+		console.log(selectedImageID);
 }; //end toggleImage
 
 nextImage = function() {
@@ -82,18 +83,17 @@ nextImage = function() {
 	try {
 		imageToShow.setAttribute(
 			'src',
-			document.getElementById(selectedImageID).parentElement.nextElementSibling.firstElementChild.src
+			document.getElementById(selectedImageID).parentElement.parentElement.nextElementSibling.querySelectorAll("img")[0].src
 		);
 		imageToShow.setAttribute(
 			'alt',
-			document.getElementById(selectedImageID).parentElement.nextElementSibling.firstElementChild.alt
+			document.getElementById(selectedImageID).parentElement.parentElement.nextElementSibling.querySelectorAll("img")[0].alt
 		);
 		imageToShow.setAttribute(
 			'title',
-			document.getElementById(selectedImageID).parentElement.nextElementSibling.firstElementChild.title
+			document.getElementById(selectedImageID).parentElement.parentElement.nextElementSibling.querySelectorAll("img")[0].title
 		);
-		selectedImageID = document.getElementById(selectedImageID).parentElement.nextElementSibling.firstElementChild
-			.id;
+		selectedImageID = document.getElementById(selectedImageID).parentElement.parentElement.nextElementSibling.querySelectorAll("img")[0].id;
 	} catch (_ex) {
 		console.log('No more next Images!\n' + _ex);
 	}
@@ -103,18 +103,17 @@ previousImage = function() {
 	try {
 		imageToShow.setAttribute(
 			'src',
-			document.getElementById(selectedImageID).parentElement.previousElementSibling.firstElementChild.src
+			document.getElementById(selectedImageID).parentElement.parentElement.previousElementSibling.querySelectorAll("img")[0].src
 		);
 		imageToShow.setAttribute(
 			'alt',
-			document.getElementById(selectedImageID).parentElement.previousElementSibling.firstElementChild.alt
+			document.getElementById(selectedImageID).parentElement.parentElement.previousElementSibling.querySelectorAll("img")[0].alt
 		);
 		imageToShow.setAttribute(
 			'title',
-			document.getElementById(selectedImageID).parentElement.previousElementSibling.firstElementChild.title
+			document.getElementById(selectedImageID).parentElement.parentElement.previousElementSibling.querySelectorAll("img")[0].title
 		);
-		selectedImageID = document.getElementById(selectedImageID).parentElement.previousElementSibling
-			.firstElementChild.id;
+		selectedImageID = document.getElementById(selectedImageID).parentElement.parentElement.previousElementSibling.querySelectorAll("img")[0].id;
 	} catch (_ex) {
 		console.log('No more previous Images!\n' + _ex);
 	}

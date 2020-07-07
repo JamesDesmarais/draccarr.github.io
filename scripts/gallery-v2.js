@@ -21,7 +21,7 @@ ig.setLayout(GridLayout, {
 const allImages = new DOMParser().parseFromString(loadPage('https://draccarr.github.io/gallery-content-v2.html'), 'text/html').querySelectorAll("[data-src]");
 const imageOptions = {
     threshold: 1,
-    rootMargin: "0px 0px -500px 0px"
+    rootMargin: "0px 0px 50px 0px"
 };
 const imageObserver = new IntersectionObserver((_entries, _imageObserver) => {
     _entries.forEach(_x => {

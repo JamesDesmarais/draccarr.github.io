@@ -458,31 +458,31 @@ strong {
 	padding: 0.5rem 1rem;
 	transform: rotate(25deg);
 }
-#Grid li a {
-	/* display: none; */
+.art-container #Grid li i {
 	position: absolute;
 	bottom: 2rem;
 	right: 2rem;
 	color: transparent;
 	z-index: 99;
-	transition: 0.2s;
+	transition: color 0.2s;
 	transition-timing-function: cubic-bezier(0, 0, 1, 1);
+	pointer-events: none;
 }
-#Grid li div.inner-shadow {
-	/* display: none; */
+.art-container #Grid li:hover i {
+	color: #fff;
+}
+.art-container #Grid li a.inner-shadow {
 	box-shadow: inset 0px 0px 0px 0px #78c2dd;
 	transition: 0.2s;
 	transition-timing-function: cubic-bezier(0, 0, 1, 1);
+	background-color: transparent;
 }
-#Grid li.show-buttons img {
-	transform: scale(1.1);
-}
-#Grid li.show-buttons a {
-	display: block;
-	color: #ffffff;
-}
-#Grid li.show-buttons div.inner-shadow {
+#Grid li:hover a.inner-shadow {
 	box-shadow: inset 0px 0px 7px 7px #78c2ddbb;
+}
+#Grid li {
+	position: relative;
+	cursor: pointer;
 }
 .inner-shadow {
 	position: absolute;
@@ -965,7 +965,6 @@ nav.side-bar ul li a {
 }
 .expand-image,
 .close-image {
-	cursor: pointer;
 	font-size: 3rem;
 }
 .show-cursor-pointer {
@@ -1116,6 +1115,7 @@ nav.side-bar ul li a {
 }
 .close-image:hover {
 	color: #db2626;
+	cursor: pointer;
 }
 body #FullButton {
 	position: fixed;
