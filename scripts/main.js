@@ -67,6 +67,9 @@ toggleImage = function(_val) {
 			imageToShow.setAttribute('src', _val.src);
 			imageToShow.setAttribute('alt', _val.alt);
 			imageToShow.setAttribute('title', _val.title);
+			if (_val.dataset.style) {
+				imageToShow.setAttribute('data-style', _val.dataset.style);
+			}
 		}
 		imageToggled = true;
 		imageViewer.removeClass('hide');
@@ -93,6 +96,10 @@ nextImage = function() {
 			'title',
 			document.getElementById(selectedImageID).parentElement.parentElement.nextElementSibling.querySelectorAll("img")[0].title
 		);
+		imageToShow.setAttribute (
+			'data-style',
+			document.getElementById(selectedImageID).parentElement.parentElement.nextElementSibling.querySelectorAll("img")[0].dataset.style
+		);
 		selectedImageID = document.getElementById(selectedImageID).parentElement.parentElement.nextElementSibling.querySelectorAll("img")[0].id;
 	} catch (_ex) {
 		console.log('No more next Images!\n' + _ex);
@@ -112,6 +119,10 @@ previousImage = function() {
 		imageToShow.setAttribute(
 			'title',
 			document.getElementById(selectedImageID).parentElement.parentElement.previousElementSibling.querySelectorAll("img")[0].title
+		);
+		imageToShow.setAttribute (
+			'data-style',
+			document.getElementById(selectedImageID).parentElement.parentElement.previousElementSibling.querySelectorAll("img")[0].dataset.style
 		);
 		selectedImageID = document.getElementById(selectedImageID).parentElement.parentElement.previousElementSibling.querySelectorAll("img")[0].id;
 	} catch (_ex) {

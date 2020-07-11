@@ -25,7 +25,8 @@ body main {
     grid-template-columns: repeat(12, 1fr);
     /* grid-template-rows: repeat(auto-fit, 28rem); */
     grid-template-rows: repeat(auto-fit, 1fr);
-    grid-gap: 2rem;
+    /* grid-gap: 2rem; */
+    gap: 1.5rem;
 }
 
 .image-container {
@@ -93,6 +94,10 @@ body main {
     grid-row: span 6;
     grid-column: span 4;
 }
+.huge-very-tall-tile {
+    grid-row: span 8;
+    grid-column: span 4;
+}
 .huge-tile {
     grid-row: span 4;
     grid-column: span 4;
@@ -100,6 +105,10 @@ body main {
 .huge-wide-tile {
     grid-row: span 4;
     grid-column: span 7;
+}
+.huge-very-wide-tile {
+    grid-row: span 4;
+    grid-column: span 8;
 }
 .huge-tall-tile {
     grid-row: span 7;
@@ -109,9 +118,11 @@ li.two-images {
     display: flex;
     flex-direction: row;
 }
-li.two-images img {
-
+#Grid li.vertical-fit img {
+    height: 100%;
+    width: auto;
 }
+
 
 
 /* .art-container ul li {

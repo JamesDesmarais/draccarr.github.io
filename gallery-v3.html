@@ -33,7 +33,7 @@
     <div id="ImageViewer" class="hide hide-in-mobile">
         <div id="ImageViewerControlsAndImage">
             <div id="ExpandImageView" class="hide-in-mobile">
-                <img id="ExpandedImage" src="./images/tree-by-veeterzy.jpg" alt="Tree Image By Veeterzy" class="hide-in-mobile">
+                <img id="ExpandedImage" src="./images/transparent-pixel.png" alt="Blank" class="hide-in-mobile">
             </div>
             <div id="ExpandedImageControls" class="expanded-image-controls">
                 <button class="fas fa-times-circle close-image" title="close" onclick="toggleImage();"></button>
@@ -64,89 +64,91 @@
             <h2>Gallery <i class="fas fa-images"></i></h2>
             <ul id="Grid">
                 <li class="huge-short-wide-tile">
-                    <div class="image-container"><img id="1" class="zoom-in" src="./images/vatherdone-outside-path.png" alt=""></div>
+                    <div class="image-container">
+                        <img id="1" class="zoom-in" src="./images/vatherdone-outside-path.png" alt="Vatherdone Outside Path" title="Vatherdone Outside Path">
+                    </div>
                     <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
                     <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
                 </li>
                 <li class="huge-tile">
-                    <div class="image-container"><img id="2" src="./images/cave-background.jpg" alt=""></div>
+                    <div class="image-container"><img id="2" src="./images/cave-background.jpg" alt="Cave Background" title="Cave Background"></div>
                     <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
                     <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
                 </li>
                 <li class="medium-tile">
-                    <div class="image-container"><img id="3" src="./images/jay-symbol-300x300.png" alt=""></div>
+                    <div class="image-container"><img id="3" src="./images/jay-symbol-300x300.png" alt="Jay Symbol" title="Jay Symbol"></div>
                     <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
                     <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
                 </li>
                 <li class="medium-tile">
-                    <div class="image-container"><img id="4" src="./images/red-blue-eye-300x300.png" alt=""></div>
+                    <div class="image-container"><img id="4" src="./images/red-blue-eye-300x300.png" alt="Red Blue Eye" title="Red Blue Eye"></div>
                     <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
                     <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
                 </li>
-                <li class="huge-tall-skinny-tile">
-                    <div class="image-container"><img id="5" class="zoom-in" src="./images/daiki-ibutsu-300x418.png" alt=""></div>
+                <li class="huge-tall-skinny-tile vertical-fit">
+                    <div class="image-container"><img id="5" class="" src="./images/daiki-ibutsu-300x418.png" alt="Daiki Ibutsu" title="Daiki Ibutsu"></div>
                     <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
                     <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
                 </li>
-                <li class="huge-wide-tile">
-                    <div class="image-container"><img id="6" src="./images/vatherdone-sewer.jpg" alt=""></div>
-                    <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
-                    <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
-                </li>
-                <li class="small-tile">
-                    <div class="image-container"><img id="7" src="./images/dot.png" alt=""></div>
-                    <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
-                    <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
-                </li>
-                <li class="small-tile">
-                    <div class="image-container"><img id="8" src="./images/dot-2.png" alt=""></div>
-                    <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
-                    <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
-                </li>
-                <li class="small-tile">
-                    <div class="image-container"><img id="9" src="./images/spinning-crystal-2-color.gif" alt=""></div>
-                    <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
-                    <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
-                </li>
-                <li class="small-tile">
-                    <div class="image-container"><img id="10" src="./images/spinning-crystal-2-2-color.gif" alt=""></div>
+                <li class="huge-very-wide-tile">
+                    <div class="image-container"><img id="6" src="./images/vatherdone-sewer.jpg" alt="Vatherdone Sewer" title="Vatherdone Sewer"></div>
                     <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
                     <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
                 </li>
                 <li class="medium-wide-tile">
-                    <div class="image-container"><img id="11" src="./images/building-1-full-with-closed-door-300x193.png" alt=""></div>
+                    <div class="image-container"><img id="11" src="./images/building-1-full-with-closed-door-300x193.png" alt="Pixel Art Building 1" title="Pixel Art Building 1"></div>
                     <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
                     <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
                 </li>
                 <li class="medium-wide-tile">
-                    <div class="image-container"><img id="12" src="./images/robot-game-300x188.png" alt=""></div>
+                    <div class="image-container"><img id="12" src="./images/robot-game-300x188.png" alt="Robot Game Snapshot" title="Robot Game Snapshot"></div>
                     <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
                     <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
                 </li>
                 <li class="medium-tile">
-                    <div class="image-container"><img id="13" src="./images/main-menu-background-170x170.png" alt=""></div>
+                    <div class="image-container"><img id="13" src="./images/main-menu-background-170x170.png" alt="Sunset" title="Sunset"></div>
                     <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
                     <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
                 </li>
                 <li class="huge-short-wide-tile">
-                    <div class="image-container"><img id="14" src="./images/wingless-dragon-perspective.png" alt=""></div>
+                    <div class="image-container"><img id="14" src="./images/wingless-dragon-perspective.png" alt="Wingless Dragon Perspective Shot" title="Wingless Dragon Perspective Shot"></div>
                     <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
                     <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
                 </li>
                 <li class="huge-short-wide-tile">
-                    <div class="image-container"><img id="15" src="./images/sr71-fighter-jet-beauty-shot.png" alt=""></div>
+                    <div class="image-container"><img id="15" src="./images/sr71-fighter-jet-beauty-shot.png" alt="SR71 Fighter Jet Beauty Shot" title="SR71 Fighter Jet Beauty Shot"></div>
                     <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
                     <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
                 </li>
                 <li class="huge-tile">
-                    <div class="image-container"><img id="16" src="./images/praedae_the_pirate_head.png" alt=""></div>
+                    <div class="image-container"><img id="16" src="./images/praedae_the_pirate_head.png" alt="Praedae The Pirate" title="Praedae The Pirate"></div>
                     <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
                     <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
                 </li>
                 <li class="huge-tile two-images">
-                    <div class="image-container"><img id="17" class="zoom-out" src="./images/wizard-sprite.png" alt=""></div>
+                    <div class="image-container"><img id="17" class="zoom-out" src="./images/wizard-sprite.png" alt="Pixel Art Wizard Sprite Sheet" title="Pixel Art Wizard Sprite Sheet"></div>
                     <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
-                    <div class="image-container"><img id="18" class="zoom-out" src="./images/wizard-sprite.gif" alt=""></div>
+                    <div class="image-container"><img id="18" class="zoom-out" src="./images/wizard-sprite.gif" alt="Pixel Art Wizard Sprite" title="Pixel Art Wizard Sprite"></div>
+                    <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
+                </li>
+                 <li class="small-tile">
+                    <div class="image-container"><img id="7" src="./images/dot.png" alt="Dot 1" title="Dot"></div>
+                    <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
+                    <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
+                </li>
+                <li class="small-tile">
+                    <div class="image-container"><img id="8" src="./images/dot-2.png" alt="Dot 2" title="Dot 2"></div>
+                    <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
+                    <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
+                </li>
+                <li class="small-tile">
+                    <div class="image-container"><img id="9" src="./images/spinning-crystal-2-color.gif" alt="Spinning Crystal 1" title="Spinning Crystal 1" data-style="background"></div>
+                    <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
+                    <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
+                </li>
+                <li class="small-tile">
+                    <div class="image-container"><img id="10" src="./images/spinning-crystal-2-2-color.gif" alt="Spinning Crystal 2" title="Spinning Crystal 2" data-style="background"></div>
+                    <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
                     <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
                 </li>
             </ul>

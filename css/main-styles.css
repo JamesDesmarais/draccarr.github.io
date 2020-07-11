@@ -483,6 +483,7 @@ strong {
 #Grid li {
 	position: relative;
 	cursor: pointer;
+	overflow: hidden;
 }
 .inner-shadow {
 	position: absolute;
@@ -702,6 +703,9 @@ li:hover .nested-nav-list {
 }
 .more-info:hover div {
 	display: block;
+}
+#ExpandedImage[data-style="background"] {
+	background-color: #252424;
 }
 
 /*************************************
