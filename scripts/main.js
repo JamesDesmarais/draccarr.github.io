@@ -59,6 +59,7 @@ var imageToShow;
 var selectedImageID;
 const imageViewer = document.getElementById("ImageViewer");
 const imageDescription = document.querySelectorAll("#ImageDescription")[0];
+const imageDetails = document.querySelectorAll("#ImageDetails")[0];
 //[Note: _val must have an image element immediately before it in the html.]
 toggleImage = function(_val) {
 	if (!imageToggled) {
@@ -76,6 +77,12 @@ toggleImage = function(_val) {
 				imageDescription.querySelectorAll("p")[0].innerHTML = _val.dataset.description;
 			} else {
 				imageDescription.querySelectorAll("p")[0].innerHTML = "No description...";
+			}
+			if (_val.title) {
+				// imageToShow.setAttribute('data-style', _val.dataset.description);
+				imageDetails.querySelectorAll("h2")[0].innerHTML = _val.title;
+			} else {
+				imageDetails.querySelectorAll("h2")[0].innerHTML = "Untitled image...";
 			}
 		}
 		imageToggled = true;

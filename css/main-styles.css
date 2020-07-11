@@ -517,6 +517,12 @@ strong {
 #ImageDescription p {
 	font: normal 2rem 'Grenze Gotisch', Arial, sans-serif;
 }
+#ImageDetails h2 {
+	font: bold 1.6rem Arial, sans-serif;
+}
+#ImageDetails span {
+	font: normal 1.6rem Arial, sans-serif;
+}
 #ImageControls {
 	padding-bottom: 1rem;
 }
@@ -1135,7 +1141,7 @@ nav.side-bar ul li a {
 	transition-timing-function: cubic-bezier(0, 0, 1, 1);
 }
 #ExpandedImageControls .close-image {
-	color: #181818;
+	color: #252424;
 }
 #ExpandedImageControls .close-image:hover, .close-image:hover {
 	color: #db2626;
