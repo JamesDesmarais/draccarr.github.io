@@ -118,10 +118,10 @@ li.two-images {
     display: flex;
     flex-direction: row;
 }
-#Grid li.vertical-fit img {
+/* #Grid li.vertical-fit img {
     height: 100%;
     width: auto;
-}
+} */
 
 
 
@@ -149,7 +149,7 @@ li.two-images {
     transition-timing-function: cubic-bezier(0, 0, 1, 1);
 }
 .art-container img.zoom-in {
-    transform: scale(1.2);
+    transform: scale(1.21);
 }
 .art-container img.zoom-out {
     transform: scale(1);
@@ -159,7 +159,7 @@ li.two-images {
     transform: scale(1.2);
 }
 .art-container li:hover img.zoom-in {
-    transform: scale(1.3);
+    transform: scale(1.31);
 }
 .art-container li:hover img.zoom-out {
     transform: scale(1.1);

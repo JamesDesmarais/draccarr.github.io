@@ -477,9 +477,9 @@ strong {
 	transition-timing-function: cubic-bezier(0, 0, 1, 1);
 	background-color: transparent;
 }
-#Grid li:hover a.inner-shadow {
+/* #Grid li:hover a.inner-shadow {
 	box-shadow: inset 0px 0px 7px 7px #78c2ddbb;
-}
+} */
 #Grid li {
 	position: relative;
 	cursor: pointer;
