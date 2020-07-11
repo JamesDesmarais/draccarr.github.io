@@ -394,6 +394,9 @@ main h2 {
 	padding: 2rem;
 	bottom: 0;
 }
+#CopyrightNotice span {
+	background-color: #141414;
+}
 .picture-icon {
 	width: 100%;
 	height: auto;
@@ -727,6 +730,12 @@ li:hover .nested-nav-list {
 }
 #ExpandedImage[data-style="background"] {
 	background-color: #252424;
+}
+.gradient-border-top {
+	width: 100%;
+	height: 1px;
+	margin-bottom: 2rem;
+	background: radial-gradient( #ccc, transparent);
 }
 
 /*************************************
