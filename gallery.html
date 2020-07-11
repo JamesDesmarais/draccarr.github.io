@@ -36,22 +36,28 @@
                 <img id="ExpandedImage" src="./images/transparent-pixel.png" alt="Blank" class="hide-in-mobile">
             </div>
             <div id="ExpandedImageControls" class="expanded-image-controls">
-                <button class="fas fa-times-circle close-image" title="close" onclick="toggleImage();"></button>
+                <button class="fas fa-times close-image" title="close" onclick="toggleImage();"></button>
                 <div id="ImageControls">
                     <button id="PreviousImage" class="control-button show-cursor-pointer fas fa-arrow-left" title="Previous" onclick="previousImage();"></button>
                     <button id="NextImage" class="control-button show-cursor-pointer fas fa-arrow-right" title="Next" onclick="nextImage();"></button>
                 </div>
-                <!-- <div id="ImageDetails">
-                    <h2 >Insert Image name here</h2>
+                <div id="ImageDetails">
+                    <h2>Vatherdone</h2>
                     <span id="ImageAuthor">By James Desmarias</span>
-                </div> -->
-                <!-- <div id="ImageDescription">
+                </div>
+                <div id="ImageDescription">
+                    <h2>Description</h2>
                     <p>
+                        Vatherdone is a large village that resides in Gredulnock that's mostly known for its library, 
+                        fur trade, and warm comforting inns. However, the people of Vatherdone must suffer the 
+                        occational attack from various monsters. This place holds many secrets, do you dare 
+                        find them?
                     </p>
-                </div> -->
+                </div>
             </div>
         </div>
         <button id="FullButton" class="full-button" onclick="toggleImage();"></button>
+        <button class="fas fa-times close-image" title="close" onclick="toggleImage();"></button>
     </div>
     <div id="GreetingContainer">
         <img class="hero-image" src="./images/robot-game.png" id="PageImage" class="side-padding top-padding" width="950" height="593.75" alt="Robot Game Image By James Desmarais" title="Robot Game Image By James Desmarais">
@@ -65,7 +71,12 @@
             <ul id="Grid">
                 <li class="huge-short-wide-tile">
                     <div class="image-container">
-                        <img id="1" class="zoom-in" src="./images/vatherdone-outside-path.png" alt="Vatherdone Outside Path" title="Vatherdone Outside Path">
+                        <img id="1" class="zoom-in" src="./images/vatherdone-outside-path.png" alt="Vatherdone, outside path" title="Vatherdone, outside path" 
+                                data-description=
+                                "Vatherdone is a large village that resides in Gredulnock that's mostly known for its library, 
+                                fur trade, and warm comforting inns. However, the people of Vatherdone must suffer the 
+                                occational attack from various monsters. This place holds many secrets, do you dare 
+                                find them?">
                     </div>
                     <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
                     <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>

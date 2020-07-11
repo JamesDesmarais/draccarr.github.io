@@ -58,6 +58,7 @@ var imageToggled = false;
 var imageToShow;
 var selectedImageID;
 const imageViewer = document.getElementById("ImageViewer");
+const imageDescription = document.querySelectorAll("#ImageDescription")[0];
 //[Note: _val must have an image element immediately before it in the html.]
 toggleImage = function(_val) {
 	if (!imageToggled) {
@@ -69,6 +70,12 @@ toggleImage = function(_val) {
 			imageToShow.setAttribute('title', _val.title);
 			if (_val.dataset.style) {
 				imageToShow.setAttribute('data-style', _val.dataset.style);
+			}
+			if (_val.dataset.description) {
+				// imageToShow.setAttribute('data-style', _val.dataset.description);
+				imageDescription.querySelectorAll("p")[0].innerHTML = _val.dataset.description;
+			} else {
+				imageDescription.querySelectorAll("p")[0].innerHTML = "No description...";
 			}
 		}
 		imageToggled = true;
@@ -82,49 +89,38 @@ toggleImage = function(_val) {
 }; //end toggleImage
 
 nextImage = function() {
+	var nextImage = document.getElementById(selectedImageID).parentElement.parentElement.nextElementSibling.querySelectorAll("img")[0];
 	imageToShow = document.getElementById('ExpandedImage');
 	try {
-		imageToShow.setAttribute(
-			'src',
-			document.getElementById(selectedImageID).parentElement.parentElement.nextElementSibling.querySelectorAll("img")[0].src
-		);
-		imageToShow.setAttribute(
-			'alt',
-			document.getElementById(selectedImageID).parentElement.parentElement.nextElementSibling.querySelectorAll("img")[0].alt
-		);
-		imageToShow.setAttribute(
-			'title',
-			document.getElementById(selectedImageID).parentElement.parentElement.nextElementSibling.querySelectorAll("img")[0].title
-		);
-		imageToShow.setAttribute (
-			'data-style',
-			document.getElementById(selectedImageID).parentElement.parentElement.nextElementSibling.querySelectorAll("img")[0].dataset.style
-		);
-		selectedImageID = document.getElementById(selectedImageID).parentElement.parentElement.nextElementSibling.querySelectorAll("img")[0].id;
+		imageToShow.setAttribute('src', nextImage.src);
+		imageToShow.setAttribute('alt',nextImage.alt);
+		imageToShow.setAttribute('title', nextImage.title);
+		imageToShow.setAttribute('data-style', nextImage.dataset.style);
+		if (nextImage.dataset.description) {
+			// imageToShow.setAttribute('data-style', _val.dataset.description);
+			imageDescription.querySelectorAll("p")[0].innerHTML = nextImage.dataset.description;
+		} else {
+			imageDescription.querySelectorAll("p")[0].innerHTML = "No description...";
+		}
+		selectedImageID = nextImage.id;
 	} catch (_ex) {
 		console.log('No more next Images!\n' + _ex);
 	}
 }; //end nextImage
 previousImage = function() {
+	var previousImage = document.getElementById(selectedImageID).parentElement.parentElement.previousElementSibling.querySelectorAll("img")[0];
 	imageToShow = document.getElementById('ExpandedImage');
 	try {
-		imageToShow.setAttribute(
-			'src',
-			document.getElementById(selectedImageID).parentElement.parentElement.previousElementSibling.querySelectorAll("img")[0].src
-		);
-		imageToShow.setAttribute(
-			'alt',
-			document.getElementById(selectedImageID).parentElement.parentElement.previousElementSibling.querySelectorAll("img")[0].alt
-		);
-		imageToShow.setAttribute(
-			'title',
-			document.getElementById(selectedImageID).parentElement.parentElement.previousElementSibling.querySelectorAll("img")[0].title
-		);
-		imageToShow.setAttribute (
-			'data-style',
-			document.getElementById(selectedImageID).parentElement.parentElement.previousElementSibling.querySelectorAll("img")[0].dataset.style
-		);
-		selectedImageID = document.getElementById(selectedImageID).parentElement.parentElement.previousElementSibling.querySelectorAll("img")[0].id;
+		imageToShow.setAttribute('src', previousImage.src);
+		imageToShow.setAttribute('alt', previousImage.alt);
+		imageToShow.setAttribute('title', previousImage.title);
+		imageToShow.setAttribute ('data-style', previousImage.dataset.style);
+		if (previousImage.dataset.description) {
+			imageDescription.querySelectorAll("p")[0].innerHTML = previousImage.dataset.description;
+		} else {
+			imageDescription.querySelectorAll("p")[0].innerHTML = "No description...";
+		}
+		selectedImageID = previousImage.id;
 	} catch (_ex) {
 		console.log('No more previous Images!\n' + _ex);
 	}
