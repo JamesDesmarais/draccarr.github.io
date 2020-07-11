@@ -57,9 +57,9 @@ copyToClipboard = function(_text) {
 var imageToggled = false;
 var imageToShow;
 var selectedImageID;
+const imageViewer = document.getElementById("ImageViewer");
 //[Note: _val must have an image element immediately before it in the html.]
 toggleImage = function(_val) {
-	var imageViewer = $('#ImageViewer');
 	if (!imageToggled) {
 		if (_val != null) {
 			selectedImageID = _val.id;
@@ -72,9 +72,9 @@ toggleImage = function(_val) {
 			}
 		}
 		imageToggled = true;
-		imageViewer.removeClass('hide');
+		imageViewer.classList.remove('hide');
 	} else {
-		imageViewer.addClass('hide');
+		imageViewer.classList.add('hide');
 		imageToggled = false;
 		imageToShow.setAttribute('src', './images/transparent-pixel.png');
 	}
