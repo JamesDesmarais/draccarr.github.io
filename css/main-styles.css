@@ -71,8 +71,6 @@ header div.container {
 	display: flex;
 	align-items: center;
 	font: 3rem/2.0 'Poppins', arial, sans-serif;
-	transition: scale 0.2s;
-	transition-timing-function: cubic-bezier(0, 0, 1, 1);
 }
 .logo a {
 	position: relative;
@@ -87,6 +85,8 @@ header div.container {
 	width: auto;
 	/* Blends the alt text into the background of the header. */
 	color: #141414;
+	transition: scale 0.2s;
+	transition-timing-function: cubic-bezier(0, 0, 1, 1);
 }
 .logo:active a img {
 	scale: .8;
@@ -103,7 +103,7 @@ main {
 	min-height: 90rem;
 	margin: 0 auto;
 	background-color: #eee;
-	padding: 1rem 2rem 2rem 2rem;
+	padding: 1.5rem 2rem 2rem 2rem;
 }
 main h2,
 main h3 {
@@ -637,6 +637,12 @@ li:hover .nested-nav-list {
 }
 .blog-post-image {
 	position: relative;
+	width: calc(100% + 4rem);
+	margin-left: -2rem;
+}
+.blog-post-image img {
+	width: 100%;
+	height: auto;
 }
 .blog-post-image .article-heading-container {
 	display: flex;
