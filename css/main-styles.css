@@ -1425,7 +1425,8 @@ body #gameContainer {
 		border-top: 0.1rem solid #ccc;
 	}
 	.full-width-image,
-	.hero-image {
+	.hero-image,
+	.blog-post-image {
 		width: calc(100% + 8rem);
 		margin-left: -4rem;
 	}
@@ -1439,9 +1440,9 @@ body #gameContainer {
 	li:hover .nested-nav-list {
 		display: none;
 	}
-	.blog-post-image .article-heading-container {
+	/* .blog-post-image .article-heading-container {
 		left: -4rem;
-	}
+	} */
 	article li {
 		font-size: 4rem;
 	}
