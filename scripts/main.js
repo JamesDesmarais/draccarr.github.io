@@ -109,6 +109,12 @@ nextImage = function() {
 		} else {
 			imageDescription.querySelectorAll("p")[0].innerHTML = "No description...";
 		}
+		if (nextImage.title) {
+			// imageToShow.setAttribute('data-style', _val.dataset.description);
+			imageDetails.querySelectorAll("h2")[0].innerHTML = nextImage.title;
+		} else {
+			imageDetails.querySelectorAll("h2")[0].innerHTML = "Titleless...";
+		}
 		selectedImageID = nextImage.id;
 	} catch (_ex) {
 		console.log('No more next Images!\n' + _ex);
@@ -126,6 +132,11 @@ previousImage = function() {
 			imageDescription.querySelectorAll("p")[0].innerHTML = previousImage.dataset.description;
 		} else {
 			imageDescription.querySelectorAll("p")[0].innerHTML = "No description...";
+		}
+		if (previousImage.title) {
+			imageDetails.querySelectorAll("h2")[0].innerHTML = previousImage.title;
+		} else {
+			imageDetails.querySelectorAll("h2")[0].innerHTML = "Titleless...";
 		}
 		selectedImageID = previousImage.id;
 	} catch (_ex) {
