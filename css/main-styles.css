@@ -700,37 +700,65 @@ li:hover .nested-nav-list {
 }
 .more-info {
 	position: relative;
+	color: #aaa;
+}
+.more-info, .more-info div div, .more-info div div .bubble-tip {
+	transition: all 0.1s;
+	transition-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+.more-info:hover {
+	color: #252424;
 }
 .more-info div {
 	position: absolute;
-	display: none;
 	top: .3rem;
 	left: 0;
 	padding-left: 2.5rem;
 	min-height: 4rem;
+	pointer-events: none;
+	transform: scale(0);
+	transform-origin: top left;
+	z-index: 98;
 }
 .more-info div div {
 	position: relative;
 	padding: 2rem;
 	width: 36rem;
 	z-index: 98;
-	background-color: #252424;
 	font: normal 1.6rem 'Raleway', arial, sans-serif;
-	color: #fff;
+	color: transparent;
+	pointer-events: none;
+	background-color: transparent;
+	transform: scale(0);
 }
 .more-info div div a {
 	padding-top: 1rem;
 }
+.more-info:hover div div .bubble-tip {
+	color: #252424;
+}
 .more-info div div .bubble-tip {
 	position: absolute;
 	top: -.6rem;
-	left: -1rem;
-	color: #252424;
+	left: -1.2rem;
+	color: transparent;
 	user-select: none;
 	line-height: 2.3rem;
+	font-size: 1.6rem;
+	min-width: 13px;
+}
+.more-info:not(:hover) div div a, .more-info:not(:hover) div div a:visited, .more-info:not(:hover) div div a:link {
+	color: transparent;
 }
 .more-info:hover div {
-	display: block;
+	pointer-events: all;
+	transform: scale(1);
+}
+.more-info:hover div div {
+	background-color: #252424;
+	color: #fff;
+	transform: scale(1);
+	pointer-events: all;
 }
 #ExpandedImage[data-style="background"] {
 	background-color: #252424;
