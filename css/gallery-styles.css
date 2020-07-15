@@ -12,12 +12,6 @@ body main {
 	padding-bottom: 2rem;
 }
 
-/* .art-container h2 {
-    font-size: 4rem;
-	text-align: center;
-	color: #fff;
-} */
-
 .art-container ul {
     display: grid;
     width: 100%;
@@ -118,67 +112,6 @@ li.two-images {
     display: flex;
     flex-direction: row;
 }
-/* #Grid li.vertical-fit img {
-    height: 100%;
-    width: auto;
-} */
-
-
-
-/* .art-container ul li {
-    display: flex;
-    flex-direction: row;
-    width: 28.5rem;
-    width: 100%;
-	height: auto;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-} */
-
-/* .art-container ul li img {
-    width: 100%;
-	height: auto;
-} */
-
-.art-container img {
-    filter: brightness(85%);
-    transform: scale(1.1);
-	transition: 0.2s;
-    transition-timing-function: cubic-bezier(0, 0, 1, 1);
-}
-.art-container img.zoom-in {
-    transform: scale(1.21);
-}
-.art-container img.zoom-out {
-    transform: scale(1);
-}
-.art-container li:hover img {
-    filter: brightness(100%);
-    transform: scale(1.2);
-}
-.art-container li:hover img.zoom-in {
-    transform: scale(1.31);
-}
-.art-container li:hover img.zoom-out {
-    transform: scale(1.1);
-}
-.art-container ul li img.half-width {
-    width: 50%;
-}
-/* #Grid {
-    counter-reset: tile-number;
-}
-#Grid li::after {
-    counter-increment: tile-number;
-    content: counter(tile-number);
-    color: #fff;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    display: block;
-} */
 
 /*************************************
   --- Media Queries

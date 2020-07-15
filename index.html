@@ -36,15 +36,27 @@
     <div id="ImageViewer" class="hide hide-in-mobile">
         <div id="ImageViewerControlsAndImage">
             <div id="ExpandImageView" class="hide-in-mobile">
-                <img id="ExpandedImage" src="./images/transparent-pixel.png" alt="Empty" class="hide-in-mobile">
+                <img id="ExpandedImage" src="./images/transparent-pixel.png" alt="Blank" class="hide-in-mobile">
             </div>
             <div id="ExpandedImageControls" class="expanded-image-controls">
-                <button class="fas fa-times-circle close-image" title="close" onclick="toggleImage();"></button>
-                <a id="PreviousImage" title="Previous"><i class="fas fa-arrow-left show-cursor-pointer" onclick="previousImage();"></i></a>
-                <a id="NextImage" title="Next"><i class="fas fa-arrow-right show-cursor-pointer" onclick="nextImage();"></i></a>
+                <button class="fas fa-times close-image" title="close" onclick="toggleImage();"></button>
+                <div id="ImageControls">
+                    <button id="PreviousImage" class="control-button show-cursor-pointer fas fa-arrow-left" title="Previous" onclick="previousImage();"></button>
+                    <button id="NextImage" class="control-button show-cursor-pointer fas fa-arrow-right" title="Next" onclick="nextImage();"></button>
+                </div>
+                <div id="ImageDetails">
+                    <h2>Vatherdone</h2>
+                    <span id="ImageAuthor">By James Desmarais</span>
+                </div>
+                <div id="ImageDescription">
+                    <h2></h2>
+                    <p>
+                    </p>
+                </div>
             </div>
         </div>
         <button id="FullButton" class="full-button" onclick="toggleImage();"></button>
+        <button class="fas fa-times close-image" title="close" onclick="toggleImage();"></button>
     </div>
     <div id="GreetingContainer">
         <img src="./images/vatherdone-with-tree-ghosts.png" alt="Vatherdone With Ghosts By James Desmarais" width="950" height="534">
@@ -298,21 +310,44 @@
                     </ul>
                 </article>
             </section>
-            <section id="Snapshots" class="hide-in-mobile">
+            <section id="Snapshots" class="hide-in-mobile art-container">
                 <h2 class="hide-in-mobile">Snapshots <i class="fas fa-images"></i></h2>
-                <div>
+                <ul id="Grid">
+                    <li>
+                        <div class="image-container">
+                            <img id="1" src="./images/merchant-screenshot-settings-menu-optimized-512x320-v.0.0.jpg" alt="Merchant Screenshot Settings Menu" title="Merchant Screenshot V0.0.6a Settings" class="hide-in-mobile">
+                        </div>
+                        <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
+                        <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
+                    </li>
+                    <li>
+                        <div class="image-container">
+                            <img id="2" src="./images/merchant-screenshot-corner-optimized-512x320-v.0.0.jpg" alt="Merchant Screenshot Second Person" title="Merchant Screenshot V0.0.6a Second Person Camera" class="hide-in-mobile">
+                        </div>
+                        <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
+                        <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
+                    </li>
+                    <li>
+                        <div class="image-container">
+                            <img id="3" src="./images/merchant-screenshot-512x320-v0.0.jpg" alt="Merchant Screenshot Third Person" title="Merchant Screenshot V0.0.6a Third Person Camera" class="hide-in-mobile">
+                        </div>
+                        <a class="inner-shadow" onclick="toggleImage(this.previousElementSibling.querySelectorAll('img')[0]);"></a>
+                        <i class="fas fa-expand expand-image hide-in-mobile" title="Expand"></i>
+                    </li>
+                </ul>
+                <!-- <div>
                     <img id="1" src="./images/merchant-screenshot-settings-menu-optimized-512x320-v.0.0.jpg" alt="Merchant Screenshot Settings Menu" title="Merchant Screenshot V0.0.6a Settings" class="hide-in-mobile">
-                    <!-- <a class="fas fa-expand expand-image hide-in-mobile" title="Expand" onclick="toggleImage(this.previousElementSibling);"></a> -->
-                    <!-- <div class="inner-shadow"></div> -->
+                    <a class="fas fa-expand expand-image hide-in-mobile" title="Expand" onclick="toggleImage(this.previousElementSibling);"></a>
+                    <div class="inner-shadow"></div>
                 </div>
                 <div>
                     <img id="2" src="./images/merchant-screenshot-corner-optimized-512x320-v.0.0.jpg" alt="Merchant Screenshot Second Person" title="Merchant Screenshot V0.0.6a Second Person Camera" class="hide-in-mobile">
-                    <!-- <a class="fas fa-expand expand-image hide-in-mobile" title="Expand" onclick="toggleImage(this.previousElementSibling);"></a> -->
+                    <a class="fas fa-expand expand-image hide-in-mobile" title="Expand" onclick="toggleImage(this.previousElementSibling);"></a>
                 </div>
                 <div>
                     <img id="3" src="./images/merchant-screenshot-512x320-v0.0.jpg" alt="Merchant Screenshot Third Person" title="Merchant Screenshot V0.0.6a Third Person Camera" class="hide-in-mobile">
-                    <!-- <a class="fas fa-expand expand-image hide-in-mobile" title="Expand" onclick="toggleImage(this.previousElementSibling);"></a> -->
-                </div>
+                    <a class="fas fa-expand expand-image hide-in-mobile" title="Expand" onclick="toggleImage(this.previousElementSibling);"></a>
+                </div> -->
             </section>
         </div>
     </main>
