@@ -5,68 +5,71 @@ $(function() {
 	CheckDate();
 	var shareButton;
 	try {
-		shareButton = document.getElementById("SharePost");
+		shareButton = document.getElementById('SharePost');
 		if (shareButton != null) {
-			shareButton.addEventListener('click', event => {
-			if (navigator.share) {
-				navigator.share({
-				title: 'Hunted Blog',
-				url: document.location
-				}).then(() => {
-					console.log('Thanks for sharing!');
-				}).catch(console.error);
-			} else {
-				// fallback
-			}
-		});
-	} else {
-		// console.log("There is no share button");
-	}
-	} catch(_ex) {
-
-	}
+			shareButton.addEventListener('click', (event) => {
+				if (navigator.share) {
+					navigator
+						.share({
+							title: 'Hunted Blog',
+							url: document.location
+						})
+						.then(() => {
+							console.log('Thanks for sharing!');
+						})
+						.catch(console.error);
+				} else {
+					// fallback
+				}
+			});
+		} else {
+			// console.log("There is no share button");
+		}
+	} catch (_ex) {}
 });
 
-toggleShareViewer = function () {
-	var URL =  document.getElementById("URL").value = document.location;
+toggleShareViewer = function() {
+	var URL = (document.getElementById('URL').value = document.location);
 	if (ShareViewer != null) {
-		ShareViewer.classList.toggle("hide");
+		ShareViewer.classList.toggle('hide');
 	}
-}//end toggleShareViewer
+}; //end toggleShareViewer
 
 copyURLToClipboard = function() {
 	try {
-		copyToClipboard(document.getElementById("URL").value);
-		document.getElementById("ClipboardPrompt").classList.remove("hide");
-	} catch(_ex) {
+		copyToClipboard(document.getElementById('URL').value);
+		document.getElementById('ClipboardPrompt').classList.remove('hide');
+	} catch (_ex) {
 		console.log(_ex);
 	}
-}//end copyURLToClipboard
+}; //end copyURLToClipboard
 
 copyToClipboard = function(_text) {
 	try {
 		navigator.clipboard.writeText(_text);
 	} catch (_ex) {
-		console.log("Text could not be added to clipboard.");
+		console.log('Text could not be added to clipboard.');
 		console.log(_ex);
 	}
-}//end copyToClipboard
-
+}; //end copyToClipboard
 
 //This hides the expanded image.
 var imageToggled = false;
 var imageToShow;
 var selectedImageID;
-const imageViewer = document.getElementById("ImageViewer");
-const imageDescription = document.querySelectorAll("#ImageDescription")[0];
-const imageDetails = document.querySelectorAll("#ImageDetails")[0];
+const imageViewer = document.getElementById('ImageViewer');
+const imageDescription = document.querySelectorAll('#ImageDescription')[0];
+const imageDetails = document.querySelectorAll('#ImageDetails')[0];
 //[Note: _val must have an image element immediately before it in the html.]
 toggleImage = function(_val) {
 	if (!imageToggled) {
 		if (_val != null) {
 			selectedImageID = _val.id;
 			imageToShow = document.getElementById('ExpandedImage');
-			imageToShow.setAttribute('src', _val.src);
+			imageToShow.setAttribute(
+				'src',
+				_val.dataset.detailsrc ? _val.dataset.detailsrc : _val.dataset.src ? _val.dataset.src : _val.src
+			);
 			imageToShow.setAttribute('alt', _val.alt);
 			imageToShow.setAttribute('title', _val.title);
 			if (_val.dataset.style) {
@@ -74,15 +77,15 @@ toggleImage = function(_val) {
 			}
 			if (_val.dataset.description) {
 				// imageToShow.setAttribute('data-style', _val.dataset.description);
-				imageDescription.querySelectorAll("p")[0].innerHTML = _val.dataset.description;
+				imageDescription.querySelectorAll('p')[0].innerHTML = _val.dataset.description;
 			} else {
-				imageDescription.querySelectorAll("p")[0].innerHTML = "No description...";
+				imageDescription.querySelectorAll('p')[0].innerHTML = 'No description...';
 			}
 			if (_val.title) {
 				// imageToShow.setAttribute('data-style', _val.dataset.description);
-				imageDetails.querySelectorAll("h2")[0].innerHTML = _val.title;
+				imageDetails.querySelectorAll('h2')[0].innerHTML = _val.title;
 			} else {
-				imageDetails.querySelectorAll("h2")[0].innerHTML = "Untitled image...";
+				imageDetails.querySelectorAll('h2')[0].innerHTML = 'Untitled image...';
 			}
 		}
 		imageToggled = true;
@@ -92,28 +95,34 @@ toggleImage = function(_val) {
 		imageToggled = false;
 		imageToShow.setAttribute('src', './images/transparent-pixel.png');
 	}
-		console.log(selectedImageID);
+	console.log(selectedImageID);
 }; //end toggleImage
 
 nextImage = function() {
-	var nextImage = document.getElementById(selectedImageID).parentElement.parentElement.nextElementSibling.querySelectorAll("img")[0];
-	imageToShow = document.getElementById('ExpandedImage');
 	try {
-		imageToShow.setAttribute('src', nextImage.src);
-		imageToShow.setAttribute('alt',nextImage.alt);
+		var nextImage = document
+			.getElementById(selectedImageID)
+			.parentElement.parentElement.nextElementSibling.querySelectorAll('img')[0];
+		imageToShow = document.getElementById('ExpandedImage');
+		imageToShow.setAttribute(
+			'src',
+			nextImage.dataset.detailsrc
+				? nextImage.dataset.detailsrc
+				: nextImage.dataset.src ? nextImage.dataset.src : nextImage.src
+		);
+		imageToShow.setAttribute('alt', nextImage.alt);
 		imageToShow.setAttribute('title', nextImage.title);
 		imageToShow.setAttribute('data-style', nextImage.dataset.style);
 		if (nextImage.dataset.description) {
-			// imageToShow.setAttribute('data-style', _val.dataset.description);
-			imageDescription.querySelectorAll("p")[0].innerHTML = nextImage.dataset.description;
+			imageDescription.querySelectorAll('p')[0].innerHTML = nextImage.dataset.description;
 		} else {
-			imageDescription.querySelectorAll("p")[0].innerHTML = "No description...";
+			imageDescription.querySelectorAll('p')[0].innerHTML = 'No description...';
 		}
 		if (nextImage.title) {
 			// imageToShow.setAttribute('data-style', _val.dataset.description);
-			imageDetails.querySelectorAll("h2")[0].innerHTML = nextImage.title;
+			imageDetails.querySelectorAll('h2')[0].innerHTML = nextImage.title;
 		} else {
-			imageDetails.querySelectorAll("h2")[0].innerHTML = "Titleless...";
+			imageDetails.querySelectorAll('h2')[0].innerHTML = 'Titleless...';
 		}
 		selectedImageID = nextImage.id;
 	} catch (_ex) {
@@ -121,22 +130,29 @@ nextImage = function() {
 	}
 }; //end nextImage
 previousImage = function() {
-	var previousImage = document.getElementById(selectedImageID).parentElement.parentElement.previousElementSibling.querySelectorAll("img")[0];
-	imageToShow = document.getElementById('ExpandedImage');
 	try {
-		imageToShow.setAttribute('src', previousImage.src);
+		var previousImage = document
+			.getElementById(selectedImageID)
+			.parentElement.parentElement.previousElementSibling.querySelectorAll('img')[0];
+		imageToShow = document.getElementById('ExpandedImage');
+		imageToShow.setAttribute(
+			'src',
+			previousImage.dataset.detailsrc
+				? previousImage.dataset.detailsrc
+				: previousImage.dataset.src ? previousImage.dataset.src : previousImage.src
+		);
 		imageToShow.setAttribute('alt', previousImage.alt);
 		imageToShow.setAttribute('title', previousImage.title);
-		imageToShow.setAttribute ('data-style', previousImage.dataset.style);
+		imageToShow.setAttribute('data-style', previousImage.dataset.style);
 		if (previousImage.dataset.description) {
-			imageDescription.querySelectorAll("p")[0].innerHTML = previousImage.dataset.description;
+			imageDescription.querySelectorAll('p')[0].innerHTML = previousImage.dataset.description;
 		} else {
-			imageDescription.querySelectorAll("p")[0].innerHTML = "No description...";
+			imageDescription.querySelectorAll('p')[0].innerHTML = 'No description...';
 		}
 		if (previousImage.title) {
-			imageDetails.querySelectorAll("h2")[0].innerHTML = previousImage.title;
+			imageDetails.querySelectorAll('h2')[0].innerHTML = previousImage.title;
 		} else {
-			imageDetails.querySelectorAll("h2")[0].innerHTML = "Titleless...";
+			imageDetails.querySelectorAll('h2')[0].innerHTML = 'Titleless...';
 		}
 		selectedImageID = previousImage.id;
 	} catch (_ex) {
@@ -162,7 +178,6 @@ ToggleMobileNav = function() {
 // 		fancyNav.removeClass('unstick-nav');
 // 	}
 // });
-
 
 // function LoadByBlogType(_blogType) {
 // 	//Get the type of blog post to load from the location hash in the url.
