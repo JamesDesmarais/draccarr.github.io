@@ -49,7 +49,6 @@ function preloadImage(_img) {
 // Events
 //====================
 window.onload = function() {   
-    console.log(allImages); 
     allImages.forEach(_x => {
         imageObserver.observe(_x);
     });
