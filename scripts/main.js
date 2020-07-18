@@ -1,7 +1,7 @@
-//This is for populating the 'mainNavigation' with the content of the navigation html file.
-$(function() {
-	// $('header').load('header.html');
-	$('#fancyNav').load('main-nav.html');
+//====================
+// Events
+//====================
+window.onload = function() {
 	CheckDate();
 	var shareButton;
 	try {
@@ -26,8 +26,15 @@ $(function() {
 			// console.log("There is no share button");
 		}
 	} catch (_ex) {}
-});
+}; //end onload
+// $(function() {
+// 	// $('header').load('header.html');
+// 	// $('#fancyNav').load('main-nav.html');
+// });
 
+//====================
+// Custom functions
+//====================
 toggleShareViewer = function() {
 	var URL = (document.getElementById('URL').value = document.location);
 	if (ShareViewer != null) {
@@ -53,14 +60,13 @@ copyToClipboard = function(_text) {
 	}
 }; //end copyToClipboard
 
-//This hides the expanded image.
 var imageToggled = false;
 var imageToShow;
 var selectedImageID;
 const imageViewer = document.getElementById('ImageViewer');
 const imageDescription = document.querySelectorAll('#ImageDescription')[0];
 const imageDetails = document.querySelectorAll('#ImageDetails')[0];
-//[Note: _val must have an image element immediately before it in the html.]
+//This toggles the expanded image
 toggleImage = function(_val) {
 	if (!imageToggled) {
 		if (_val != null) {
@@ -97,7 +103,6 @@ toggleImage = function(_val) {
 	}
 	console.log(selectedImageID);
 }; //end toggleImage
-
 nextImage = function() {
 	try {
 		var nextImage = document

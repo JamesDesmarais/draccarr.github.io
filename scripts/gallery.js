@@ -5,6 +5,7 @@ Date modified: Jul 17, 2020
 InfiniteGrids documentation:
     https://naver.github.io/egjs-infinitegrid/#layouts
 ***********************************************/
+window.addEventListener("load", initializeGallery, true); 
 const allImages = document.querySelectorAll("[data-src]");
 const grid = document.querySelectorAll("#Grid")[0];
 const imageOptions = {
@@ -48,8 +49,8 @@ function preloadImage(_img) {
 //====================
 // Events
 //====================
-window.onload = function() {   
+function initializeGallery() {
     allImages.forEach(_x => {
         imageObserver.observe(_x);
     });
-}; //end window.onLoad
+}

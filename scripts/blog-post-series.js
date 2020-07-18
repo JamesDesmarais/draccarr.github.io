@@ -1,8 +1,9 @@
+window.addEventListener("load", initializeBlogPostSeries, true); 
 var postsDoc;
 var allPosts;
 var currentPost;
-window.onload = function() {
-    //All the text from blog-content.html
+function initializeBlogPostSeries () {
+//All the text from blog-content.html
 	postsDoc = new DOMParser().parseFromString(loadPage('https://draccarr.github.io/blog-content.html'), 'text/html');
     var blogSeries = window.location.search.substr(2);
 
@@ -29,7 +30,7 @@ window.onload = function() {
 	} else {
 		document.getElementById('NextPostBottom').classList.remove('hide');
 	}
-}; //end window.onLoad
+}//end initializeBlogPostSeries
 
 //Loads html pages
 function loadPage(_href) {

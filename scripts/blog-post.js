@@ -1,11 +1,15 @@
+//Replace JQuery with this later.
+// window.addEventListener("load", initializeBlogPost, true); 
 var postsDoc;
 var allPosts;
 var currentPost;
+// function initializeBlogPost() {
+
+// }//end initializeBlogPost
 $.get('https://draccarr.github.io/blog-content.html', function(_content) {
 	postsDoc = new DOMParser().parseFromString(_content, 'text/html');
 	$('#BlogPost').load('blog-content.html ' + window.location.hash);
 	ReplaceAnchors();
-	// ReplaceImage();
 });
 
 var previousPostAnchorTop;
