@@ -1,6 +1,6 @@
 //This is for populating the 'mainNavigation' with the content of the navigation html file.
 $(function() {
-	$('header').load('header.html');
+	// $('header').load('header.html');
 	$('#fancyNav').load('main-nav.html');
 	CheckDate();
 	var shareButton;
