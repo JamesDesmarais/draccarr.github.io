@@ -29,15 +29,6 @@ function eraseCookie(_name) {
 	document.cookie = _name + '=; Max-Age=-99999999;';
 }
 
-window.onload = function() {
-    // setCookie('MyFirstCookie', 'JtestCookie3', 7);
-    // console.log("Cookie: " + document.cookie);
-    // var x = getCookie('MyFirstCookie');
-    // if (x) {
-    //     console.log(x);
-    // }
-}
-
 //Starts and continues the series
 function startSeries(_seriesName) {
 	if (getCookie(_seriesName)) {

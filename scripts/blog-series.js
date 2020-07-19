@@ -1,8 +1,6 @@
+window.addEventListener("load", initializeBlogSeries, true); 
 var myCurrentContent;
-
-//ToDo: Use the URL to determine how to order the content.
-window.onload = function () {
-    console.log(window.location);
+function initializeBlogSeries() {
     if (window.location.search.indexOf('ascending') > -1) {
         LoadAscending();
     } else if (window.location.search.indexOf('descending') > -1) {
@@ -10,7 +8,7 @@ window.onload = function () {
     } else {
         console.error("ascending or descending must appear in the search query of the URL. ex. ?=descending#hunted");    
     }
-}
+}//end initializeBlogSeries
 
 //Newest to oldest.
 function LoadDescending() {
