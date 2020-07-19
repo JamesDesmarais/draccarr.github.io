@@ -1,31 +1,23 @@
 //====================
+// Register Service Worker
+//====================
+// if ("serviceWorker" in navigator) {
+// 	window.addEventListener('load', () => {
+// 		navigator.serviceWorker.register('/sw.js')
+// 		.then(reg => {
+// 			console.log("Registered! " + reg);
+// 		}).catch(err => {
+// 			console.log("Registration failed: " + err);
+// 		});
+// 	});
+// }
+linkServiceWorker();
+//====================
 // Events
 //====================
 window.onload = function() {
 	CheckDate();
-	var shareButton;
-	try {
-		shareButton = document.getElementById('SharePost');
-		if (shareButton != null) {
-			shareButton.addEventListener('click', (event) => {
-				if (navigator.share) {
-					navigator
-						.share({
-							title: 'Hunted Blog',
-							url: document.location
-						})
-						.then(() => {
-							console.log('Thanks for sharing!');
-						})
-						.catch(console.error);
-				} else {
-					// fallback
-				}
-			});
-		} else {
-			// console.log("There is no share button");
-		}
-	} catch (_ex) {}
+	linkShareButton();
 }; //end onload
 
 // window.addEventListener('beforeinstallprompt', (event) => {
@@ -61,8 +53,47 @@ window.onload = function() {
 // });
 
 //====================
-// Custom functions
+// functions
 //====================
+function linkServiceWorker() {
+	if ("serviceWorker" in navigator) {
+		window.addEventListener('load', () => {
+			navigator.serviceWorker.register('/sw.js')
+			.then(reg => {
+				console.log("Registered! " + reg);
+			}).catch(err => {
+				console.log("Registration failed: " + err);
+			});
+		});
+	}
+}
+
+function linkShareButton() {
+	var shareButton;
+	try {
+		shareButton = document.getElementById('SharePost');
+		if (shareButton != null) {
+			shareButton.addEventListener('click', (event) => {
+				if (navigator.share) {
+					navigator
+						.share({
+							title: 'Hunted Blog',
+							url: document.location
+						})
+						.then(() => {
+							console.log('Thanks for sharing!');
+						})
+						.catch(console.error);
+				} else {
+					// fallback
+				}
+			});
+		} else {
+			// console.log("There is no share button");
+		}
+	} catch (_ex) {}
+}//end linkShareButton
+
 toggleShareViewer = function() {
 	var URL = (document.getElementById('URL').value = document.location);
 	if (ShareViewer != null) {
