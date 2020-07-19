@@ -25,7 +25,7 @@
             "name": "Blog Selection Page",
             "short_name": "Blogs",
             "description": "The official ElderReign Studios blog spot.",
-            "url": "/today?source=pwa",
+            "url": "/blogs.html",
             "icons": [
                 {
                     "src": "/images/draccarr-logo-192x192.png",
@@ -37,7 +37,7 @@
             "name": "Gallery Page",
             "short_name": "Gallery",
             "description": "The official ElderReign Studios gallery.",
-            "url": "/tomorrow?source=pwa",
+            "url": "/gallery.html",
             "icons": [
                 {
                     "src": "/images/draccarr-logo-192x192.png",
