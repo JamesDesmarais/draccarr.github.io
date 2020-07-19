@@ -1,0 +1,49 @@
+{
+    "short_name": "ElderReign",
+    "name": "ElderReign Studios",
+    "description": "To stay up to date on all the exciting new things ElderReign Studios has to offer.",
+    "icons": [
+        {
+            "src": "/images/draccarr-logo-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/images/draccarr-logo-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/?source=pwa",
+    "background_color": "#252424",
+    "display": "standalone",
+    "scope": "/",
+    "orientation": "portrait-primary",
+    "theme_color": "#141414",
+    "shortcuts": [
+        {
+            "name": "Blog Selection Page",
+            "short_name": "Blogs",
+            "description": "The official ElderReign Studios blog spot.",
+            "url": "/today?source=pwa",
+            "icons": [
+                {
+                    "src": "/images/draccarr-logo-192x192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "Gallery Page",
+            "short_name": "Gallery",
+            "description": "The official ElderReign Studios gallery.",
+            "url": "/tomorrow?source=pwa",
+            "icons": [
+                {
+                    "src": "/images/draccarr-logo-192x192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        }
+    ]
+}
