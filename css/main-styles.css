@@ -57,6 +57,7 @@ header {
 	z-index: 99;
 }
 header div.container {
+	position: relative;
 	width: 95rem;
 	margin: auto;
 	height: auto;
@@ -742,6 +743,39 @@ li:hover .nested-nav-list {
 	height: 1px;
 	margin-bottom: 2rem;
 	background: radial-gradient( #ccc, transparent);
+}
+#ViewModeToggle {
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	font-size: 2rem;
+	padding: 1.5rem;
+	margin-top: .2rem;
+	height: 100%;
+	cursor: pointer;
+	transition: color 0.1s;
+	transition-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+#ViewModeToggle:hover {
+	color: #f1cc88;
+}
+body.night-mode #ExpandedImageControls .close-image {
+	color: #ddd;
+}
+body.night-mode #ExpandedImageControls .close-image:hover {
+	color: #db2626;
+}
+body.night-mode main, body.night-mode #ImageDescription,body.night-mode #ExpandedImageControls {
+	color: #aaa;
+}
+body.night-mode main {
+	background-color: #141414;
+}
+body.night-mode #ExpandedImageControls {
+	background-color: #1e2020;
+}
+body.night-mode .blog-post-image .article-heading-container {
+	background-color: #00000044;
 }
 
 /*************************************
@@ -1505,9 +1539,6 @@ body #gameContainer {
 	li:hover .nested-nav-list {
 		display: none;
 	}
-	/* .blog-post-image .article-heading-container {
-		left: -4rem;
-	} */
 	article li {
 		font-size: 4rem;
 	}
@@ -1517,6 +1548,9 @@ body #gameContainer {
 	.super-text {
 		font-size: 5rem;
 		color: #fff;
+	}
+	#ViewModeToggle {
+		font-size: 4rem;
 	}
 }
 /*changed min-width from 1201px*/

@@ -67,6 +67,9 @@
                         <a href="#Contact" class="current-page" onclick="ToggleMobileNav();"><i class="fas fa-envelope"></i> Contact</a>
                         <div class="fill-bar"></div>
                     </li>
+                    <li>
+                        <button id="ViewModeToggle" onclick="changeViewMode();" class="fas" title="Night Mode"></button>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -78,6 +81,7 @@
     <footer></footer>
 
     <!-- Javascript plugins (bottom priority) -->
+    <script src="./scripts/cookie-manager.js"></script>
     <script>$(function () { $("main").load("blog-content.html"); });</script>
     <script>$(function () { $("footer").load("footer.html"); });</script>
     

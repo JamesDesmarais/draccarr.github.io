@@ -1,3 +1,9 @@
+window.addEventListener("load", initializeCookieManager, true); 
+function initializeCookieManager() {
+	linkViewModeButton();
+	loadViewMode();
+}//end initializeCookieManager
+
 //Set the cookie
 function setCookie(_name, _value, _days) {
 	var expires = '';
@@ -28,6 +34,47 @@ function getCookie(_name) {
 function eraseCookie(_name) {
 	document.cookie = _name + '=; Max-Age=-99999999;';
 }
+
+//Changes the view mode
+function changeViewMode() {
+	if (getCookie("ViewMode")) {
+		eraseCookie("ViewMode");
+	} else {
+		setCookie("ViewMode", "Night", 7);
+	}
+}
+
+function linkViewModeButton() {
+	try {
+		var displayModeButton = document.querySelector('#ViewModeToggle');
+		if (displayModeButton) {
+			displayModeButton.addEventListener('click', (_e) => {
+				loadViewMode();
+			});
+		}
+	} catch(_ex) {
+
+	}
+}//end linkDisplayModeButton
+
+function loadViewMode() {
+	try {
+		var displayModeButton = document.querySelector('#ViewModeToggle');
+		if (getCookie("ViewMode")) {
+			displayModeButton.classList.toggle('fa-moon', false);
+			displayModeButton.classList.toggle('fa-sun', true);
+			displayModeButton.setAttribute('title', "Day Mode");
+			document.querySelector('body').classList.toggle('night-mode', true);
+		} else {
+			displayModeButton.classList.toggle('fa-sun', false);
+			displayModeButton.classList.toggle('fa-moon', true);
+			displayModeButton.setAttribute('title', "Night Mode");
+			document.querySelector('body').classList.toggle('night-mode', false);
+		}
+	} catch(_ex) {
+		console.log("Failed to load the view mode... " + _ex);
+	}
+}//end loadViewMode
 
 //Starts and continues the series
 function startSeries(_seriesName) {

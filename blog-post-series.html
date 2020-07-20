@@ -24,6 +24,7 @@
     <script src="./scripts/jquery-3.3.1.min.js"></script>
     <!-- <script src="./scripts/cookie-manager.js"></script> -->
     <script src="./scripts/blog-post-series.js"></script>
+    <script src="./scripts/cookie-manager.js"></script>
 </head>
 
 <body>
@@ -70,6 +71,9 @@
                         <a href="#Contact" class="current-page" onclick="ToggleMobileNav();"><i class="fas fa-envelope"></i> Contact</a>
                         <div class="fill-bar"></div>
                     </li>
+                    <li>
+                        <button id="ViewModeToggle" onclick="changeViewMode();" class="fas" title="Night Mode"></button>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -108,7 +112,6 @@
     <footer></footer>
 
     <!-- Javascript plugins (bottom priority) -->
-    <!-- <script>$(function () { $("#BlogPost").load("blog-content.html " + window.location.hash); });</script> -->
     <script>$(function () { $("footer").load("footer.html"); });</script>
 
 
