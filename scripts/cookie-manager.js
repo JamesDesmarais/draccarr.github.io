@@ -92,6 +92,7 @@ function changeSeriesPosition(_amount) {
 	console.log(seriesName);
 	var seriesLocation = getCookie(seriesName);
 	setCookie(seriesName, Number(seriesLocation) + _amount, 7);
+	window.location.reload(false);
 }
 
 //ToDo: 
