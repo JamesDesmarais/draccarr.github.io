@@ -782,6 +782,9 @@ body.night-mode #ExpandedImageControls {
 body.night-mode .blog-post-image .article-heading-container {
 	background-color: #00000044;
 }
+body.night-mode .blog-post-image:hover .article-heading-container {
+	background-color: #ffffff00;
+}
 body.night-mode #NewsArticles article:first-of-type,
 body.night-mode #BlogsArticles article:first-of-type {
 	border-top: 1px solid #aaa;

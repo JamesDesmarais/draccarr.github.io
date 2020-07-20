@@ -1,3 +1,5 @@
+linkViewModeButton();
+loadViewMode();
 window.addEventListener("load", initializeCookieManager, true); 
 function initializeCookieManager() {
 	linkViewModeButton();
