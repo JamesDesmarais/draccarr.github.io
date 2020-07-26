@@ -92,6 +92,7 @@ header div.container {
 }
 #MobileNav {
 	left: 0;
+	transition: 0s;
 }
 main {
 	position: relative;
@@ -1588,6 +1589,20 @@ body #gameContainer {
 	}
 	#ViewModeToggle {
 		font-size: 4rem;
+	}
+	body header .container {
+		background-color: #141414;
+	}
+	body header #MobileNav {
+		transition: 0.2s;
+		transition-timing-function: cubic-bezier(0, 0, 1, 1);
+		transform-origin: top;
+		transform: translateY(0);
+		z-index: -1;
+	}
+	body header #MobileNav.hide {
+		transform: translateY(-46rem);
+		display: block;
 	}
 }
 /*changed min-width from 1201px*/
