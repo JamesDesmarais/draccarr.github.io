@@ -676,6 +676,7 @@ li:hover .nested-nav-list {
 .more-info {
 	position: relative;
 	color: #aaa;
+	z-index: 2;
 }
 .more-info, .more-info div div, .more-info div div .bubble-tip {
 	transition: all 0.1s;
@@ -787,11 +788,30 @@ body.night-mode .blog-post-image:hover .article-heading-container {
 }
 body.night-mode #NewsArticles article:first-of-type,
 body.night-mode #BlogsArticles article:first-of-type {
-	border-top: 1px solid #aaa;
+	/* border-top: 1px solid #aaa; */
+	border-top: 1px solid #575757;
 }
 body.night-mode #NewsArticles article,
 body.night-mode #BlogsArticles article {
-	border-bottom: 1px solid #aaa;
+	/* border-bottom: 1px solid #aaa; */
+	border-bottom: 1px solid #575757;
+}
+body.night-mode h2 {
+	color: #aaa;
+}
+body.night-mode article {
+	border-bottom: 1px solid #575757;
+}
+body.night-mode .more-info:hover:after {
+	content: '';
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	width: 1rem;
+	height: 1rem;
+	background-color: #aaa;
+	border-radius: 50%;
+	z-index: -1;
 }
 
 /*************************************
