@@ -813,6 +813,10 @@ body.night-mode .more-info:hover:after {
 	border-radius: 50%;
 	z-index: -1;
 }
+body.night-mode .new-symbol {
+	color: #252424;
+	font-weight: 500;
+}
 
 /*************************************
   --- Form Styles
