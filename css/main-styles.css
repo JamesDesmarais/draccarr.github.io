@@ -226,9 +226,13 @@ body .half-horizontal-size {
 .horizontal-center {
 	margin-left: 25%;
 }
-.special-message {
+.special-message, .special-message ~ p {
 	font: 1.6rem/1.5 'Raleway', arial, sans-serif;
+	padding-bottom: 1rem;
+}
+.special-message {
 	border-top: 0.1rem solid #ccc;
+	padding-top: 1rem;
 }
 main li {
 	font-family: 'Raleway', arial, sans-serif;
