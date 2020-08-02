@@ -5,8 +5,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="theme-color" content="#141414"/>
-    <title>ElderReign Studios | Contact Page</title>
-    <link rel="icon" href="./images/draccarr-logo.png">
+
+    <meta property="og:site_name" content="ElderReign Studios">
+    <meta property="og:title" content="Projects">
+    <meta property="og:description" content="The official ElderReign Studios projects spot.">
+    <meta property="og:image" content="https://draccarr.github.io/images/draccarr-logo-300x300.png">
+    <meta property="og:url" content="https://draccarr.github.io/blogs.html">
+
+    <title>ElderReign Studios | Blogs</title>
+    <link rel="icon" href="./images/draccarr-logo-300x300.png">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main-styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -14,7 +21,9 @@
     <!-- Javascript plugins (top priority) -->
     <script src="./scripts/modernizr-custom.js"></script>
     <script src="./scripts/jquery-3.3.1.min.js"></script>
+    <!-- <script src="./scripts/cookie-manager.js"></script> -->
 </head>
+
 <body>
     <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -70,32 +79,70 @@
             </nav>
         </div>
     </header>
+    <div id="ImageViewer" class="hide hide-in-mobile">
+        <div id="ImageViewerControlsAndImage">
+            <div id="ExpandImageView" class="hide-in-mobile">
+                <img id="ExpandedImage" src="./images/transparent-pixel.png" width="950" height="632.833" alt="Empty" class="hide-in-mobile">
+            </div>
+            <div id="ExpandedImageControls" class="expanded-image-controls">
+                <button class="fas fa-times-circle close-image" title="close" onclick="toggleImage();"></button>
+                <a id="PreviousImage" title="Previous"><i class="fas fa-arrow-left show-cursor-pointer" onclick="previousImage();"></i></a>
+                <a id="NextImage" title="Next"><i class="fas fa-arrow-right show-cursor-pointer" onclick="nextImage();"></i></a>
+            </div>
+        </div>
+        <button id="FullButton" class="full-button" onclick="toggleImage();"></button>
+    </div>
+    <div id="GreetingContainer">
+        <img src="./images/vatherdone-sewer.jpg" alt="Projects Image By James Desmarais" width="950" height="632.828">
+    </div>
     <main>
-        <h1 class="hide">Contact</h1>
+        <h1 class="hide">Projects</h1>
         <nav id="fancyNav" class="side-bar fancyNav"></nav>
-        <h2><b><i>* Still in development, not hooked up yet.</i></b></h2>
-        <form class="contact-form">
-            <fieldset>
-                <ul>
-                    <li><label for="name" id="lbl-name">Name:</label></li>
-                    <li><input type="text" id="name" placeholder="Name..." onfocus="placeholder = ' '" onblur="placeholder = 'Name...'" required></li>
-                    <li><label for="email" id="lbl-email">Email</label></li>
-                    <li><input type="email" id="email" placeholder="Email..." onfocus="placeholder = ' '" onblur="placeholder = 'Email...'" required></li>
-                    <li><label for="message" id="lbl-message">Message:</label></li>
-                    <li><textarea id="message" placeholder="Message..." onfocus="placeholder = ' '" onblur="placeholder = 'Message...'" required></textarea></li>
-                    <li><input type="submit" id="submit" name="submit" value="Submit"></li>
-                    <li><input type="reset" id="reset" name="reset" value="Clear"></li>
-                </ul>
-            </fieldset>
-        </form>
+        <!-- <img class="hero-image" src="./images/blog-by-pixabay-optimized.jpg" alt="Blog Image By Pixabay"> -->
+        <div id="index-container">
+            <section id="BlogsArticles">
+                <h2>Projects <i class="fas fa-book"></i></h2>
+                <article class="card">
+                    <div class="article-left-side">
+                        <h3>Hunted companion app</h3>
+                        <a href="./ProjectDownloads/Hunted Companion App.zip" title="Download" download><i class="fas fa-file-download"></i> Hunted Companion App Download</a>
+                        <p>
+                            Players, use this companion app for a better experience using Jay bot. 
+                            It provides a better user interface than manually entering commands for Jay each time  
+                            you want to update something.
+                        </p>
+                        <p>
+                            This was a collaboration project brought to you by 
+                            <a href="https://www.linkedin.com/in/aleksandar-trninkov-85843614b/" target="_blank" 
+                            rel="noopener noreferrer" title="Aleksandar Trninkov's LinkedIn">
+                                Aleksandar Trninkov
+                            </a> and 
+                            <a href="https://www.linkedin.com/in/james-desmarais-36b609150/" target="_blank" 
+                            rel="noopener noreferrer" title="James Desmarais' LinkedIn">
+                                James Desmarais
+                            </a>
+                        </p>
+                    </div>
+                    <div class="article-right-side">
+                        <img src="./images/jay-symbol.png" alt="Jay Symbol By James Desmarais" title="Jay Symbol By James Desmarais">
+                        <span class="last-updated">
+                            <b>Last updated: </b>
+                            <span class="date">Aug 1, 2020</span>
+                        </span>
+                    </div>
+                </article>
+            </section>
+        </div>
     </main>
 
     <!-- Javascript (Mid priority)-->
     <script src="./scripts/main.js"></script>
     <script src="./scripts/cookie-manager.js"></script>
+    
 
     <footer></footer>
     
     <!-- Javascript plugins (bottom priority) -->
     <script>$(function () { $("footer").load("footer.html"); });</script>
+
 </body>
