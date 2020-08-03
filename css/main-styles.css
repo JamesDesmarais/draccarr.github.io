@@ -801,7 +801,7 @@ li:hover .nested-nav-list {
 #GreetingContainer a:hover {
 	cursor: pointer;
 	background-color: #78c2dd;
-	max-height: 5vh;
+	max-height: 5rem;
 }
 #GreetingContainer a:hover::before {
 	border-color: transparent #78c2dd transparent transparent;
@@ -812,9 +812,9 @@ li:hover .nested-nav-list {
 #GreetingContainer .block-hover {
 	position: absolute;
 	background-color: transparent;
-	height: .8rem;
+	height: 1rem;
 	width: 100%;
-	margin-bottom: 4.7rem;
+	margin-bottom: 5rem;
 	bottom: 0;
 }
 
