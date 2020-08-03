@@ -753,17 +753,24 @@ li:hover .nested-nav-list {
 	background: radial-gradient( #ccc, transparent);
 }
 #GreetingContainer a {
+	display: flex;
+	text-align: center;
+	align-content: center;
+	flex-direction: column;
+	transition: color 0.1s, max-height .3s;
+	/* transition-timing-function: cubic-bezier(0, 0, 1, 1); */
 	position: absolute;
 	align-self: center;
-	background-color: #141414;
+	background-color: #4f8295;
 	color: #fff;
 	font: normal 3rem 'Raleway', arial, sans-serif;
 	padding: 1rem;
 	border-radius: 1rem 1rem 0 0;
 	bottom: 0;
-	transition: color 0.1s;
-	transition-timing-function: cubic-bezier(0, 0, 1, 1);
+	text-shadow: #000 0 0 0;
 	-webkit-tap-highlight-color: transparent;
+	height: 8vh;
+	max-height: 5.5rem;
 }
 #GreetingContainer a::after {
 	content: '';
@@ -775,7 +782,8 @@ li:hover .nested-nav-list {
 	height: 0;
 	border: solid;
 	border-width: 10rem;
-	border-color: transparent transparent transparent #141414;
+	border-color: transparent transparent transparent #4f8295;
+	pointer-events: none;
 }
 #GreetingContainer a::before {
 	content: '';
@@ -787,13 +795,28 @@ li:hover .nested-nav-list {
 	height: 0;
 	border: solid;
 	border-width: 10rem;
-	border-color: transparent #141414 transparent transparent;
+	border-color: transparent #4f8295 transparent transparent;
+	pointer-events: none;
 }
 #GreetingContainer a:hover {
-	color: #e6c926;
 	cursor: pointer;
+	background-color: #78c2dd;
+	max-height: 5vh;
 }
-
+#GreetingContainer a:hover::before {
+	border-color: transparent #78c2dd transparent transparent;
+} 
+#GreetingContainer a:hover::after {
+	border-color: transparent transparent transparent #78c2dd;
+}
+#GreetingContainer .block-hover {
+	position: absolute;
+	background-color: transparent;
+	height: .8rem;
+	width: 100%;
+	margin-bottom: 4.7rem;
+	bottom: 0;
+}
 
 /*************************************
   --- Night Mode Styles
@@ -865,6 +888,7 @@ body.night-mode .new-symbol {
 	color: #252424;
 	font-weight: 500;
 }
+
 
 /*************************************
   --- Form Styles
