@@ -24,60 +24,59 @@
 </head>
 
 <body>
-    <!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-    <![endif]-->
-        <header>
-        <div class="container">
-            <span class="logo" style="display: inline-block;">
-                    <a href="./index.html"><img src="./images/draccarr-logo-300x300.png" alt="logo"><span>ElderReign Studios</span></a>
-            </span>
-            <button id="OpenMenuBtn" type="button" aria-label="Toggle Menu Button" onclick="ToggleMobileNav();" class="show-in-mobile">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav id="MobileNav" class="show-in-mobile hide side-bar">
-                <ul class="clearfix">
-                    <li class="hide-home-link">
-                        <a href="./index.html"><i class="fas fa-home"></i> Home</a>
-                        <div class="fill-bar"></div>
-                    </li>
-                    <li>
-                        <a href="./blogs.html"><i class="fas fa-book"></i> Blogs <i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></a>
-                        <ul class="nested-nav-list">
-                            <li>
-                                <a href="./blog-series.html?=descending0./blog-post.html#hunted">Hunted</a>
-                                <div class="nested-fill-bar"></div>
-                            </li>
-                            <li><a href="./blog-series.html?=descending1./blog-post.html#player-notes-hunted">Player Notes (Hunted)</a><div class="nested-fill-bar"></div></li>
-                            <li><a href="./blog-series.html?=descending2./blog-post.html#a-programmers-thoughts">A Programmer's Thoughts</a><div class="nested-fill-bar"></div></li>
-                            <li><a href="./blog.html">All Blogs</a><div class="nested-fill-bar"></div></li>
-                        </ul>
-                        <div class="fill-bar"></div>
-                    </li>
-                    <li>
-                        <a href="./gallery.html"><i class="fas fa-images"></i> Gallery</a>
-                        <div class="fill-bar"></div>
-                    </li>
-                    <li>
-                        <a href="./projects.html"><i class="fas fa-folder"></i> Projects</a>
-                        <div class="fill-bar"></div>
-                    </li>
-                    <!-- <li><a href="./game-catalog.html">Game Catalog</a></li> -->
-                    <li>
-                        <a href="./about.html"><i class="fas fa-info-circle"></i> About</a>
-                        <div class="fill-bar"></div>
-                    </li>
-                    <!-- <li>
-                        <a href="#Contact" class="current-page" onclick="ToggleMobileNav();"><i class="fas fa-envelope"></i> Contact</a>
-                        <div class="fill-bar"></div>
-                    </li> -->
-                    <li>
-                        <button id="ViewModeToggle" onclick="changeViewMode();" class="fas" title="Night Mode"></button>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<!-- inject:header.html -->
+<header>
+    <div class="container">
+        <span class="logo" style="display: inline-block;">
+                <a href="./index.html"><img src="./images/draccarr-logo-300x300.png" alt="logo" width="50" height="50"><span>ElderReign Studios</span></a>
+        </span>
+        <button id="OpenMenuBtn" type="button" aria-label="Toggle Menu Button" onclick="ToggleMobileNav();" class="show-in-mobile">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="MobileNav" class="show-in-mobile hide side-bar">
+            <ul class="clearfix">
+                <li class="hide-home-link">
+                    <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+                    <div class="fill-bar"></div>
+                </li>
+                <li>
+                    <a href="./blogs.html"><i class="fas fa-book"></i> Blogs <i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></a>
+                    <ul class="nested-nav-list">
+                        <li>
+                            <a href="./blog-series.html?=descending0./blog-post.html#hunted">Hunted</a>
+                            <div class="nested-fill-bar"></div>
+                        </li>
+                        <li><a href="./blog-series.html?=descending1./blog-post.html#player-notes-hunted">Player Notes (Hunted)</a><div class="nested-fill-bar"></div></li>
+                        <li><a href="./blog-series.html?=descending2./blog-post.html#a-programmers-thoughts">A Programmer's Thoughts</a><div class="nested-fill-bar"></div></li>
+                        <li><a href="./blog.html">All Blogs</a><div class="nested-fill-bar"></div></li>
+                    </ul>
+                    <div class="fill-bar"></div>
+                </li>
+                <li>
+                    <a href="./gallery.html"><i class="fas fa-images"></i> Gallery</a>
+                    <div class="fill-bar"></div>
+                </li>
+                <li>
+                    <a href="./projects.html"><i class="fas fa-folder"></i> Projects</a>
+                    <div class="fill-bar"></div>
+                </li>
+                <!-- <li><a href="./game-catalog.html">Game Catalog</a></li> -->
+                <li>
+                    <a href="./about.html"><i class="fas fa-info-circle"></i> About</a>
+                    <div class="fill-bar"></div>
+                </li>
+                <!-- <li>
+                    <a href="#Contact" class="current-page" onclick="ToggleMobileNav();"><i class="fas fa-envelope"></i> Contact</a>
+                    <div class="fill-bar"></div>
+                </li> -->
+                <li>
+                    <button id="ViewModeToggle" onclick="changeViewMode();" class="fas" title="Night Mode"></button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- endinject-->
     <div id="GreetingContainer">
         <img class="hero-image" src="./images/robot-game.png" id="PageImage" class="side-padding top-padding" width="1920" height="1200" alt="Robot Game Image By James Desmarais" title="Robot Game Image By James Desmarais">
     </div>
