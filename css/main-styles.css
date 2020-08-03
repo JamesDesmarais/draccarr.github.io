@@ -1347,6 +1347,14 @@ body #gameContainer {
 /*************************************
   --- Media Queries
  *************************************/
+@media only screen and (max-width: 840px) {
+	body header {
+		height: 12rem;
+	}
+	.logo span {
+		display: none;
+	}
+}
 @media only screen and (max-width: 980px) {
 	body {
 		width: 100%;
