@@ -759,17 +759,18 @@ li:hover .nested-nav-list {
 	color: #fff;
 	font: normal 3rem 'Raleway', arial, sans-serif;
 	padding: 1rem;
-	/* border-radius: 1rem 1rem 0 0; */
+	border-radius: 1rem 1rem 0 0;
 	bottom: 0;
 	transition: color 0.1s;
 	transition-timing-function: cubic-bezier(0, 0, 1, 1);
+	-webkit-tap-highlight-color: transparent;
 }
 #GreetingContainer a::after {
 	content: '';
 	display: block;
 	position: absolute;
-	top: 0;
-	right: -20rem;
+	top: .3rem;
+	right: -19.7rem;
 	width: 0;
 	height: 0;
 	border: solid;
@@ -780,8 +781,8 @@ li:hover .nested-nav-list {
 	content: '';
 	display: block;
 	position: absolute;
-	top: 0;
-	left: -20rem;
+	top: .3rem;
+	left: -19.7rem;
 	width: 0;
 	height: 0;
 	border: solid;
