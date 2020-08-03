@@ -592,6 +592,9 @@ li:hover .nested-nav-list {
 	color: #fff;
 }
 #GreetingContainer {
+	display: flex;
+	flex-direction: column;
+	position: relative;
 	width: 100%;
 	height: 100%;
 	/* background-color: #000;  */
@@ -748,6 +751,46 @@ li:hover .nested-nav-list {
 	height: 1px;
 	margin-bottom: 2rem;
 	background: radial-gradient( #ccc, transparent);
+}
+#GreetingContainer a {
+	position: absolute;
+	align-self: center;
+	background-color: #141414;
+	color: #fff;
+	font: normal 3rem 'Raleway', arial, sans-serif;
+	padding: 1rem;
+	/* border-radius: 1rem 1rem 0 0; */
+	bottom: 0;
+	transition: color 0.1s;
+	transition-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+#GreetingContainer a::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: -20rem;
+	width: 0;
+	height: 0;
+	border: solid;
+	border-width: 10rem;
+	border-color: transparent transparent transparent #141414;
+}
+#GreetingContainer a::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -20rem;
+	width: 0;
+	height: 0;
+	border: solid;
+	border-width: 10rem;
+	border-color: transparent #141414 transparent transparent;
+}
+#GreetingContainer a:hover {
+	color: #e6c926;
+	cursor: pointer;
 }
 
 
@@ -1378,6 +1421,9 @@ body #gameContainer {
 	for proformance because it's one of the first pieces of content to load on the page.
 	But because it currently relies on this media query, I'll keep it here for now.
 	*/
+	#GreetingContainer a {
+		font-size: 6rem;
+	}
 	#GreetingContainer,
 	#GamesContainer {
 		margin-top: 12rem;
