@@ -1448,6 +1448,15 @@ body #gameContainer {
 	*/
 	#GreetingContainer a {
 		font-size: 6rem;
+		height: 11rem;
+		max-height: 10rem;
+	}
+	#GreetingContainer a:hover {
+		max-height: 9rem;
+	}
+	#GreetingContainer .block-hover {
+		height: 1rem;
+		margin-bottom: 9rem;
 	}
 	#GreetingContainer,
 	#GamesContainer {
