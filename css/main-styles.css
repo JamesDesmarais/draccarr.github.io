@@ -852,7 +852,8 @@ body.night-mode #ExpandedImageControls {
 	background-color: #1e2020;
 }
 body.night-mode .blog-post-image .article-heading-container {
-	background-color: #00000044;
+	/* background-color: #00000044; */
+	background-color: #000;
 }
 body.night-mode .blog-post-image:hover .article-heading-container {
 	background-color: #ffffff00;
