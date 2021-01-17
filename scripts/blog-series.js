@@ -12,7 +12,7 @@ function initializeBlogSeries() {
 
 //Newest to oldest.
 function LoadDescending() {
-    fetch('https://draccarr.github.io/blog-content.html')
+    fetch('https://elderreign.com/blog-content.html')
         .then(response => response.text())
         .then((data) => {
         myCurrentContent = new DOMParser().parseFromString(data, "text/html");
@@ -28,7 +28,7 @@ function LoadDescending() {
 function LoadAscending() {
     console.log(window.location.search);
     var articles;
-    fetch('https://draccarr.github.io/blog-content.html')
+    fetch('https://elderreign.com/blog-content.html')
         .then(response => response.text())
         .then((data) => {
         myCurrentContent = new DOMParser().parseFromString(data, "text/html");

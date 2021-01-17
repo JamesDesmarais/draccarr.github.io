@@ -4,7 +4,7 @@ var allPosts;
 var currentPost;
 function initializeBlogPostSeries () {
 //All the text from blog-content.html
-	postsDoc = new DOMParser().parseFromString(loadPage('https://draccarr.github.io/blog-content.html'), 'text/html');
+	postsDoc = new DOMParser().parseFromString(loadPage('https://elderreign.com/blog-content.html'), 'text/html');
     var blogSeries = window.location.search.substr(2);
 
 	//Grab the post you're on from the cookie. The cookie is chosen from the class of the current article.

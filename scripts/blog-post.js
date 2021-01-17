@@ -4,7 +4,7 @@ var postsDoc;
 var allPosts;
 var currentPost;
 function initializeBlogPost() {
-    fetch('https://draccarr.github.io/blog-content.html')
+    fetch('https://elderreign.com/blog-content.html')
         .then(response => response.text())
         .then((data) => {
         postsDoc = new DOMParser().parseFromString(data, "text/html");
@@ -19,7 +19,7 @@ var nextPostAnchorTop;
 var nextPostAnchorBottom;
 var loadedHTML;
 ReplaceAnchors = function() {
-	    fetch('https://draccarr.github.io/blog-content.html')
+	    fetch('https://elderreign.com/blog-content.html')
         .then(response => response.text())
         .then((data) => {
 		postsDoc = new DOMParser().parseFromString(data, "text/html");
