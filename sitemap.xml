@@ -23,21 +23,6 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://elderreign.com/blog-series.html?=descending0./blog-post.html</loc>
-  <lastmod>2021-01-17T23:10:19+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://elderreign.com/blog-series.html?=descending1./blog-post.html</loc>
-  <lastmod>2021-01-17T23:10:19+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://elderreign.com/blog-series.html?=descending2./blog-post.html</loc>
-  <lastmod>2021-01-17T23:10:19+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://elderreign.com/blog.html</loc>
   <lastmod>2021-01-17T23:10:19+00:00</lastmod>
   <priority>0.80</priority>
@@ -54,11 +39,6 @@
 </url>
 <url>
   <loc>https://elderreign.com/about.html</loc>
-  <lastmod>2021-01-17T23:10:19+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://elderreign.com/blog-post.html</loc>
   <lastmod>2021-01-17T23:10:19+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -83,35 +63,8 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://elderreign.com/blog-series.html?=ascending0./blog-post.html</loc>
-  <lastmod>2021-01-17T23:10:19+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://elderreign.com/blog-post-series.html?=hunted</loc>
-  <lastmod>2021-01-17T23:10:19+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://elderreign.com/blog-series.html?=descending</loc>
-  <lastmod>2021-01-17T23:10:19+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://elderreign.com/blog-post-series.html?=player-notes-hunted</loc>
-  <lastmod>2021-01-17T23:10:19+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://elderreign.com/blog-post-series.html?=a-programmers-thoughts</loc>
-  <lastmod>2021-01-17T23:10:19+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
   <loc>https://elderreign.com/ProjectDownloads/mobile-hunted-companion-app/mhc-manual.pdf</loc>
   <lastmod>2021-01-17T23:10:19+00:00</lastmod>
   <priority>0.64</priority>
 </url>
-
-
 </urlset>
