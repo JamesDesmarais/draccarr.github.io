@@ -20,8 +20,8 @@ article {
     color: white;
 }
 .rune-pixels-profile-pic {
-    width: 10rem;
-    height: auto;
+    width: auto;
+    height: 100%;
 }
 #Scoreboard {
     display: flex;
@@ -101,6 +101,7 @@ article {
 }
 .description h3 {
     font-weight: bold;
+    font-size: 5rem;
 }
 .description div {
     display: flex;
@@ -114,11 +115,12 @@ article {
     justify-content: space-between;
     align-items: flex-end;
 }
-.description p {
+.score {
     color: gold;
     /* background-color: rgba(0, 0, 0, 0.592); */
     /* border-radius: 10rem; */
     padding-left: 1.5rem;
+    font-size: 5rem;
 }
 .personal-bingo-card {
 
@@ -136,7 +138,7 @@ article {
 }
 
 .rank-container {
-    height: 5rem;
+    height: 10rem;
     width: auto;
     display: flex;
     flex-direction: row;
@@ -200,5 +202,15 @@ img.rank
         padding: 6px;
         max-width: 50rem;
         border: solid black 2px;
+    }
+    .description h3 {
+        font-weight: bold;
+        font-size: 1.6rem;
+    }
+    .rank-container {
+        height: 5rem;
+    }
+    .score {
+        font-size: 1.6rem;
     }
 }
