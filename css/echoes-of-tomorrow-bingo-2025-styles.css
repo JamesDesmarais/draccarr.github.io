@@ -1,0 +1,173 @@
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #021443;
+}
+
+.bingo-board {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	background-color: #000;
+    position: relative;
+}
+article {
+    color: white;
+}
+.rune-pixels-profile-pic {
+    width: 10rem;
+    height: auto;
+}
+#Scoreboard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin: 3rem 0 0 3rem
+}
+#Scoreboard .card-frame
+{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3rem;
+    padding: 6px;
+    width: 34.2rem;
+    border: solid black 2px;
+}
+#Scoreboard .card
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    padding: 1rem;
+    background-color: #00283b;
+}
+
+
+/**************************************************
+**************************************************/
+#Scoreboard .card-frame {
+  background-color: #472d09;        
+  /* background-color: #3b2718;         */
+  border-radius: 3px;
+
+  /* Inset shadow on the brown border itself */
+  box-shadow:
+    inset 0 2px 6px rgba(0, 0, 0, 0.6),   /* top inner shadow */
+    inset 0 -2px 6px rgba(0, 0, 0, 0.5),  /* bottom inner shadow */
+    inset 2px 0 6px rgba(0, 0, 0, 0.5),   /* left inner shadow */
+    inset -2px 0 6px rgba(0, 0, 0, 0.5);  /* right inner shadow */
+  
+  position: relative;
+  /* overflow: hidden; */
+}
+
+/* Chalkboard recess stays the same */
+.card-frame::before {
+  content: "";
+  position: absolute;
+  inset: 6px; /* matches border thickness */
+  border-radius: 2px;
+  pointer-events: none;
+
+  box-shadow:
+    inset 0 10px 16px rgba(0, 0, 0, 0.45),  /* top inner falloff */
+    inset 0 -8px 14px rgba(0, 0, 0, 0.35),  /* bottom inner falloff */
+    inset 8px 0 14px rgba(0, 0, 0, 0.35),   /* left inner falloff */
+    inset -8px 0 14px rgba(0, 0, 0, 0.35);  /* right inner falloff */
+}
+/**************************************************
+**************************************************/
+
+
+
+
+
+
+
+.card .description
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 2rem;
+    width: 100%;
+}
+.description h3 {
+    font-weight: bold;
+    /* background-color: rgba(0, 0, 0, 0.592); */
+    padding: .5rem 1.5rem;
+}
+.description div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.description .scores
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.description p {
+    color: gold;
+    /* background-color: rgba(0, 0, 0, 0.592); */
+    /* border-radius: 10rem; */
+    padding-left: 1.5rem;
+}
+.personal-bingo-card {
+
+    width: 30rem;
+    height: auto;
+}
+.profile-pic-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 1rem;
+    border-radius: 100%;
+    /* background-color: magenta; */
+}
+
+.rank-container {
+    /* width: 10rem; */
+    height: 10rem;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    margin-right: -10rem;
+    margin-top: 1rem;
+    /* padding: 1rem 2rem; */
+    /* border-radius: 100%; */
+    /* background-color: #CD7F32; */
+    font-weight: bold;
+    font-size: 8rem;
+
+    color: #021443;
+}
+img.rank
+{
+    height: 100%;
+    width: auto;
+}
+
+.rank-container.top-five {
+    background-color: gold; 
+}
+
+.rank-container.top-ten {
+    background-color: silver;
+}
+
+.bronze {
+    background-color: #CD7F32;
+}
