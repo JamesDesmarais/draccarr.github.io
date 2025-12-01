@@ -3,6 +3,9 @@ main {
     margin: 0;
     padding: 0;
     background-color: #021443;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .bingo-board {
@@ -25,7 +28,6 @@ article {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    margin: 3rem 0 0 3rem
 }
 #Scoreboard .card-frame
 {
@@ -33,7 +35,7 @@ article {
     flex-direction: row;
     margin-bottom: 3rem;
     padding: 6px;
-    width: 34.2rem;
+    width: 100%;
     border: solid black 2px;
 }
 #Scoreboard .card
@@ -99,8 +101,6 @@ article {
 }
 .description h3 {
     font-weight: bold;
-    /* background-color: rgba(0, 0, 0, 0.592); */
-    padding: .5rem 1.5rem;
 }
 .description div {
     display: flex;
@@ -112,6 +112,7 @@ article {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
 }
 .description p {
     color: gold;
@@ -135,24 +136,15 @@ article {
 }
 
 .rank-container {
-    /* width: 10rem; */
-    height: 10rem;
+    height: 5rem;
     width: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    right: 0;
-    margin-right: -10rem;
-    margin-top: 1rem;
-    /* padding: 1rem 2rem; */
-    /* border-radius: 100%; */
-    /* background-color: #CD7F32; */
-    font-weight: bold;
-    font-size: 8rem;
-
-    color: #021443;
+    position: relative;
+    left: 0;
+    bottom: 0;
 }
 img.rank
 {
@@ -170,4 +162,43 @@ img.rank
 
 .bronze {
     background-color: #CD7F32;
+}
+
+
+@media (min-width: 1232px) {
+    main {
+        flex-direction: row-reverse;
+        width: 100%;
+    }
+    .format-container-1 {
+        /* flex-grow: 0; */
+        /* width: 100%; */
+        flex: 0 0 auto;
+    }
+    .format-container-1 img {
+        /* position: fixed; */
+        height: 100vh;
+        width: auto;
+        right: 0;
+        display: block;
+        position: sticky;
+        top: 0;
+    }
+    .format-container-2 {
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow: hidden;
+    }
+    #Scoreboard {
+        margin: 3rem 3rem 0 3rem
+    }
+    #Scoreboard .card-frame
+    {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 3rem;
+        padding: 6px;
+        max-width: 50rem;
+        border: solid black 2px;
+    }
 }
