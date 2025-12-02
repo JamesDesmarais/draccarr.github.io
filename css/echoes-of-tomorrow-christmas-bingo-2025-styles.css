@@ -154,16 +154,27 @@ img.rank
     width: auto;
 }
 
-.rank-container.top-five {
-    background-color: gold; 
+
+
+.card-frame .rank-container {
+    /* color: #CD7F32; */
+    color: silver;
 }
 
-.rank-container.top-ten {
-    background-color: silver;
+.card-frame:nth-child(-n+6) .rank-container {
+    color: silver;
 }
 
-.bronze {
-    background-color: #CD7F32;
+.card-frame:nth-child(-n+2) .rank-container {
+    color: gold; 
+}
+
+.rank-container span
+{
+    font-size: 2rem;
+    font-weight: 800;
+    padding-right: .5rem;
+    align-self: flex-end;
 }
 
 
