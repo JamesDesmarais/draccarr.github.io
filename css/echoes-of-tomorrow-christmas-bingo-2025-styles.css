@@ -171,7 +171,7 @@ img.rank
 
 .rank-container span
 {
-    font-size: 2rem;
+    font-size: 5rem;
     font-weight: 800;
     padding-right: .5rem;
     align-self: flex-end;
@@ -221,7 +221,7 @@ img.rank
     .rank-container {
         height: 5rem;
     }
-    .score {
+    .score, .rank-container {
         font-size: 1.6rem;
     }
 }
