@@ -221,7 +221,10 @@ img.rank
     .rank-container {
         height: 5rem;
     }
-    .score, .rank-container {
+    .score {
         font-size: 1.6rem;
+    }
+    .rank-container span {
+        font-size: 2rem;
     }
 }
