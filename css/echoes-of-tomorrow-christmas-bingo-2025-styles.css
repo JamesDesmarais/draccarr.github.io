@@ -157,11 +157,11 @@ img.rank
 
 
 .card-frame .rank-container {
-    /* color: #CD7F32; */
-    color: silver;
+    color: #CD7F32;
+    /* color: silver; */
 }
 
-.card-frame:nth-child(-n+6) .rank-container {
+.card-frame:nth-child(-n+8) .rank-container {
     color: silver;
 }
 
