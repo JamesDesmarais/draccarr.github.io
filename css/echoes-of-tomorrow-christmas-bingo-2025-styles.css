@@ -161,7 +161,7 @@ img.rank
     /* color: silver; */
 }
 
-.card-frame:nth-child(-n+6) .rank-container {
+.card-frame:nth-child(-n+7) .rank-container {
     color: silver;
 }
 
