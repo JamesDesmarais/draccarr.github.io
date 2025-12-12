@@ -154,7 +154,9 @@ img.rank
     width: auto;
 }
 
-
+.card-frame .rank-container.disqualified {
+    color: red;
+}
 
 .card-frame .rank-container {
     color: #CD7F32;
